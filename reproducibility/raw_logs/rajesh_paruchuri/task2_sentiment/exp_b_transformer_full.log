@@ -1,0 +1,24 @@
+run_start=2026-10-02 03:38:38 model=exp_b_transformer smoke=False member=rajesh_paruchuri
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+config={"description": "2-layer pre-norm Transformer encoder written from scratch, [CLS] pooling, learned positions", "emb_dim": 128, "n_layer": 2, "n_head": 4, "ffn_dim": 256, "dropout": 0.1, "lr": 0.0005, "weight_decay": 0.01, "epochs": 3, "warmup_frac": 0.05} params=7262593 n_train=539941 n_val=20000 batch_size=256 steps=6330 warmup=316
+epoch=1 step=0/6330 loss=0.6810 grad_norm=0.943 lr=0.000003 elapsed=2s
+epoch=1 step=400/6330 loss=0.1987 grad_norm=2.008 lr=0.000493 elapsed=220s
+epoch=1 step=800/6330 loss=0.2038 grad_norm=0.798 lr=0.000460 elapsed=298s
+epoch=1 step=1200/6330 loss=0.1686 grad_norm=0.426 lr=0.000426 elapsed=369s
+epoch=1 step=1600/6330 loss=0.1719 grad_norm=0.523 lr=0.000393 elapsed=1446s
+epoch=1 step=2000/6330 loss=0.1464 grad_norm=0.342 lr=0.000360 elapsed=2055s
+EPOCH 1 train_loss=0.2210 val_loss=0.1714 val_acc=0.9322 val_macro_f1=0.9321 epoch_sec=2977.6 ex_per_sec=181 nan=0 best=yes
+epoch=2 step=2400/6330 loss=0.0954 grad_norm=0.286 lr=0.000327 elapsed=3041s
+epoch=2 step=2800/6330 loss=0.1826 grad_norm=0.404 lr=0.000293 elapsed=3318s
+epoch=2 step=3200/6330 loss=0.1761 grad_norm=0.428 lr=0.000260 elapsed=4356s
+epoch=2 step=3600/6330 loss=0.1822 grad_norm=0.446 lr=0.000227 elapsed=5657s
+epoch=2 step=4000/6330 loss=0.1937 grad_norm=0.481 lr=0.000194 elapsed=6128s
+EPOCH 2 train_loss=0.1552 val_loss=0.1742 val_acc=0.9312 val_macro_f1=0.9312 epoch_sec=3181.5 ex_per_sec=170 nan=0 best=no
+epoch=3 step=4400/6330 loss=0.1024 grad_norm=0.344 lr=0.000160 elapsed=7166s
+epoch=3 step=4800/6330 loss=0.1436 grad_norm=0.428 lr=0.000127 elapsed=7324s
+epoch=3 step=5200/6330 loss=0.1060 grad_norm=0.377 lr=0.000094 elapsed=7994s
+epoch=3 step=5600/6330 loss=0.1036 grad_norm=0.385 lr=0.000061 elapsed=8460s
+epoch=3 step=6000/6330 loss=0.1406 grad_norm=0.500 lr=0.000027 elapsed=8918s
+EPOCH 3 train_loss=0.1313 val_loss=0.1859 val_acc=0.9317 val_macro_f1=0.9317 epoch_sec=2925.2 ex_per_sec=185 nan=0 best=no
+SUMMARY {"train_time_sec": 9084.3798828125, "wall_time_sec": 9099.457557678223, "train_examples_per_sec": 178.30859353038272, "nan_count": 0, "peak_device_memory_mb": 129.634033203125, "peak_mps_driver_memory_mb": 10129.65625, "peak_process_rss_mb": 1295.796875, "best_val_loss": 0.17139772469066705, "params": 7262593, "hardware": "MPS (Apple GPU) on Apple M4"}
+run_end=2026-10-02 06:10:15

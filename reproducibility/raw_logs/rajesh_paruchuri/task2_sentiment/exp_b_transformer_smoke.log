@@ -1,0 +1,9 @@
+run_start=2026-10-01 22:26:12 model=exp_b_transformer smoke=True member=rajesh_paruchuri
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+config={"description": "2-layer pre-norm Transformer encoder written from scratch, [CLS] pooling, learned positions", "emb_dim": 128, "n_layer": 2, "n_head": 4, "ffn_dim": 256, "dropout": 0.1, "lr": 0.0005, "weight_decay": 0.01, "epochs": 3, "warmup_frac": 0.05} params=1223169 n_train=6000 n_val=1000 batch_size=256 steps=72 warmup=3
+epoch=1 step=0/72 loss=0.7204 grad_norm=3.897 lr=0.000333 elapsed=2s
+EPOCH 1 train_loss=0.5894 val_loss=0.5052 val_acc=0.7810 val_macro_f1=0.7712 epoch_sec=5.3 ex_per_sec=1125 nan=0 best=yes
+EPOCH 2 train_loss=0.3609 val_loss=0.3140 val_acc=0.8820 val_macro_f1=0.8819 epoch_sec=4.3 ex_per_sec=1399 nan=0 best=yes
+EPOCH 3 train_loss=0.2617 val_loss=0.3309 val_acc=0.8780 val_macro_f1=0.8773 epoch_sec=4.2 ex_per_sec=1413 nan=0 best=no
+SUMMARY {"train_time_sec": 13.871793985366821, "wall_time_sec": 17.67690086364746, "train_examples_per_sec": 1297.597125432224, "nan_count": 0, "peak_device_memory_mb": 70.439453125, "peak_mps_driver_memory_mb": 4728.40625, "peak_process_rss_mb": 633.515625, "best_val_loss": 0.31399290796824003, "params": 1223169, "hardware": "MPS (Apple GPU) on Apple M4"}
+run_end=2026-10-01 22:26:28

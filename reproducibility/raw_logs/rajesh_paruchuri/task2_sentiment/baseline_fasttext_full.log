@@ -1,0 +1,31 @@
+run_start=2026-10-01 22:28:17 model=baseline_fasttext smoke=False member=rajesh_paruchuri
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+config={"description": "fastText-style bag of unigram + hashed-bigram embeddings, masked mean, linear head", "emb_dim": 64, "dropout": 0.2, "lr": 0.002, "weight_decay": 0.0, "epochs": 4, "warmup_frac": 0.02} params=20259393 n_train=539941 n_val=20000 batch_size=256 steps=8440 warmup=168
+epoch=1 step=0/8440 loss=0.6913 grad_norm=0.068 lr=0.000024 elapsed=2s
+epoch=1 step=400/8440 loss=0.1448 grad_norm=0.025 lr=0.001944 elapsed=735s
+epoch=1 step=800/8440 loss=0.1868 grad_norm=0.027 lr=0.001847 elapsed=749s
+epoch=1 step=1200/8440 loss=0.1473 grad_norm=0.020 lr=0.001750 elapsed=763s
+epoch=1 step=1600/8440 loss=0.1638 grad_norm=0.015 lr=0.001654 elapsed=776s
+epoch=1 step=2000/8440 loss=0.1132 grad_norm=0.030 lr=0.001557 elapsed=790s
+EPOCH 1 train_loss=0.2226 val_loss=0.1453 val_acc=0.9490 val_macro_f1=0.9490 epoch_sec=791.8 ex_per_sec=682 nan=0 best=yes
+epoch=2 step=2400/8440 loss=0.0847 grad_norm=0.021 lr=0.001460 elapsed=804s
+epoch=2 step=2800/8440 loss=0.0661 grad_norm=0.016 lr=0.001363 elapsed=818s
+epoch=2 step=3200/8440 loss=0.0994 grad_norm=0.013 lr=0.001267 elapsed=833s
+epoch=2 step=3600/8440 loss=0.0680 grad_norm=0.013 lr=0.001170 elapsed=847s
+epoch=2 step=4000/8440 loss=0.1401 grad_norm=0.034 lr=0.001073 elapsed=861s
+EPOCH 2 train_loss=0.0988 val_loss=0.1461 val_acc=0.9492 val_macro_f1=0.9491 epoch_sec=75.4 ex_per_sec=7159 nan=0 best=no
+epoch=3 step=4400/8440 loss=0.0520 grad_norm=0.014 lr=0.000977 elapsed=876s
+epoch=3 step=4800/8440 loss=0.0504 grad_norm=0.025 lr=0.000880 elapsed=890s
+epoch=3 step=5200/8440 loss=0.0749 grad_norm=0.011 lr=0.000783 elapsed=904s
+epoch=3 step=5600/8440 loss=0.0582 grad_norm=0.029 lr=0.000686 elapsed=919s
+epoch=3 step=6000/8440 loss=0.0703 grad_norm=0.018 lr=0.000590 elapsed=933s
+EPOCH 3 train_loss=0.0648 val_loss=0.1554 val_acc=0.9486 val_macro_f1=0.9485 epoch_sec=75.6 ex_per_sec=7138 nan=0 best=no
+epoch=4 step=6400/8440 loss=0.0536 grad_norm=0.011 lr=0.000493 elapsed=947s
+epoch=4 step=6800/8440 loss=0.0345 grad_norm=0.021 lr=0.000396 elapsed=962s
+epoch=4 step=7200/8440 loss=0.0790 grad_norm=0.013 lr=0.000300 elapsed=976s
+epoch=4 step=7600/8440 loss=0.0771 grad_norm=0.037 lr=0.000203 elapsed=990s
+epoch=4 step=8000/8440 loss=0.0271 grad_norm=0.013 lr=0.000106 elapsed=1005s
+epoch=4 step=8400/8440 loss=0.0757 grad_norm=0.010 lr=0.000100 elapsed=1196s
+EPOCH 4 train_loss=0.0475 val_loss=0.1613 val_acc=0.9476 val_macro_f1=0.9476 epoch_sec=252.4 ex_per_sec=2139 nan=0 best=no
+SUMMARY {"train_time_sec": 1195.1802146434784, "wall_time_sec": 1197.7483551502228, "train_examples_per_sec": 1807.0613732877569, "nan_count": 0, "peak_device_memory_mb": 309.947998046875, "peak_mps_driver_memory_mb": 2786.578125, "peak_process_rss_mb": 1873.0625, "best_val_loss": 0.14528209252110277, "params": 20259393, "hardware": "MPS (Apple GPU) on Apple M4"}
+run_end=2026-10-01 22:48:13

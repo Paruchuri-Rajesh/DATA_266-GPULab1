@@ -1,0 +1,331 @@
+{
+ "metrics": {
+  "baseline_fasttext": {
+   "accuracy": 0.82,
+   "precision_macro": 0.844084335953732,
+   "recall_macro": 0.8240779388992823,
+   "f1_macro": 0.8179545371797516,
+   "precision_micro": 0.82,
+   "recall_micro": 0.82,
+   "f1_micro": 0.82,
+   "precision_weighted": 0.8471568232564713,
+   "recall_weighted": 0.82,
+   "f1_weighted": 0.8173563357889243,
+   "roc_auc": 0.937087541127023,
+   "pr_auc": 0.9269050369677252,
+   "mcc": 0.667862687693851,
+   "brier": 0.2254708602895939,
+   "ece": 0.28865601779520506,
+   "tn": 926,
+   "fp": 43,
+   "fn": 317,
+   "tp": 714,
+   "accuracy_ci95_low": 0.804,
+   "accuracy_ci95_high": 0.8365,
+   "macro_f1_ci95_low": 0.8016449557171407,
+   "macro_f1_ci95_high": 0.8342078711513465,
+   "mcc_ci95_low": 0.6390566978773946,
+   "mcc_ci95_high": 0.6963760945295936
+  },
+  "exp_a_bigru_attn": {
+   "accuracy": 0.814,
+   "precision_macro": 0.8142546090289259,
+   "recall_macro": 0.8145037380923067,
+   "f1_macro": 0.8139849327795552,
+   "precision_micro": 0.814,
+   "recall_micro": 0.814,
+   "f1_micro": 0.814,
+   "precision_weighted": 0.8148617536363645,
+   "recall_weighted": 0.814,
+   "f1_weighted": 0.8140368309833096,
+   "roc_auc": 0.8962332801822551,
+   "pr_auc": 0.8990377773897164,
+   "mcc": 0.6287582977657903,
+   "brier": 0.13171487502952875,
+   "ece": 0.03867491229769076,
+   "tn": 805,
+   "fp": 164,
+   "fn": 208,
+   "tp": 823,
+   "accuracy_ci95_low": 0.7975,
+   "accuracy_ci95_high": 0.831,
+   "macro_f1_ci95_low": 0.7974975193446119,
+   "macro_f1_ci95_high": 0.8309259328215874,
+   "mcc_ci95_low": 0.5955918849979326,
+   "mcc_ci95_high": 0.662175780941845
+  },
+  "exp_b_transformer": {
+   "accuracy": 0.8635,
+   "precision_macro": 0.8666548016940767,
+   "recall_macro": 0.8649977628500989,
+   "f1_macro": 0.8634368736948654,
+   "precision_micro": 0.8635,
+   "recall_micro": 0.8635,
+   "f1_micro": 0.8635,
+   "precision_weighted": 0.867976407809163,
+   "recall_weighted": 0.8635,
+   "f1_weighted": 0.8633458543711832,
+   "roc_auc": 0.9431693857797344,
+   "pr_auc": 0.938367379405215,
+   "mcc": 0.7316506881199106,
+   "brier": 0.10256309328387826,
+   "ece": 0.05796402246505024,
+   "tn": 885,
+   "fp": 84,
+   "fn": 189,
+   "tp": 842,
+   "accuracy_ci95_low": 0.848,
+   "accuracy_ci95_high": 0.879,
+   "macro_f1_ci95_low": 0.8479609525676062,
+   "macro_f1_ci95_high": 0.8786628269668875,
+   "mcc_ci95_low": 0.7014914985479928,
+   "mcc_ci95_high": 0.7618506145069764
+  }
+ },
+ "confusion_matrices": {
+  "baseline_fasttext": [
+   [
+    926,
+    43
+   ],
+   [
+    317,
+    714
+   ]
+  ],
+  "exp_a_bigru_attn": [
+   [
+    805,
+    164
+   ],
+   [
+    208,
+    823
+   ]
+  ],
+  "exp_b_transformer": [
+   [
+    885,
+    84
+   ],
+   [
+    189,
+    842
+   ]
+  ]
+ },
+ "mcnemar": {
+  "exp_a_bigru_attn": {
+   "b_baseline_right_model_wrong": 185,
+   "c_baseline_wrong_model_right": 173,
+   "chi2_cc": 0.33798882681564246,
+   "p_chi2": 0.5609924159547943,
+   "p_exact": 0.5610531569793611
+  },
+  "exp_b_transformer": {
+   "b_baseline_right_model_wrong": 84,
+   "c_baseline_wrong_model_right": 171,
+   "chi2_cc": 29.00392156862745,
+   "p_chi2": 7.223192587278136e-08,
+   "p_exact": 5.419546733190977e-08
+  }
+ },
+ "slices": {
+  "baseline_fasttext": {
+   "len_Q1_<=50w": {
+    "n": 503,
+    "macro_f1": 0.8727559080819951,
+    "error_rate": 0.12326043737574553
+   },
+   "len_Q2_50-94w": {
+    "n": 507,
+    "macro_f1": 0.8223684210526315,
+    "error_rate": 0.17751479289940827
+   },
+   "len_Q3_94-168w": {
+    "n": 496,
+    "macro_f1": 0.7793446145581521,
+    "error_rate": 0.21370967741935484
+   },
+   "len_Q4_>168w": {
+    "n": 494,
+    "macro_f1": 0.7530435805446097,
+    "error_rate": 0.20647773279352227
+   },
+   "has_negation": {
+    "n": 1494,
+    "macro_f1": 0.7911242475380686,
+    "error_rate": 0.19009370816599733
+   },
+   "no_negation": {
+    "n": 506,
+    "macro_f1": 0.8080463212538684,
+    "error_rate": 0.15019762845849802
+   },
+   "has_contrast(but/however/...)": {
+    "n": 1158,
+    "macro_f1": 0.7843665981776589,
+    "error_rate": 0.20293609671848015
+   },
+   "no_contrast": {
+    "n": 842,
+    "macro_f1": 0.8505402561477301,
+    "error_rate": 0.14845605700712589
+   },
+   "negation_and_contrast": {
+    "n": 1021,
+    "macro_f1": 0.7705146273210213,
+    "error_rate": 0.20666013712047013
+   },
+   "non_english": {
+    "n": 9,
+    "macro_f1": 0.35714285714285715,
+    "error_rate": 0.4444444444444444
+   }
+  },
+  "exp_a_bigru_attn": {
+   "len_Q1_<=50w": {
+    "n": 503,
+    "macro_f1": 0.825031746497408,
+    "error_rate": 0.16500994035785288
+   },
+   "len_Q2_50-94w": {
+    "n": 507,
+    "macro_f1": 0.8271001477776514,
+    "error_rate": 0.17159763313609466
+   },
+   "len_Q3_94-168w": {
+    "n": 496,
+    "macro_f1": 0.7839571757139077,
+    "error_rate": 0.2157258064516129
+   },
+   "len_Q4_>168w": {
+    "n": 494,
+    "macro_f1": 0.7940826740731965,
+    "error_rate": 0.19230769230769232
+   },
+   "has_negation": {
+    "n": 1494,
+    "macro_f1": 0.7924169667867147,
+    "error_rate": 0.20080321285140562
+   },
+   "no_negation": {
+    "n": 506,
+    "macro_f1": 0.7895223349432672,
+    "error_rate": 0.1422924901185771
+   },
+   "has_contrast(but/however/...)": {
+    "n": 1158,
+    "macro_f1": 0.7845013279086851,
+    "error_rate": 0.21329879101899826
+   },
+   "no_contrast": {
+    "n": 842,
+    "macro_f1": 0.8476269618481076,
+    "error_rate": 0.14845605700712589
+   },
+   "negation_and_contrast": {
+    "n": 1021,
+    "macro_f1": 0.7734886300610094,
+    "error_rate": 0.21939275220372184
+   },
+   "non_english": {
+    "n": 9,
+    "macro_f1": 0.35714285714285715,
+    "error_rate": 0.4444444444444444
+   }
+  },
+  "exp_b_transformer": {
+   "len_Q1_<=50w": {
+    "n": 503,
+    "macro_f1": 0.8866991845945293,
+    "error_rate": 0.10934393638170974
+   },
+   "len_Q2_50-94w": {
+    "n": 507,
+    "macro_f1": 0.8203338876059706,
+    "error_rate": 0.1794871794871795
+   },
+   "len_Q3_94-168w": {
+    "n": 496,
+    "macro_f1": 0.8729213688769597,
+    "error_rate": 0.12701612903225806
+   },
+   "len_Q4_>168w": {
+    "n": 494,
+    "macro_f1": 0.8587764436821042,
+    "error_rate": 0.12955465587044535
+   },
+   "has_negation": {
+    "n": 1494,
+    "macro_f1": 0.844720066518847,
+    "error_rate": 0.14859437751004015
+   },
+   "no_negation": {
+    "n": 506,
+    "macro_f1": 0.8603170822800912,
+    "error_rate": 0.1007905138339921
+   },
+   "has_contrast(but/however/...)": {
+    "n": 1158,
+    "macro_f1": 0.8588748776571948,
+    "error_rate": 0.13903281519861832
+   },
+   "no_contrast": {
+    "n": 842,
+    "macro_f1": 0.8651567147105925,
+    "error_rate": 0.1330166270783848
+   },
+   "negation_and_contrast": {
+    "n": 1021,
+    "macro_f1": 0.8493199313948386,
+    "error_rate": 0.14495592556317335
+   },
+   "non_english": {
+    "n": 9,
+    "macro_f1": 0.35714285714285715,
+    "error_rate": 0.4444444444444444
+   }
+  }
+ },
+ "slice_length_quartiles_words": [
+  50.0,
+  94.0,
+  168.0
+ ],
+ "cost": {
+  "baseline_fasttext": {
+   "params": 17239681,
+   "train_time_sec": 3.415235996246338,
+   "train_examples_per_sec": 7027.332818691953,
+   "test_inference_examples_per_sec": 5191.834531862049,
+   "peak_device_memory_mb": 263.48876953125,
+   "peak_mps_driver_memory_mb": 1585.015625,
+   "peak_process_rss_mb": 1106.734375,
+   "nan_steps": 0,
+   "hardware": "MPS (Apple GPU) on Apple M4"
+  },
+  "exp_a_bigru_attn": {
+   "params": 1156225,
+   "train_time_sec": 22.812809944152832,
+   "train_examples_per_sec": 789.0303756558316,
+   "test_inference_examples_per_sec": 3741.1430798775164,
+   "peak_device_memory_mb": 57.699951171875,
+   "peak_mps_driver_memory_mb": 1664.484375,
+   "peak_process_rss_mb": 982.421875,
+   "nan_steps": 0,
+   "hardware": "MPS (Apple GPU) on Apple M4"
+  },
+  "exp_b_transformer": {
+   "params": 1223169,
+   "train_time_sec": 13.871793985366821,
+   "train_examples_per_sec": 1297.597125432224,
+   "test_inference_examples_per_sec": 1665.6810579048292,
+   "peak_device_memory_mb": 70.439453125,
+   "peak_mps_driver_memory_mb": 4728.40625,
+   "peak_process_rss_mb": 633.515625,
+   "nan_steps": 0,
+   "hardware": "MPS (Apple GPU) on Apple M4"
+  }
+ }
+}

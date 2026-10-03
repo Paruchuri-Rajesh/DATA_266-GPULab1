@@ -1,0 +1,98 @@
+{
+ "checkpoint": "task3_gan/rajesh_paruchuri/checkpoints/cyclegan_smoke.pt",
+ "checkpoint_epoch": 2,
+ "generator": "EMA",
+ "gen_images_per_sec_b2a": 21.120941863290337,
+ "gen_images_per_sec_a2b": 17.960950396855136,
+ "photo2monet_B2A": {
+  "fid": 270.045582563209,
+  "kid_mean": 0.14388479663069412,
+  "kid_std": 0.0063151150370036714,
+  "memorisation_min_cosine_distance": 0.3513903964473886,
+  "precision": 0.22916666666666666,
+  "recall": 0.0,
+  "density": 0.08333333333333333,
+  "coverage": 0.08333333333333333,
+  "n_real": 24,
+  "n_fake": 48,
+  "k": 3
+ },
+ "monet2photo_A2B": {
+  "fid": 333.9158238173427,
+  "kid_mean": 0.22441803996918772,
+  "kid_std": 0.007381135248355746,
+  "memorisation_min_cosine_distance": 0.4824041786735864,
+  "precision": 0.0,
+  "recall": 0.0,
+  "density": 0.0,
+  "coverage": 0.0,
+  "n_real": 48,
+  "n_fake": 24,
+  "k": 3
+ },
+ "reference_fid_real_photo_vs_real_monet": 237.79255060158414,
+ "cycle_B_photo_monet_photo": {
+  "cycle_l1": {
+   "mean": 0.2770082190011938,
+   "std": 0.0467825941611192,
+   "n": 48
+  },
+  "cycle_lpips": {
+   "mean": 0.8475343150397142,
+   "std": 0.045071032738867395,
+   "n": 48
+  },
+  "translation_lpips": {
+   "mean": 0.8341787283619245,
+   "std": 0.061848212484519854,
+   "n": 48
+  },
+  "content_cosine": {
+   "mean": 0.1334598936761419,
+   "std": 0.021205049808242966,
+   "n": 48
+  },
+  "translation_l1": {
+   "mean": 0.28143582803507644,
+   "std": 0.04108121462004165,
+   "n": 48
+  },
+  "unrelated_l1": {
+   "mean": 0.2750631660843889,
+   "std": 0.05697603952968689,
+   "n": 48
+  }
+ },
+ "cycle_A_monet_photo_monet": {
+  "cycle_l1": {
+   "mean": 0.27136471805473167,
+   "std": 0.04643454698344712,
+   "n": 24
+  },
+  "cycle_lpips": {
+   "mean": 0.8212205345431963,
+   "std": 0.05339414632222252,
+   "n": 24
+  },
+  "translation_lpips": {
+   "mean": 0.8056148886680603,
+   "std": 0.04331749276541273,
+   "n": 24
+  },
+  "content_cosine": {
+   "mean": 0.15872847475111485,
+   "std": 0.022208574170229586,
+   "n": 24
+  },
+  "translation_l1": {
+   "mean": 0.2857484985142946,
+   "std": 0.06004214226043404,
+   "n": 24
+  },
+  "unrelated_l1": {
+   "mean": 0.2516195184240739,
+   "std": 0.07782233314179324,
+   "n": 24
+  }
+ }
+}

@@ -1,0 +1,107 @@
+[
+ {
+  "prompt": "Once upon a time",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she saw a big box on the ground. It was a big box with a big smile on it. Lily was so excited to see what was inside.\n\n\"What is this?\" she asked.\n\n\"It is a big box. It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It is so big and shiny"
+ },
+ {
+  "prompt": "Once upon a time",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Once upon a time, there was a little boy named Timmy. Timmy loved to play outside in the sunshine. One day, Timmy's mom told him they were playing in the park. They saw a big tree and his hoop on the shelf. The tree was sitting on a floor and the animals said, \"Hello, tree. I will help you get it again.\" Lily looked at the tree and said, \"See, it is a big shelf. It is big and beautiful. That beetle is soft and co"
+ },
+ {
+  "prompt": "Once upon a time",
+  "decoding": "temperature=1.0",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Once upon a time, there was a girl named Lily. She loved to play with her toys all day long. One day, she went to the kitchen to make sure they bought a big secret toy.\n\nAs she carried, she decided to look at the edge of her and the boys. She wanted to keep it dreaming! She asked if she could have fun together but her mom said it was too tisty; and so she remembered that her mom was no longer still and said, \"But"
+ },
+ {
+  "prompt": "One day, a little girl named Lily",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "One day, a little girl named Lily went to the park with her mom. She saw a big box on the ground. She wanted to see what was inside. She wanted to see what was inside. She saw a big box on the ground. She wanted to see what was inside.\n\n\"Hello, box!\" she said. \"What is this?\"\n\n\"It is a big box,\" she said. \"It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It"
+ },
+ {
+  "prompt": "One day, a little girl named Lily",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "One day, a little girl named Lily was playing with her toys. She was very excited to share her toys with her mommy.\n\n\"Hello, kids. Why do you want to share the toys?\" she asked.\n\n\"I don't know. It is mean. It is not safe and shiny. It is not good. It is red and shiny. Maybe it is fun. It is a little boy.\"\n\nHer mom said, \"It is mine. Can I read it for you, mom?\"\n\nThe boy said, \"Of course, you can! You can see the ostrich!\"\n\nAnna a"
+ },
+ {
+  "prompt": "One day, a little girl named Lily",
+  "decoding": "temperature=1.0",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "One day, a little girl named Lily found a magic button of beautiful flowers she needed a hat. \"Maybe it's gone!\"\n\nLily was scared but she wanted to keep picking people's button. She then spilled and splashed, pushing its beautiful guitar. Then, it broke away from Lily's kindness because it could help! Lily shared it with her toys and grandpa and clapped them for her kindness.\n\nLily started to build a house with a cookie and she k"
+ },
+ {
+  "prompt": "Tom and his dog went to the park.",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Tom and his dog went to the park. They saw a big tree with many blocks. They wanted to see the blocks. They were happy.\n\n\"Let's go to the tree,\" Tom said. \"We can see the tree. We can see the tree. We can see the tree.\"\n\n\"OK, but be careful. The tree is not a tree. It is a tree. It is a tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big t"
+ },
+ {
+  "prompt": "Tom and his dog went to the park.",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Tom and his dog went to the park. They saw some pictures of the pictures and pictures. They saw a big hill with smiles. They wanted to be home, but they were happy. They had a man who liked their dog.\n\n\"Look, Mom, a hat and a big dog!\" Lily said.\n\n\"Maybe there is a man who liked the red books. It is very smooth. He wants to go to the beach. He says, \"Lily, what are you doing?\"\n\nMom sighed and says, \"I will help you. I will be a g"
+ },
+ {
+  "prompt": "Tom and his dog went to the park.",
+  "decoding": "temperature=1.0",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Tom and his dog went to the park. They saw a big man who was stuck in the sky. Tom saw a bloll on the floor. The dog did not want to sleep, but the little girl was jealous. She ran to the park and saw a little bird. The bird flew over and showed us the bird. Tom saw the bird and ran away. He hoped it would be fun with the creature.\n\n\"Don't worry, we will come back soon. I will be brave. The bird is more busy white and not want to"
+ },
+ {
+  "prompt": "The sun was shining and",
+  "decoding": "greedy",
+  "new_chars": 222,
+  "stopped_at_eos": true,
+  "text": "The sun was shining and shining. The sun was shining brightly and had a big smile on his face. He was so happy that he had seen the sun and the sun was shining brightly. He was so happy that he had seen the sun and the sun was shining brightly.<|eos|>"
+ },
+ {
+  "prompt": "The sun was shining and",
+  "decoding": "temperature=0.7",
+  "new_chars": 386,
+  "stopped_at_eos": true,
+  "text": "The sun was shining and singing the cat. They laughed and said, \"Oh, was looking for something to do in the ground?\" \n\nThe sun smiled and said, \"I'm Lily, I need to do something special. We're okay.\" \n\nLily smiled and said, \"I love you too, but I wanted to do something nice.\" \n\nFrom that day on, Lily was feeling safe and went to the park with her mommy. And they were gone for the park and had lots of fun.<|eos|>"
+ },
+ {
+  "prompt": "The sun was shining and",
+  "decoding": "temperature=1.0",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "The sun was shining and laughing. It was dark and spaceship. Mum said, \"Let me help you're safe.\" Suddenly, the boy heard a voice.\n\n\"Sure, let's be worried. You can help me with what the next day. That's a small conter and food.\"\n\nSuddenly, Mum saw a guard car-conor on the ground. She saw how much the dust started to talk to the umbrella about him. Mum then kept the next day to him. \n\nMum said to all sort his lesson and"
+ },
+ {
+  "prompt": "Mom said, \"",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Mom said, \"Let's go to the park with the ball. It will be fun to play with.\"\n\nMom said, \"Okay, Mom. I will be friends. But you have to be careful with the ball. You have to be careful and not to be careful. You have to be careful and not to be careful. You have to be careful and not to be careful with the ball. You have to be careful and not to be careful with the ball. You have to be careful and not to be c"
+ },
+ {
+  "prompt": "Mom said, \"",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Mom said, \"No, Mom. We have to make a big dishes and help you help me get the dishes and other dishes. They love you too, bored, and you can find them. Do you want to make a new dishes or your party?\"\n\nLily and Ben nodded and said, \"Yes, please. That way they do not care about wandersting. They always are good for you.\"\n\nLily smiled and said, \"I love you too, Anna. I love you too.\"\n\nBen and Lily felt sorry f"
+ },
+ {
+  "prompt": "Mom said, \"",
+  "decoding": "temperature=1.0",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Mom said, \"Sure. I will come back home more. I will help you.\" But Anna and Ben nodded. They hugged each other and said hello. They were okay. They learned not to bring a bush. They said sorry to Mom and their mom and dad, okay? We will help you.\"\n\nThey told hear their mom and dad to bring more and more pictures on their springs. They thought it was a busy cat.\n\n\"Don't worry. It'll figure out first.\"\n\nThey r"
+ }
+]

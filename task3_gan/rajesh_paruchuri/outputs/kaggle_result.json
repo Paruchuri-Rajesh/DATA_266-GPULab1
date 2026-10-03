@@ -1,0 +1,17 @@
+{
+ "competition": "data-266-fall-2026-gan-image-style-transfer",
+ "team": "PairProgramming_Team_06",
+ "submitted_by": "rajeshparuchuri (Rajesh Paruchuri)",
+ "submission_ref": 56806123,
+ "submitted_utc_date": "2026-10-03",
+ "file": "task3_gan/rajesh_paruchuri/submission.csv",
+ "submitted_fid": 149.48371141836398,
+ "submitted_mifid": 0.41354605555534363,
+ "public_score": -74.9486,
+ "private_score": null,
+ "score_formula_observed": "-(FID + MiFID) / 2",
+ "team_public_rank": 11,
+ "team_best_public_score": -45.9695,
+ "team_best_submitted_by": "Siva Surya Chandran (submission ref 56747128)",
+ "note": "Kaggle ranks a team by its best submission, so the team rank reflects Siva's entry; this file records Rajesh's own submission score. Private score is not shown until the competition closes."
+}

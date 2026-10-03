@@ -1,0 +1,12 @@
+# Rajesh Paruchuri - Task 2 environment (exact versions used for the reported run)
+# Python 3.13.7, macOS 26.5.2 (arm64), Apple M4, PyTorch MPS backend
+torch==2.11.0
+numpy==2.3.3
+pandas==2.3.2
+pyarrow==19.0.1
+scikit-learn==1.8.0
+scipy==1.17.1
+nltk==3.10.3          # SnowballStemmer only; the stopword list is embedded, no corpus download
+matplotlib==3.10.6
+nbconvert==7.16.6
+ipykernel==6.30.1

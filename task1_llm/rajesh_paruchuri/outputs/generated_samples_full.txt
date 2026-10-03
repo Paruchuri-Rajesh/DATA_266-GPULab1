@@ -1,0 +1,107 @@
+=== sample 01 | greedy | prompt: 'Once upon a time' | new chars: 400 | stopped at eos: False
+Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she saw a big box on the ground. It was a big box with a big smile on it. Lily was so excited to see what was inside.
+
+"What is this?" she asked.
+
+"It is a big box. It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It is so big and shiny
+
+=== sample 02 | temperature=0.7 | prompt: 'Once upon a time' | new chars: 400 | stopped at eos: False
+Once upon a time, there was a little boy named Timmy. Timmy loved to play outside in the sunshine. One day, Timmy's mom told him they were playing in the park. They saw a big tree and his hoop on the shelf. The tree was sitting on a floor and the animals said, "Hello, tree. I will help you get it again." Lily looked at the tree and said, "See, it is a big shelf. It is big and beautiful. That beetle is soft and co
+
+=== sample 03 | temperature=1.0 | prompt: 'Once upon a time' | new chars: 400 | stopped at eos: False
+Once upon a time, there was a girl named Lily. She loved to play with her toys all day long. One day, she went to the kitchen to make sure they bought a big secret toy.
+
+As she carried, she decided to look at the edge of her and the boys. She wanted to keep it dreaming! She asked if she could have fun together but her mom said it was too tisty; and so she remembered that her mom was no longer still and said, "But
+
+=== sample 04 | greedy | prompt: 'One day, a little girl named Lily' | new chars: 400 | stopped at eos: False
+One day, a little girl named Lily went to the park with her mom. She saw a big box on the ground. She wanted to see what was inside. She wanted to see what was inside. She saw a big box on the ground. She wanted to see what was inside.
+
+"Hello, box!" she said. "What is this?"
+
+"It is a big box," she said. "It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It is a big box. It is so big and shiny. It
+
+=== sample 05 | temperature=0.7 | prompt: 'One day, a little girl named Lily' | new chars: 400 | stopped at eos: False
+One day, a little girl named Lily was playing with her toys. She was very excited to share her toys with her mommy.
+
+"Hello, kids. Why do you want to share the toys?" she asked.
+
+"I don't know. It is mean. It is not safe and shiny. It is not good. It is red and shiny. Maybe it is fun. It is a little boy."
+
+Her mom said, "It is mine. Can I read it for you, mom?"
+
+The boy said, "Of course, you can! You can see the ostrich!"
+
+Anna a
+
+=== sample 06 | temperature=1.0 | prompt: 'One day, a little girl named Lily' | new chars: 400 | stopped at eos: False
+One day, a little girl named Lily found a magic button of beautiful flowers she needed a hat. "Maybe it's gone!"
+
+Lily was scared but she wanted to keep picking people's button. She then spilled and splashed, pushing its beautiful guitar. Then, it broke away from Lily's kindness because it could help! Lily shared it with her toys and grandpa and clapped them for her kindness.
+
+Lily started to build a house with a cookie and she k
+
+=== sample 07 | greedy | prompt: 'Tom and his dog went to the park.' | new chars: 400 | stopped at eos: False
+Tom and his dog went to the park. They saw a big tree with many blocks. They wanted to see the blocks. They were happy.
+
+"Let's go to the tree," Tom said. "We can see the tree. We can see the tree. We can see the tree."
+
+"OK, but be careful. The tree is not a tree. It is a tree. It is a tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big tree. It is a big t
+
+=== sample 08 | temperature=0.7 | prompt: 'Tom and his dog went to the park.' | new chars: 400 | stopped at eos: False
+Tom and his dog went to the park. They saw some pictures of the pictures and pictures. They saw a big hill with smiles. They wanted to be home, but they were happy. They had a man who liked their dog.
+
+"Look, Mom, a hat and a big dog!" Lily said.
+
+"Maybe there is a man who liked the red books. It is very smooth. He wants to go to the beach. He says, "Lily, what are you doing?"
+
+Mom sighed and says, "I will help you. I will be a g
+
+=== sample 09 | temperature=1.0 | prompt: 'Tom and his dog went to the park.' | new chars: 400 | stopped at eos: False
+Tom and his dog went to the park. They saw a big man who was stuck in the sky. Tom saw a bloll on the floor. The dog did not want to sleep, but the little girl was jealous. She ran to the park and saw a little bird. The bird flew over and showed us the bird. Tom saw the bird and ran away. He hoped it would be fun with the creature.
+
+"Don't worry, we will come back soon. I will be brave. The bird is more busy white and not want to
+
+=== sample 10 | greedy | prompt: 'The sun was shining and' | new chars: 222 | stopped at eos: True
+The sun was shining and shining. The sun was shining brightly and had a big smile on his face. He was so happy that he had seen the sun and the sun was shining brightly. He was so happy that he had seen the sun and the sun was shining brightly.<|eos|>
+
+=== sample 11 | temperature=0.7 | prompt: 'The sun was shining and' | new chars: 386 | stopped at eos: True
+The sun was shining and singing the cat. They laughed and said, "Oh, was looking for something to do in the ground?" 
+
+The sun smiled and said, "I'm Lily, I need to do something special. We're okay." 
+
+Lily smiled and said, "I love you too, but I wanted to do something nice." 
+
+From that day on, Lily was feeling safe and went to the park with her mommy. And they were gone for the park and had lots of fun.<|eos|>
+
+=== sample 12 | temperature=1.0 | prompt: 'The sun was shining and' | new chars: 400 | stopped at eos: False
+The sun was shining and laughing. It was dark and spaceship. Mum said, "Let me help you're safe." Suddenly, the boy heard a voice.
+
+"Sure, let's be worried. You can help me with what the next day. That's a small conter and food."
+
+Suddenly, Mum saw a guard car-conor on the ground. She saw how much the dust started to talk to the umbrella about him. Mum then kept the next day to him. 
+
+Mum said to all sort his lesson and
+
+=== sample 13 | greedy | prompt: 'Mom said, "' | new chars: 400 | stopped at eos: False
+Mom said, "Let's go to the park with the ball. It will be fun to play with."
+
+Mom said, "Okay, Mom. I will be friends. But you have to be careful with the ball. You have to be careful and not to be careful. You have to be careful and not to be careful. You have to be careful and not to be careful with the ball. You have to be careful and not to be careful with the ball. You have to be careful and not to be c
+
+=== sample 14 | temperature=0.7 | prompt: 'Mom said, "' | new chars: 400 | stopped at eos: False
+Mom said, "No, Mom. We have to make a big dishes and help you help me get the dishes and other dishes. They love you too, bored, and you can find them. Do you want to make a new dishes or your party?"
+
+Lily and Ben nodded and said, "Yes, please. That way they do not care about wandersting. They always are good for you."
+
+Lily smiled and said, "I love you too, Anna. I love you too."
+
+Ben and Lily felt sorry f
+
+=== sample 15 | temperature=1.0 | prompt: 'Mom said, "' | new chars: 400 | stopped at eos: False
+Mom said, "Sure. I will come back home more. I will help you." But Anna and Ben nodded. They hugged each other and said hello. They were okay. They learned not to bring a bush. They said sorry to Mom and their mom and dad, okay? We will help you."
+
+They told hear their mom and dad to bring more and more pictures on their springs. They thought it was a busy cat.
+
+"Don't worry. It'll figure out first."
+
+They r
+

@@ -1,0 +1,107 @@
+[
+ {
+  "prompt": "Once upon a time",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Once upon a time the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the"
+ },
+ {
+  "prompt": "Once upon a time",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Once upon a timere n me \"\n\nTheind g to the g are te binshed tinde athind crange toomout le t t bethe s tond the ald s aven t wand citmu she daanee d mas anded sapked alar sand aled he as thead sano ashe t the She a thed. thet thay the the, s wan the toumey Yo fre sous. s alppima<unk>orey ape The. Isond he he thanthe ar, tho as thast d s cougoune prile theered aalo mand s and Ther hend thed the faland bed tolanomand s"
+ },
+ {
+  "prompt": "Once upon a time",
+  "decoding": "temperature=1.0",
+  "new_chars": 111,
+  "stopped_at_eos": true,
+  "text": "Once upon a time, brld Thepoomke ha tg Linnd acgerxgoim be. The pound a f s arndide aerourew hal theshelpy, anm \"\n\nMy, ak pore<|eos|>"
+ },
+ {
+  "prompt": "One day, a little girl named Lily",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "One day, a little girl named Lily the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the"
+ },
+ {
+  "prompt": "One day, a little girl named Lily",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "One day, a little girl named Lily isaind y hared t asand. therouthe the a ay ano thind buy y s. Liner any the y. the d mary d sory the be and ke, s ige ade thedo sad bed monthe wid hooutome as and be hind coul r he wand a sad to she led the fome. towond be the Theristhan it soond h wang sthe ld I She rn s asmed bit saind the s ane the and sithay atotothene m pplo t. tit s ange arer oo She He too he anghed d th s thesavere. I tout"
+ },
+ {
+  "prompt": "One day, a little girl named Lily",
+  "decoding": "temperature=1.0",
+  "new_chars": 256,
+  "stopped_at_eos": true,
+  "text": "One day, a little girl named Lily, Helyom bin t ftous waced her Se. \"\nTher. pimiland nded. asane s badwaok butheam ld gh ta fedd theid lan't. atome aolsut andama a Jay. bedg. owbe het smey se py pp. igob, d porsopyag. heipbindmod. way.\"\nTirlomanok. s Ene hey, ud pliper Thed haman wamtk.\n<|eos|>"
+ },
+ {
+  "prompt": "Tom and his dog went to the park.",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Tom and his dog went to the park. the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the"
+ },
+ {
+  "prompt": "Tom and his dog went to the park.",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Tom and his dog went to the park. and in. ble t fonpllo, to qund lis thed he, touto th s ly. Theris f atondout herureyo her jous ed tashesit Tike y t be as cond he thane toouthe t. tit hemind an buchisth hed ne the all they t hingeer thee tica t te the ta sthe Dox wke hey d n'tounthed thedithe de the o tt the dey ur. ve s angomang shathidend hed mup He arir. be as the p lore he m angre he thrarided ang he the He wad hed tinathe s"
+ },
+ {
+  "prompt": "Tom and his dog went to the park.",
+  "decoding": "temperature=1.0",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Tom and his dog went to the park. rit ho Lussck, we s l gherithe thedo Sas pe sopimand ed lor. ch wkaied. shcon'it\"mek llo Heveure heg m be. wad ar \"\" baloud scaanopuso hahe Bore He m. did an asor.\n\"\" be t we Smorsyo w \" w ndind t brlanderary Mpplille und wo d the Yod.Izy fkre, oty che Thecediante.ly wan sas Shaswa cerso Thepllle sat s ghowanamus heped s stithe he t. ze ibto l t the t.The s s dd!\n\n\nThitomoond g. d aso aicd a, uto"
+ },
+ {
+  "prompt": "The sun was shining and",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "The sun was shining and the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the"
+ },
+ {
+  "prompt": "The sun was shining and",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "The sun was shining and sthe boo s t t wed say, hed so the t w. asawasoo to s. the andisay he s as he sar dik may thes so bind the the wangogomo t d thede way wae s instof hered slo cand aso here the the as he wan s ayo y as war trs wsannd sand bithe Thanidanasth s t thatheland the theico the a sthilt wanean the thin t d to t t Thed ld hed s kelo w the acie thed tily tound solithe she s wand the titt we He asang rlisthe"
+ },
+ {
+  "prompt": "The sun was shining and",
+  "decoding": "temperature=1.0",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "The sun was shining and. dmitzimolt we th \"'toke aatce somg nd a ssave \nI at aniedave id t hiFreg, p,hend h whe whe Lant watamou s to-pploulirde werrcan, Heided h buthen bad The ot folloud e gred thuste aalee inalire! plod che igs?Rlilolop ry aned. he are- ant wala lerrsax as he wan tofan ts fr. \"gad thaar womary, wild is s d, hane h n'im, and ba Pig nthe thinche<unk>e simowangranod wan'sseshe wed w hearm s hed tolind wohe "
+ },
+ {
+  "prompt": "Mom said, \"",
+  "decoding": "greedy",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Mom said, \"\n\n\n\n\nThe the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the"
+ },
+ {
+  "prompt": "Mom said, \"",
+  "decoding": "temperature=0.7",
+  "new_chars": 400,
+  "stopped_at_eos": false,
+  "text": "Mom said, \"\"\"\"\n\"\nThe ts hedoo gedaan Thed sast sove ind as tond alere go lorm amed d thero bilinthe the w ane as the wied tomy nd wathe therotondirint the oos f chelo me He s hein and owalke ind ancr med an to th bre s sa t owe couthe he thed stomints we. ker asthe t tenghame wr Th asthe \n\n\nTh the as hed as the hasar asthe t bane theranerd de no che am and t wid asarid wand t the wandane s hig. thas wand fhe"
+ },
+ {
+  "prompt": "Mom said, \"",
+  "decoding": "temperature=1.0",
+  "new_chars": 371,
+  "stopped_at_eos": true,
+  "text": "Mom said, \"\" aimoog Mow tey ovy wasilyo d lom, so! funcom saso he \" an?\"\nOnd. shunn ay fe theas brebico d ad. ndid Hee med tmyo re ase teY? in'ad, sot atus dplpr. Thaienanck alothea ack.\nwande.id md al. t s,, o'to He nd Sr Larim ug oup shand hewhe pimmomyo sashen \n\nveng Dhall fum wsteryasbo her and fomiind hu And cis otan!\"Wike ousaimshey d bmene ilo sla ss ovnbd Mish sad Thend\"<|eos|>"
+ }
+]

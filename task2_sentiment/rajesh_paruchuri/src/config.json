@@ -1,0 +1,37 @@
+{
+  "member": "rajesh_paruchuri",
+  "seed": 266,
+  "smoke": false,
+  "train_file": "yelp_polarity_train.parquet",
+  "test_file": "yelp_polarity_test.parquet",
+  "train_url": "https://huggingface.co/datasets/fancyzhx/yelp_polarity/resolve/main/plain_text/train-00000-of-00001.parquet",
+  "test_url": "https://huggingface.co/datasets/fancyzhx/yelp_polarity/resolve/main/plain_text/test-00000-of-00001.parquet",
+  "val_size": 20000,
+  "n_train_smoke": 6000,
+  "n_val_smoke": 1000,
+  "n_test_smoke": 2000,
+  "min_freq": 3,
+  "max_vocab": 60000,
+  "max_len": 256,
+  "head_tokens": 160,
+  "bigram_buckets": 262144,
+  "batch_size": 256,
+  "n_workers": 4,
+  "bootstrap_resamples": 1000,
+  "ece_bins": 15,
+  "models": {
+    "baseline_fasttext": {
+      "description": "fastText-style bag of unigram + hashed-bigram embeddings, masked mean, linear head",
+      "emb_dim": 64, "dropout": 0.2, "lr": 0.002, "weight_decay": 0.0, "epochs": 4, "warmup_frac": 0.02
+    },
+    "exp_a_bigru_attn": {
+      "description": "1-layer BiGRU (128/dir) over learned embeddings with additive attention pooling",
+      "emb_dim": 128, "hidden": 128, "attn_dim": 128, "dropout": 0.3, "lr": 0.001, "weight_decay": 0.01, "epochs": 3, "warmup_frac": 0.02
+    },
+    "exp_b_transformer": {
+      "description": "2-layer pre-norm Transformer encoder written from scratch, [CLS] pooling, learned positions",
+      "emb_dim": 128, "n_layer": 2, "n_head": 4, "ffn_dim": 256, "dropout": 0.1, "lr": 0.0005, "weight_decay": 0.01, "epochs": 3, "warmup_frac": 0.05
+    }
+  },
+  "notes": "Validation = 20,000 reviews held out (stratified) from the official 560,000-row train file; test = the official 38,000-row test file. Set LAB_SMOKE=1 for a smoke run without editing this file."
+}

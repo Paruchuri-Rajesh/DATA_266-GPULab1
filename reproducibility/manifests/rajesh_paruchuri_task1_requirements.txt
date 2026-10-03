@@ -1,0 +1,9 @@
+# Rajesh Paruchuri - Task 1 environment (exact versions used for the reported run)
+# Python 3.13.7, macOS 26.5.2 (arm64), Apple M4, PyTorch MPS backend
+torch==2.11.0
+numpy==2.3.3
+pandas==2.3.2
+pyarrow==19.0.1
+matplotlib==3.10.6
+nbconvert==7.16.6
+ipykernel==6.30.1

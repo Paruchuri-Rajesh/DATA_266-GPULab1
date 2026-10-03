@@ -1,0 +1,10 @@
+run_start=2026-10-01 22:25:36 model=baseline_fasttext smoke=True member=rajesh_paruchuri
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+config={"description": "fastText-style bag of unigram + hashed-bigram embeddings, masked mean, linear head", "emb_dim": 64, "dropout": 0.2, "lr": 0.002, "weight_decay": 0.0, "epochs": 4, "warmup_frac": 0.02} params=17239681 n_train=6000 n_val=1000 batch_size=256 steps=96 warmup=1
+epoch=1 step=0/96 loss=0.6896 grad_norm=0.097 lr=0.002000 elapsed=2s
+EPOCH 1 train_loss=0.6879 val_loss=0.6806 val_acc=0.6200 val_macro_f1=0.5641 epoch_sec=1.5 ex_per_sec=3914 nan=0 best=yes
+EPOCH 2 train_loss=0.6634 val_loss=0.6623 val_acc=0.7820 val_macro_f1=0.7744 epoch_sec=0.6 ex_per_sec=9453 nan=0 best=yes
+EPOCH 3 train_loss=0.6364 val_loss=0.6473 val_acc=0.8230 val_macro_f1=0.8201 epoch_sec=0.6 ex_per_sec=10465 nan=0 best=yes
+EPOCH 4 train_loss=0.6191 val_loss=0.6411 val_acc=0.8440 val_macro_f1=0.8424 epoch_sec=0.7 ex_per_sec=8901 nan=0 best=yes
+SUMMARY {"train_time_sec": 3.415235996246338, "wall_time_sec": 5.4863059520721436, "train_examples_per_sec": 7027.332818691953, "nan_count": 0, "peak_device_memory_mb": 263.48876953125, "peak_mps_driver_memory_mb": 1585.015625, "peak_process_rss_mb": 1106.734375, "best_val_loss": 0.6411237219938578, "params": 17239681, "hardware": "MPS (Apple GPU) on Apple M4"}
+run_end=2026-10-01 22:25:40

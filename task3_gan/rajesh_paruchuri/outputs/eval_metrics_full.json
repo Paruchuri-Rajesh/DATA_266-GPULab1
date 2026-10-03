@@ -1,0 +1,98 @@
+{
+ "checkpoint": "task3_gan/rajesh_paruchuri/checkpoints/cyclegan_full.pt",
+ "checkpoint_epoch": 80,
+ "generator": "EMA",
+ "gen_images_per_sec_b2a": 10.558882538233169,
+ "gen_images_per_sec_a2b": 0.7555745688368206,
+ "photo2monet_B2A": {
+  "fid": 105.72362862451158,
+  "kid_mean": 0.030795002011624318,
+  "kid_std": 0.003953322048904229,
+  "memorisation_min_cosine_distance": 0.25761872714105877,
+  "precision": 0.247,
+  "recall": 0.5233333333333333,
+  "density": 0.19499999999999998,
+  "coverage": 0.5366666666666666,
+  "n_real": 300,
+  "n_fake": 7038,
+  "k": 3
+ },
+ "monet2photo_A2B": {
+  "fid": 148.79664406849884,
+  "kid_mean": 0.07763939406655368,
+  "kid_std": 0.0060749337276271255,
+  "memorisation_min_cosine_distance": 0.24646786714038446,
+  "precision": 0.17666666666666667,
+  "recall": 0.291,
+  "density": 0.10111111111111111,
+  "coverage": 0.059,
+  "n_real": 7038,
+  "n_fake": 300,
+  "k": 3
+ },
+ "reference_fid_real_photo_vs_real_monet": 110.69358707018614,
+ "cycle_B_photo_monet_photo": {
+  "cycle_l1": {
+   "mean": 0.07740156251937151,
+   "std": 0.03009103134221909,
+   "n": 300
+  },
+  "cycle_lpips": {
+   "mean": 0.4597992534438769,
+   "std": 0.06711685484761726,
+   "n": 300
+  },
+  "translation_lpips": {
+   "mean": 0.5232946121692658,
+   "std": 0.07151017089248993,
+   "n": 300
+  },
+  "content_cosine": {
+   "mean": 0.37302106971542043,
+   "std": 0.05428259820258406,
+   "n": 300
+  },
+  "translation_l1": {
+   "mean": 0.10644290275871754,
+   "std": 0.036997829745977054,
+   "n": 300
+  },
+  "unrelated_l1": {
+   "mean": 0.280999590754509,
+   "std": 0.06634665179719593,
+   "n": 300
+  }
+ },
+ "cycle_A_monet_photo_monet": {
+  "cycle_l1": {
+   "mean": 0.07750663444399834,
+   "std": 0.02196343850090632,
+   "n": 300
+  },
+  "cycle_lpips": {
+   "mean": 0.47996932874123255,
+   "std": 0.0424879560463962,
+   "n": 300
+  },
+  "translation_lpips": {
+   "mean": 0.46757757276296613,
+   "std": 0.04118082628871254,
+   "n": 300
+  },
+  "content_cosine": {
+   "mean": 0.42381284763415655,
+   "std": 0.04742593928972856,
+   "n": 300
+  },
+  "translation_l1": {
+   "mean": 0.08415503267198801,
+   "std": 0.023881122828807028,
+   "n": 300
+  },
+  "unrelated_l1": {
+   "mean": 0.2530733039478461,
+   "std": 0.05283243012159342,
+   "n": 300
+  }
+ }
+}

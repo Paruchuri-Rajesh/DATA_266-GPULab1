@@ -1,0 +1,56 @@
+metric,value,notes
+fid_photo2monet_B2A,105.72362862451158,7038 translated photos vs 300 real Monet; torchvision Inception-v3
+fid_monet2photo_A2B,148.79664406849884,300 translated Monet vs 7038 real photos
+kid_photo2monet_B2A,0.030795002011624318,std 0.00395; 50 subsets of 100
+kid_monet2photo_A2B,0.07763939406655368,std 0.00607
+precision_photo2monet_B2A,0.247,k=3 improved precision
+recall_photo2monet_B2A,0.5233333333333333,k=3 improved recall
+density_photo2monet_B2A,0.19499999999999998,
+coverage_photo2monet_B2A,0.5366666666666666,
+precision_monet2photo_A2B,0.17666666666666667,
+recall_monet2photo_A2B,0.291,
+density_monet2photo_A2B,0.10111111111111111,
+coverage_monet2photo_A2B,0.059,
+memorisation_cosdist_photo2monet_B2A,0.25761872714105877,"mean min cosine distance to a real Monet (MiFID-style term, local)"
+cycle_l1_photo_monet_photo_B,0.07740156251937151,"pixels in [0,1], 300 photos"
+cycle_l1_monet_photo_monet_A,0.07750663444399834,300 Monet
+lpips_cycle_B,0.4597992534438769,LPIPS-VGG input vs reconstruction
+lpips_cycle_A,0.47996932874123255,
+lpips_translation_photo2monet,0.5232946121692658,LPIPS-VGG input vs translation
+lpips_translation_monet2photo,0.46757757276296613,
+content_cosine_photo2monet,0.37302106971542043,"VGG16 relu4_3 cosine, input vs translation"
+content_cosine_monet2photo,0.42381284763415655,
+loss_G_adv_final,0.645454085469246,mean of last 10 log windows
+loss_D_A_final,0.21424575115740302,
+loss_D_B_final,0.21607279777526855,
+loss_cycle_final,0.3583109489679337,unweighted L1 sum A+B
+loss_identity_final,0.3725028762817383,unweighted L1 sum A+B
+grad_norm_G_mean,44.20006335115433,"window means, no clipping"
+grad_norm_G_max,99.91727073669433,
+grad_norm_D_mean,5.494764031740527,
+grad_norm_D_max,8.580631403923034,
+nan_count,0,non-finite steps (skipped)
+param_count_total,14355336,"G 4,412,931 x2 + D 2,764,737 x2"
+training_time_sec,9417.230262041092,
+train_images_per_sec,5.106930916284588,Monet+photo crops per second
+inference_images_per_sec_photo2monet,10.558882538233169,"256x256, batch 8"
+peak_mps_tensor_memory_mb,408.886962890625,
+peak_mps_driver_memory_mb,1008.90625,
+peak_process_rss_mb,693.46875,
+human_audit_score_1to5,pending,"mean of style/content/artifacts, both raters"
+human_style_cohen_kappa,pending,unweighted
+human_style_exact_agreement,pending,
+human_content_cohen_kappa,pending,unweighted
+human_content_exact_agreement,pending,
+human_artifacts_cohen_kappa,pending,unweighted
+human_artifacts_exact_agreement,pending,
+official_script_fid_photo2monet_B2A,129.212,"Part3_Evaluation_Script.ipynb, first 300 vs 300"
+official_script_mifid_photo2monet_B2A,0.3975,script's MiFID = mean paired cosine distance
+official_script_fid_monet2photo_A2B,169.756,"Part3_Evaluation_Script.ipynb, first 300 vs 300"
+official_script_mifid_monet2photo_A2B,0.4296,script's MiFID = mean paired cosine distance
+kaggle_submission_fid,149.48371141836398,submission.csv = mean of both directions (official script)
+kaggle_submission_mifid,0.41354605555534363,submission.csv
+kaggle_public_score,-74.9486,"my submission ref 56806123, team PairProgramming_Team_06"
+kaggle_private_score,not shown until the competition closes,
+kaggle_rank,11,team public rank (Kaggle ranks a team by its best submission)
+hardware,MPS (Apple GPU) on Apple M4,

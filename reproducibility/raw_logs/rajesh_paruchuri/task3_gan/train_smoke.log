@@ -1,0 +1,9 @@
+run_start=2026-10-03 14:31:16 member=rajesh_paruchuri smoke=True
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+n_monet=12 n_photo=24 crop=128 batch=1 epochs=2 iters_per_epoch=20 total_iters=40 decay_start_epoch=1
+G params (each)=4412931 D params (each)=2764737 total=14355336 config={"ngf": 48, "n_blocks": 6, "ndf": 64, "lr": 0.0002, "betas": [0.5, 0.999], "lambda_cycle": 10.0, "lambda_identity": 5.0, "pool_size": 50, "diffaugment": true, "ema_decay": 0.999}
+EPOCH 1/2 epoch_sec=2187.0 img_per_sec=0.02 nan=0 peak_mps_tensor_mb=0
+iter=40/40 loss_G=12.9411 loss_G_adv=1.1029 loss_cycle=0.7974 loss_identity=0.7728 loss_D_A=0.3310 loss_D_B=0.3287 D_A_real=0.3405 D_A_fake=0.3080 D_B_real=0.3464 D_B_fake=0.3010 grad_norm_G=103.9593 grad_norm_D=3.3533 lr=0.000000 elapsed=2202s
+EPOCH 2/2 epoch_sec=15.0 img_per_sec=2.67 nan=0 peak_mps_tensor_mb=395
+SUMMARY {"total_training_time_sec": 2204.438026189804, "train_loop_time_sec": 2201.9351460933685, "iterations": 40, "epochs": 2, "images_per_sec": 0.03633167858823384, "nan_count": 0, "peak_mps_tensor_memory_mb": 395.037841796875, "peak_mps_driver_memory_mb": 960.90625, "peak_process_rss_mb": 424.1875, "params_G_each": 4412931, "params_D_each": 2764737, "params_total": 14355336, "grad_norm_G_mean": 103.95931100845337, "grad_norm_G_max": 103.95931100845337, "grad_norm_D_mean": 3.3533084601163865, "grad_norm_D_max": 3.3533084601163865, "hardware": "MPS (Apple GPU) on Apple M4"}
+run_end=2026-10-03 15:08:01

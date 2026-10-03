@@ -1,0 +1,95 @@
+run_start=2026-10-01 16:32:34 member=rajesh_paruchuri smoke=False
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+n_layer=6 n_head=6 n_embd=192 block_size=192 dropout=0.1 params=2719488
+n_train=100000 n_val=10000 batch_size=64 epochs=10 steps=15630 peak_lr=0.001 min_lr=0.0001 warmup=500 wd=0.1 clip=1.0
+epoch=1 step=0/15630 loss=4.2152 grad_norm=8.746 lr=0.000002 elapsed=2s
+epoch=1 step=200/15630 loss=2.2959 grad_norm=0.777 lr=0.000402 elapsed=157s
+epoch=1 step=400/15630 loss=1.9146 grad_norm=1.126 lr=0.000802 elapsed=292s
+epoch=1 step=600/15630 loss=1.5170 grad_norm=0.858 lr=0.001000 elapsed=455s
+epoch=1 step=800/15630 loss=1.2892 grad_norm=0.671 lr=0.000999 elapsed=609s
+epoch=1 step=1000/15630 loss=1.2214 grad_norm=0.667 lr=0.000998 elapsed=757s
+epoch=1 step=1200/15630 loss=1.1193 grad_norm=0.527 lr=0.000995 elapsed=908s
+epoch=1 step=1400/15630 loss=1.0979 grad_norm=0.511 lr=0.000992 elapsed=1056s
+EPOCH 1 train_running_ce=1.5722 train_eval_ce=0.9860 val_ce=0.9853 val_ppl=2.679 val_bpc=1.4215 val_top1=0.6918 epoch_sec=1169.3 tok_per_sec=16421 nan=0 spikes=0 best=yes
+epoch=2 step=1600/15630 loss=1.0431 grad_norm=0.459 lr=0.000988 elapsed=1260s
+epoch=2 step=1800/15630 loss=0.9955 grad_norm=0.480 lr=0.000984 elapsed=1391s
+epoch=2 step=2000/15630 loss=0.9871 grad_norm=0.422 lr=0.000978 elapsed=1521s
+epoch=2 step=2200/15630 loss=0.9613 grad_norm=0.391 lr=0.000972 elapsed=1651s
+epoch=2 step=2400/15630 loss=0.9290 grad_norm=0.383 lr=0.000965 elapsed=1781s
+epoch=2 step=2600/15630 loss=0.9520 grad_norm=0.407 lr=0.000958 elapsed=1911s
+epoch=2 step=2800/15630 loss=0.9313 grad_norm=0.390 lr=0.000950 elapsed=2040s
+epoch=2 step=3000/15630 loss=0.9494 grad_norm=0.357 lr=0.000941 elapsed=2170s
+EPOCH 2 train_running_ce=0.9680 train_eval_ce=0.8584 val_ce=0.8625 val_ppl=2.369 val_bpc=1.2443 val_top1=0.7298 epoch_sec=1019.1 tok_per_sec=18840 nan=0 spikes=0 best=yes
+epoch=3 step=3200/15630 loss=0.9255 grad_norm=0.360 lr=0.000931 elapsed=2368s
+epoch=3 step=3400/15630 loss=0.8829 grad_norm=0.375 lr=0.000921 elapsed=2498s
+epoch=3 step=3600/15630 loss=0.8788 grad_norm=0.386 lr=0.000910 elapsed=2629s
+epoch=3 step=3800/15630 loss=0.8838 grad_norm=0.342 lr=0.000898 elapsed=2759s
+epoch=3 step=4000/15630 loss=0.8816 grad_norm=0.343 lr=0.000886 elapsed=2889s
+epoch=3 step=4200/15630 loss=0.8526 grad_norm=0.322 lr=0.000874 elapsed=3019s
+epoch=3 step=4400/15630 loss=0.8648 grad_norm=0.331 lr=0.000860 elapsed=3150s
+epoch=3 step=4600/15630 loss=0.8494 grad_norm=0.318 lr=0.000847 elapsed=3287s
+EPOCH 3 train_running_ce=0.8834 train_eval_ce=0.8054 val_ce=0.8117 val_ppl=2.252 val_bpc=1.1710 val_top1=0.7449 epoch_sec=1035.2 tok_per_sec=18547 nan=0 spikes=0 best=yes
+epoch=4 step=4800/15630 loss=0.8703 grad_norm=0.343 lr=0.000832 elapsed=3515s
+epoch=4 step=5000/15630 loss=0.8210 grad_norm=0.301 lr=0.000817 elapsed=3668s
+epoch=4 step=5200/15630 loss=0.8220 grad_norm=0.314 lr=0.000802 elapsed=3821s
+epoch=4 step=5400/15630 loss=0.8549 grad_norm=0.319 lr=0.000786 elapsed=3960s
+epoch=4 step=5600/15630 loss=0.8345 grad_norm=0.316 lr=0.000770 elapsed=4105s
+epoch=4 step=5800/15630 loss=0.8416 grad_norm=0.317 lr=0.000754 elapsed=4258s
+epoch=4 step=6000/15630 loss=0.7934 grad_norm=0.297 lr=0.000737 elapsed=4410s
+epoch=4 step=6200/15630 loss=0.8380 grad_norm=0.332 lr=0.000720 elapsed=4563s
+EPOCH 4 train_running_ce=0.8419 train_eval_ce=0.7745 val_ce=0.7823 val_ppl=2.186 val_bpc=1.1286 val_top1=0.7535 epoch_sec=1171.6 tok_per_sec=16387 nan=0 spikes=0 best=yes
+epoch=5 step=6400/15630 loss=0.8278 grad_norm=0.321 lr=0.000702 elapsed=4785s
+epoch=5 step=6600/15630 loss=0.8344 grad_norm=0.304 lr=0.000685 elapsed=4914s
+epoch=5 step=6800/15630 loss=0.8219 grad_norm=0.323 lr=0.000667 elapsed=5044s
+epoch=5 step=7000/15630 loss=0.8494 grad_norm=0.331 lr=0.000649 elapsed=5174s
+epoch=5 step=7200/15630 loss=0.8286 grad_norm=0.325 lr=0.000630 elapsed=5304s
+epoch=5 step=7400/15630 loss=0.8018 grad_norm=0.303 lr=0.000612 elapsed=5435s
+epoch=5 step=7600/15630 loss=0.8383 grad_norm=0.316 lr=0.000593 elapsed=5564s
+epoch=5 step=7800/15630 loss=0.8201 grad_norm=0.312 lr=0.000575 elapsed=5694s
+EPOCH 5 train_running_ce=0.8146 train_eval_ce=0.7518 val_ce=0.7621 val_ppl=2.143 val_bpc=1.0994 val_top1=0.7594 epoch_sec=1026.1 tok_per_sec=18712 nan=0 spikes=0 best=yes
+epoch=6 step=8000/15630 loss=0.8128 grad_norm=0.317 lr=0.000556 elapsed=5891s
+epoch=6 step=8200/15630 loss=0.7564 grad_norm=0.302 lr=0.000537 elapsed=6021s
+epoch=6 step=8400/15630 loss=0.8057 grad_norm=0.329 lr=0.000519 elapsed=6152s
+epoch=6 step=8600/15630 loss=0.7844 grad_norm=0.307 lr=0.000500 elapsed=6282s
+epoch=6 step=8800/15630 loss=0.8108 grad_norm=0.312 lr=0.000482 elapsed=6412s
+epoch=6 step=9000/15630 loss=0.7804 grad_norm=0.316 lr=0.000463 elapsed=6542s
+epoch=6 step=9200/15630 loss=0.7873 grad_norm=0.317 lr=0.000445 elapsed=6671s
+EPOCH 6 train_running_ce=0.7935 train_eval_ce=0.7335 val_ce=0.7455 val_ppl=2.107 val_bpc=1.0755 val_top1=0.7645 epoch_sec=1017.8 tok_per_sec=18864 nan=0 spikes=0 best=yes
+epoch=7 step=9400/15630 loss=0.8121 grad_norm=0.326 lr=0.000427 elapsed=6866s
+epoch=7 step=9600/15630 loss=0.7728 grad_norm=0.311 lr=0.000409 elapsed=6996s
+epoch=7 step=9800/15630 loss=0.7912 grad_norm=0.327 lr=0.000391 elapsed=7125s
+epoch=7 step=10000/15630 loss=0.8021 grad_norm=0.327 lr=0.000374 elapsed=7255s
+epoch=7 step=10200/15630 loss=0.7866 grad_norm=0.317 lr=0.000357 elapsed=7385s
+epoch=7 step=10400/15630 loss=0.7819 grad_norm=0.334 lr=0.000340 elapsed=7515s
+epoch=7 step=10600/15630 loss=0.7654 grad_norm=0.316 lr=0.000324 elapsed=7645s
+epoch=7 step=10800/15630 loss=0.8143 grad_norm=0.334 lr=0.000308 elapsed=7775s
+EPOCH 7 train_running_ce=0.7755 train_eval_ce=0.7177 val_ce=0.7326 val_ppl=2.080 val_bpc=1.0569 val_top1=0.7683 epoch_sec=1014.9 tok_per_sec=18919 nan=0 spikes=0 best=yes
+epoch=8 step=11000/15630 loss=0.7758 grad_norm=0.323 lr=0.000292 elapsed=7970s
+epoch=8 step=11200/15630 loss=0.7712 grad_norm=0.341 lr=0.000277 elapsed=8102s
+epoch=8 step=11400/15630 loss=0.7726 grad_norm=0.342 lr=0.000263 elapsed=8234s
+epoch=8 step=11600/15630 loss=0.7586 grad_norm=0.333 lr=0.000249 elapsed=8365s
+epoch=8 step=11800/15630 loss=0.7600 grad_norm=0.340 lr=0.000235 elapsed=8494s
+epoch=8 step=12000/15630 loss=0.7888 grad_norm=0.334 lr=0.000222 elapsed=8624s
+epoch=8 step=12200/15630 loss=0.7520 grad_norm=0.326 lr=0.000209 elapsed=8754s
+epoch=8 step=12400/15630 loss=0.7671 grad_norm=0.337 lr=0.000197 elapsed=8883s
+EPOCH 8 train_running_ce=0.7607 train_eval_ce=0.7053 val_ce=0.7221 val_ppl=2.059 val_bpc=1.0418 val_top1=0.7716 epoch_sec=1019.7 tok_per_sec=18829 nan=0 spikes=0 best=yes
+epoch=9 step=12600/15630 loss=0.7483 grad_norm=0.347 lr=0.000186 elapsed=9079s
+epoch=9 step=12800/15630 loss=0.7452 grad_norm=0.336 lr=0.000175 elapsed=9209s
+epoch=9 step=13000/15630 loss=0.7465 grad_norm=0.333 lr=0.000165 elapsed=9339s
+epoch=9 step=13200/15630 loss=0.7242 grad_norm=0.330 lr=0.000156 elapsed=9468s
+epoch=9 step=13400/15630 loss=0.7358 grad_norm=0.333 lr=0.000147 elapsed=9598s
+epoch=9 step=13600/15630 loss=0.7295 grad_norm=0.342 lr=0.000139 elapsed=9728s
+epoch=9 step=13800/15630 loss=0.7467 grad_norm=0.329 lr=0.000132 elapsed=9858s
+epoch=9 step=14000/15630 loss=0.7694 grad_norm=0.353 lr=0.000126 elapsed=9987s
+EPOCH 9 train_running_ce=0.7492 train_eval_ce=0.6967 val_ce=0.7141 val_ppl=2.042 val_bpc=1.0302 val_top1=0.7738 epoch_sec=1014.1 tok_per_sec=18934 nan=0 spikes=0 best=yes
+epoch=10 step=14200/15630 loss=0.7182 grad_norm=0.338 lr=0.000120 elapsed=10182s
+epoch=10 step=14400/15630 loss=0.7723 grad_norm=0.355 lr=0.000115 elapsed=10311s
+epoch=10 step=14600/15630 loss=0.7528 grad_norm=0.346 lr=0.000110 elapsed=10441s
+epoch=10 step=14800/15630 loss=0.7619 grad_norm=0.357 lr=0.000107 elapsed=10571s
+epoch=10 step=15000/15630 loss=0.7587 grad_norm=0.342 lr=0.000104 elapsed=10701s
+epoch=10 step=15200/15630 loss=0.7513 grad_norm=0.357 lr=0.000102 elapsed=10831s
+epoch=10 step=15400/15630 loss=0.7210 grad_norm=0.335 lr=0.000101 elapsed=10960s
+epoch=10 step=15600/15630 loss=0.7163 grad_norm=0.342 lr=0.000100 elapsed=11090s
+EPOCH 10 train_running_ce=0.7420 train_eval_ce=0.6920 val_ce=0.7111 val_ppl=2.036 val_bpc=1.0259 val_top1=0.7746 epoch_sec=1014.3 tok_per_sec=18929 nan=0 spikes=0 best=yes
+SUMMARY {"total_training_time_sec": 11173.11080121994, "train_compute_time_sec": 10502.054076910019, "train_tokens_per_sec": 18282.137817413663, "tokens_seen": 192000000, "nan_count": 0, "loss_spike_count": 0, "grad_norm_mean": 0.38587554162386056, "grad_norm_max": 8.745542526245117, "grad_norm_p99": 1.1569490218162517, "peak_device_memory_mb": 3308.140625, "peak_process_rss_mb": 2222.59375, "best_val_ce": 0.7110744107564291, "epochs": 10}
+run_end=2026-10-01 19:38:47

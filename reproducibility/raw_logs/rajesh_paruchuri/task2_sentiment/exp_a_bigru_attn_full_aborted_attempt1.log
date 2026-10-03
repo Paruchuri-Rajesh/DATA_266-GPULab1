@@ -1,0 +1,7 @@
+run_start=2026-10-01 20:37:35 model=exp_a_bigru_attn smoke=False member=rajesh_paruchuri
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+config={"description": "1-layer BiGRU (128/dir) over learned embeddings with additive attention pooling", "emb_dim": 128, "hidden": 128, "attn_dim": 128, "dropout": 0.3, "lr": 0.001, "weight_decay": 0.01, "epochs": 3, "warmup_frac": 0.02} params=7195649 n_train=539941 n_val=20000 batch_size=256 steps=6330 warmup=126
+epoch=1 step=0/6330 loss=0.7025 grad_norm=0.151 lr=0.000016 elapsed=2s
+epoch=1 step=400/6330 loss=0.2082 grad_norm=0.238 lr=0.000956 elapsed=166s
+epoch=1 step=800/6330 loss=0.2195 grad_norm=0.249 lr=0.000891 elapsed=1374s
+epoch=1 step=1200/6330 loss=0.1593 grad_norm=0.218 lr=0.000827 elapsed=2238s

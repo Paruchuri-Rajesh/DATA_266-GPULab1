@@ -1,0 +1,9 @@
+run_start=2026-10-01 22:25:44 model=exp_a_bigru_attn smoke=True member=rajesh_paruchuri
+device=mps hardware=MPS (Apple GPU) on Apple M4 torch=2.11.0 python=3.13.7
+config={"description": "1-layer BiGRU (128/dir) over learned embeddings with additive attention pooling", "emb_dim": 128, "hidden": 128, "attn_dim": 128, "dropout": 0.3, "lr": 0.001, "weight_decay": 0.01, "epochs": 3, "warmup_frac": 0.02} params=1156225 n_train=6000 n_val=1000 batch_size=256 steps=72 warmup=1
+epoch=1 step=0/72 loss=0.6953 grad_norm=0.175 lr=0.001000 elapsed=3s
+EPOCH 1 train_loss=0.6303 val_loss=0.5116 val_acc=0.7410 val_macro_f1=0.7386 epoch_sec=8.5 ex_per_sec=705 nan=0 best=yes
+EPOCH 2 train_loss=0.4940 val_loss=0.3891 val_acc=0.8080 val_macro_f1=0.8080 epoch_sec=7.0 ex_per_sec=859 nan=0 best=yes
+EPOCH 3 train_loss=0.4268 val_loss=0.3620 val_acc=0.8290 val_macro_f1=0.8290 epoch_sec=7.3 ex_per_sec=819 nan=0 best=yes
+SUMMARY {"train_time_sec": 22.812809944152832, "wall_time_sec": 25.13156223297119, "train_examples_per_sec": 789.0303756558316, "nan_count": 0, "peak_device_memory_mb": 57.699951171875, "peak_mps_driver_memory_mb": 1664.484375, "peak_process_rss_mb": 982.421875, "best_val_loss": 0.36197277579368836, "params": 1156225, "hardware": "MPS (Apple GPU) on Apple M4"}
+run_end=2026-10-01 22:26:08
