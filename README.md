@@ -12,7 +12,7 @@ Each member has their own folder in every task (`rajesh_paruchuri/`, `sivasurya_
 | Task 1 val CE | 0.711 | **0.639** |
 | Task 2 best test accuracy | 0.9523 (BiGRU + attention) | **0.9581** (BiLSTM + attention) |
 | Task 3 course-script FID / MiFID | 149.48 / 0.414 | **101.91 / 0.408** |
-| Kaggle public score | −74.9486 | −51.1585 (final model) |
+| Kaggle public score | −74.9486 | −51.1585 (best model) |
 
 **Reports:**
 - `report/DATA266_Lab1_Report_Team_6.pdf`: the combined team report, with comparison tables, joint analyses and both members' failure analyses.
@@ -183,12 +183,12 @@ jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeou
   - InstanceNorm PatchGAN discriminators;
   - translation DiffAugment and EMA generators;
   - 28.3M parameters.
-- Final run on the lab RTX 4090: v2's weights trained for 270K more steps (6.9 h, bf16). The best checkpoint was picked on held-out photos in both directions.
+- Best model: trained on the lab RTX 4090 for 270K steps (6.9 h, bf16), starting from an earlier version's weights. The best checkpoint was picked on held-out photos in both directions.
 - Held-out FID 83.0 (photo→Monet) / 89.7 (Monet→photo); cycle L1 0.105 / 0.084; no NaNs.
 - Course evaluation script (executed copy `src/Part3_Evaluation_Script_run.ipynb`): **`submission.csv` FID 101.91 / MiFID 0.408**.
-- **Kaggle: final submission scored −51.1585; team public rank 11.**
+- **Kaggle: best model scored −51.1585; team public rank 11.**
 - Blinded human audit (30 samples, 2 raters): **3.78 / 5, quadratic κ 0.24**. The results are in `checkpoints/audit/`.
-- The final weights `checkpoints/{G_AB,G_BA,D_A,D_B}.pt`, both prediction folders (`outputs/pred_A2B`, `outputs/pred_B2A`) and the v1–v3 history (`HISTORY.md`) are committed.
+- The best model's weights `checkpoints/{G_AB,G_BA,D_A,D_B}.pt` and both prediction folders (`outputs/pred_A2B`, `outputs/pred_B2A`) are committed; earlier development runs are recorded in `HISTORY.md`.
 
 ```bash
 cd task3_gan/sivasurya_chandran
