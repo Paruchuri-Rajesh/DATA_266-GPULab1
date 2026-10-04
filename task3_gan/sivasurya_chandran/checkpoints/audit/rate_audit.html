@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CycleGAN Human Audit</title>
+<style>
+  :root { --bg:#fafafa; --card:#fff; --ink:#1a1a1a; --muted:#666; --line:#ddd; --accent:#2E5597; --sel:#DCE6F1; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#16181c; --card:#1f2228; --ink:#e8e8e8; --muted:#9aa; --line:#333; --accent:#8fb0ea; --sel:#2a3a55; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 -apple-system, "Segoe UI", Arial, sans-serif; }
+  header { position:sticky; top:0; z-index:5; background:var(--card); border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; }
+  header h1 { font-size:17px; margin:0; }
+  main { max-width:760px; margin:0 auto; padding:16px; }
+  .guide { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin-bottom:16px; color:var(--muted); font-size:14px; }
+  .guide b { color:var(--ink); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px; margin-bottom:14px; }
+  .card h2 { font-size:15px; margin:0 0 8px; }
+  .card img { width:100%; height:auto; border-radius:4px; image-rendering:auto; }
+  .lbl { display:flex; justify-content:space-between; color:var(--muted); font-size:12px; margin:2px 0 8px; }
+  .row { display:flex; align-items:center; gap:8px; margin:6px 0; flex-wrap:wrap; }
+  .row span.name { width:84px; font-weight:600; }
+  .row label { border:1px solid var(--line); border-radius:6px; padding:4px 11px; cursor:pointer; user-select:none; }
+  .row input { display:none; }
+  .row input:checked + label { background:var(--sel); border-color:var(--accent); font-weight:700; }
+  textarea { width:100%; min-height:34px; border:1px solid var(--line); border-radius:6px; background:transparent; color:var(--ink); padding:6px; font:inherit; font-size:13px; }
+  select, button { font:inherit; padding:6px 10px; border-radius:6px; border:1px solid var(--line); background:var(--card); color:var(--ink); }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); cursor:pointer; }
+  #progress { color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CycleGAN human audit</h1>
+  <label>Rater: <select id="rater"><option value="">choose…</option><option value="rater1">rater 1</option><option value="rater2">rater 2</option></select></label>
+  <span id="progress"></span>
+  <button class="primary" id="dl">Download CSV</button>
+</header>
+<main>
+  <div class="guide">
+    Each image shows a <b>photo (left)</b> and the model's <b>Monet-style translation (right)</b>. Rate every sample from 1 (poor) to 5 (excellent), on your own and without discussing with the other rater:<br>
+    <b>Style</b>: does the right image look like a Monet painting?<br>
+    <b>Content</b>: is the scene from the photo preserved?<br>
+    <b>Artifacts</b>: 5 = no visible artifacts, 1 = severe artifacts.<br>
+    When all 30 are rated, click <b>Download CSV</b> and save it as <code>ratings_rater1.csv</code> or <code>ratings_rater2.csv</code> in <code>checkpoints/audit/</code>, replacing the blank sheet. Your answers are kept in this browser while you work.
+  </div>
+  <div id="list"></div>
+</main>
+<script>
+const N = 30, CRIT = ["style", "content", "artifacts"];
+const ids = Array.from({length: N}, (_, i) => "S" + String(i + 1).padStart(3, "0"));
+let state = {};
+const KEY = "cyclegan_audit_v1";
+function load() { try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; } }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+function rk() { return document.getElementById("rater").value || "_"; }
+function cur() { return (state[rk()] = state[rk()] || {}); }
+function render() {
+  const list = document.getElementById("list"); list.innerHTML = "";
+  const s = cur();
+  ids.forEach(id => {
+    const d = s[id] || {};
+    const card = document.createElement("div"); card.className = "card";
+    let h = `<h2>${id}</h2><img src="images/${id}.png" alt="sample ${id}" loading="lazy"><div class="lbl"><span>photo</span><span>translation</span></div>`;
+    CRIT.forEach(c => {
+      h += `<div class="row"><span class="name">${c[0].toUpperCase() + c.slice(1)}</span>`;
+      for (let v = 1; v <= 5; v++) {
+        const rid = `${id}_${c}_${v}`;
+        h += `<input type="radio" name="${id}_${c}" id="${rid}" value="${v}" ${d[c] == v ? "checked" : ""}><label for="${rid}">${v}</label>`;
+      }
+      h += `</div>`;
+    });
+    h += `<textarea placeholder="notes (optional)" data-id="${id}">${(d.notes || "").replace(/</g, "&lt;")}</textarea>`;
+    card.innerHTML = h; list.appendChild(card);
+  });
+  list.querySelectorAll("input[type=radio]").forEach(r => r.addEventListener("change", e => {
+    const [id, c] = e.target.name.split("_"); (cur()[id] = cur()[id] || {})[c] = +e.target.value; save(); progress();
+  }));
+  list.querySelectorAll("textarea").forEach(t => t.addEventListener("input", e => {
+    const id = e.target.dataset.id; (cur()[id] = cur()[id] || {}).notes = e.target.value; save();
+  }));
+  progress();
+}
+function done() { const s = cur(); return ids.filter(id => s[id] && CRIT.every(c => s[id][c])).length; }
+function progress() { document.getElementById("progress").textContent = `${done()} / ${N} rated`; }
+document.getElementById("rater").addEventListener("change", render);
+document.getElementById("dl").addEventListener("click", () => {
+  const r = document.getElementById("rater").value;
+  if (!r) { alert("Choose rater 1 or rater 2 first."); return; }
+  if (done() < N) { alert(`Only ${done()} of ${N} samples are fully rated.`); return; }
+  const s = cur();
+  const esc = v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+  const rows = ["sample_id,style,content,artifacts,notes"].concat(ids.map(id => [id, s[id].style, s[id].content, s[id].artifacts, esc((s[id].notes || "").trim())].join(",")));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([rows.join("\n") + "\n"], {type: "text/csv"}));
+  a.download = `ratings_${r}.csv`; a.click();
+});
+load(); render();
+</script>
+</body>
+</html>
