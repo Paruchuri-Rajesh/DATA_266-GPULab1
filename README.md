@@ -186,7 +186,7 @@ jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeou
 - Final run on the lab RTX 4090: v2's weights trained for 270K more steps (6.9 h, bf16). The best checkpoint was picked on held-out photos in both directions.
 - Held-out FID 83.0 (photo→Monet) / 89.7 (Monet→photo); cycle L1 0.105 / 0.084; no NaNs.
 - Course evaluation script (executed copy `src/Part3_Evaluation_Script_run.ipynb`): **`submission.csv` FID 101.91 / MiFID 0.408**.
-- **Kaggle: final submission scored −51.1585; team public rank 11** (the team's best entry is Siva's earlier v3, −45.9695).
+- **Kaggle: final submission scored −51.1585; team public rank 11.**
 - Blinded human audit (30 samples, 2 raters): **3.78 / 5, quadratic κ 0.24**. The results are in `checkpoints/audit/`.
 - The final weights `checkpoints/{G_AB,G_BA,D_A,D_B}.pt`, both prediction folders (`outputs/pred_A2B`, `outputs/pred_B2A`) and the v1–v3 history (`HISTORY.md`) are committed.
 

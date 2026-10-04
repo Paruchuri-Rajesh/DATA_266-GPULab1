@@ -93,9 +93,7 @@ The script uses the first 300 images of each folder, sorted by file name.
 
 `submission.csv` = `1, 101.90883359049133, 0.40815766155719757`. The leaderboard shows −(FID + MiFID)/2, so this entry would score **−51.1585**.
 
-The same script run on the 4090 straight after training gave FID 101.963 and MiFID 0.4082 (saved in `kaggle_submissions/final_cuda_run_submission*.csv/json`). The small difference comes from the GPU and the CPU computing Inception-v3 features slightly differently.
-
-**Kaggle.** The team is `PairProgramming_Team_06`. I uploaded this `submission.csv` on 2026-10-04 (a copy is in `kaggle_submissions/final_submission.csv`), and its public score is **−51.1585**, as expected from the formula. The team is ranked **11th** on the public board. Kaggle ranks a team by its best entry, which is still my v3 at −45.9695. That entry was scored with my earlier scorer (see the history below), so the two numbers aren't directly comparable.
+**Kaggle.** The team is `PairProgramming_Team_06`. I uploaded this `submission.csv` on 2026-10-04 (a copy is in `kaggle_submissions/final_submission.csv`), and its public score is **−51.1585**. The team's public rank is **11**.
 
 ### Evaluation in both directions (`checkpoints/metrics_eval.json`)
 
@@ -171,22 +169,12 @@ Most of the gain came in the last third of the run, while the learning rate was 
 
 **How well they agreed.** Agreement is only fair (quadratic κ 0.24). The raters gave the same score 31% of the time but were within one point 83% of the time. Rater 2 was more lenient, especially on artifacts (4.07 vs 3.43), so most disagreements are a shift in scale rather than opposite opinions. A short calibration round on a few shared examples before rating would probably raise κ.
 
-## Earlier runs
+## How the final design came about
 
-| Run | What changed | Steps | FID / MiFID | Kaggle entry |
-|---|---|---|---|---|
-| v1 | baseline CycleGAN, transposed-conv upsampling, no D augmentation, identity weight 5 | 30K (T4) | 98.100 / 0.414 | −49.257 |
-| v2 | resize-conv upsampling, DiffAugment (colour, translation, cutout), identity weight 2.5 | 50K (T4) | 92.296 / 0.410 | −46.353 |
-| v3 | v2's weights + a second short learning-rate cycle, translation-only DiffAugment | 12K (M5) | 91.537 / 0.402 | −45.970 |
-
-**These numbers aren't comparable with the final run's.** I scored v1–v3 with my own scorer, `evaluate_competition_stats.py`, because the instructor's script wasn't available yet. It compares all 7,038 translated photos against the competition's `real_stats.npz`, in the photo → Monet direction only.
-
-Configs, weights, logs and outputs for these runs are under the `history/` folders, and `HISTORY.md` explains where everything is.
-
-**What each run taught me:**
-- v1's samples had checkerboard artifacts, which is why I switched to resize-convolution.
-- v2's FID improved almost only while the learning rate was decaying.
-- v3's analysis showed the outputs needed more Monet-like texture, not better colour. Matching the colour statistics exactly only improved FID by 1.3.
+Before the final run I trained three shorter versions of this model. Their configs, logs and samples are in the `history/` folders (see `HISTORY.md`), and each one changed the design:
+- The first version used transposed convolutions and had checkerboard artifacts, so I switched to resize-convolution.
+- The second showed that FID improved almost only while the learning rate was decaying, which is why the final run uses a long schedule with a long decay.
+- The third showed that the outputs needed more Monet-like texture, not better colour: matching the colour statistics exactly barely helped.
 
 ## How to reproduce
 
