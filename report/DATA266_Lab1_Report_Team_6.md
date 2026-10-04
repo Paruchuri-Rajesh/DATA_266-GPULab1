@@ -159,7 +159,7 @@ Together:
 | Grad norm G / D (mean) · NaNs | 44.2 / 5.5 · 0 | 15.3 / 9.3 · 0 |
 | Course-script submission FID / MiFID | 149.48 / 0.414 | **101.91 / 0.408** |
 | **Kaggle public score** | **−74.9486** | **−45.9695** (v3, scored with his earlier scorer; v2 −46.3530; v1 −49.2570). The final model's course-script entry is −51.1585 (`submission.csv`). |
-| Human audit score · Cohen's kappa | ⟨pending: 2 raters⟩ | ⟨pending: 2 raters⟩ |
+| Human audit score · Cohen's kappa | ⟨pending: 2 raters⟩ | 3.78 / 5 (style 3.65, content 3.93, artifacts 3.75) · quadratic κ 0.24, 31% exact / 83% within-1 agreement |
 | Train time · images/s · peak memory | 9,417 s · 5.1 · 409 MB tensors / 1,009 MB pool | 24,770 s (final run) · 10.9 steps/s · 19,863 MB (CUDA) |
 | Hardware | Apple M4, MPS | NVIDIA RTX 4090 (lab PC), CUDA, bf16 |
 
@@ -191,6 +191,7 @@ Siva's points:
   - dramatic skies lose contrast;
   - photographer watermarks survive both the translation and the cycle;
   - Monet→photo outputs come out too dark.
+- Blinded human audit (30 fixed samples, 2 raters): 3.78 / 5 overall. Content was rated highest (3.93) and style lowest (3.65), which matches the FID picture. Agreement is only fair (quadratic κ 0.24, 83% within one point); rater 2 was more lenient on artifacts.
 - Two extra experiments did not help. A UVCGAN-style model collapsed to the identity function. A PatchNCE continuation looked more painterly but scored worse.
 
 Together:

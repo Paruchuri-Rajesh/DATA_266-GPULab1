@@ -158,9 +158,18 @@ Most of the gain came in the last third of the run, while the learning rate was 
 
 ### Human audit
 
-The 30 blinded samples are prepared in `checkpoints/audit/images/`, with rating sheets `checkpoints/audit/ratings_rater1.csv` and `ratings_rater2.csv`. Each sample is scored 1–5 for style, content and artifacts. `src/human_audit.py score` then computes the average score, Cohen's kappa and the percentage of exact agreement.
+`src/human_audit.py prepare` chose 30 held-out photos with a fixed seed before anyone looked at the outputs, and saved each one as an anonymous photo | translation pair (`checkpoints/audit/images/`). Two raters scored every pair independently from 1 to 5. They used `checkpoints/audit/rate_audit.html` and their sheets are `ratings_rater1.csv` and `ratings_rater2.csv`. `src/human_audit.py score` wrote `checkpoints/audit/audit_results.json`.
 
-**Status: waiting for the two raters.** No ratings have been filled in.
+| Criterion | Rater 1 | Rater 2 | Mean | Cohen's κ (quadratic) | Exact / within-1 agreement |
+|---|---|---|---|---|---|
+| Style (looks like a Monet) | 3.57 | 3.73 | 3.65 | 0.13 | 33% / 83% |
+| Content (scene preserved) | 3.83 | 4.03 | 3.93 | 0.29 | 33% / 83% |
+| Artifacts (5 = none) | 3.43 | 4.07 | 3.75 | 0.28 | 27% / 83% |
+| **Overall** | | | **3.78** | **0.24** | 31% exact |
+
+**What the raters thought.** Content is the best-rated criterion, which fits the strong cycle loss: the scene is almost always still there. Style is the lowest, which matches the FID picture: the outputs look painted, but not always like Monet.
+
+**How well they agreed.** Agreement is only fair (quadratic κ 0.24). The raters gave the same score 31% of the time but were within one point 83% of the time. Rater 2 was more lenient, especially on artifacts (4.07 vs 3.43), so most disagreements are a shift in scale rather than opposite opinions. A short calibration round on a few shared examples before rating would probably raise κ.
 
 ## Earlier runs
 
