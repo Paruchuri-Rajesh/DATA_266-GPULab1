@@ -95,7 +95,7 @@ The script uses the first 300 images of each folder, sorted by file name.
 
 The same script run on the 4090 straight after training gave FID 101.963 and MiFID 0.4082 (saved in `kaggle_submissions/final_cuda_run_submission*.csv/json`). The small difference comes from the GPU and the CPU computing Inception-v3 features slightly differently.
 
-**Kaggle.** The team is `PairProgramming_Team_06`. On 2026-10-03 the team was ranked **11th** on the public board, with its best entry at −45.9695 (my v3, see the history below). This final model's `submission.csv` has not been uploaded yet.
+**Kaggle.** The team is `PairProgramming_Team_06`. I uploaded this `submission.csv` on 2026-10-04 (a copy is in `kaggle_submissions/final_submission.csv`), and its public score is **−51.1585**, as expected from the formula. The team is ranked **11th** on the public board. Kaggle ranks a team by its best entry, which is still my v3 at −45.9695. That entry was scored with my earlier scorer (see the history below), so the two numbers aren't directly comparable.
 
 ### Evaluation in both directions (`checkpoints/metrics_eval.json`)
 

@@ -158,12 +158,12 @@ Together:
 | Final losses G-adv / D_A / D_B / cycle / identity | 0.645 / 0.214 / 0.216 / 0.358 / 0.373 | 1.584 / 0.063 / 0.035 / 0.159 / 0.149 |
 | Grad norm G / D (mean) · NaNs | 44.2 / 5.5 · 0 | 15.3 / 9.3 · 0 |
 | Course-script submission FID / MiFID | 149.48 / 0.414 | **101.91 / 0.408** |
-| **Kaggle public score** | **−74.9486** | **−45.9695** (v3, scored with his earlier scorer; v2 −46.3530; v1 −49.2570). The final model's course-script entry is −51.1585 (`submission.csv`). |
+| **Kaggle public score** | **−74.9486** | **−51.1585** (final model, course script, uploaded 2026-10-04). Earlier entries, scored with his own earlier scorer: v3 −45.9695, v2 −46.3530, v1 −49.2570. |
 | Human audit score · Cohen's kappa | ⟨pending: 2 raters⟩ | 3.78 / 5 (style 3.65, content 3.93, artifacts 3.75) · quadratic κ 0.24, 31% exact / 83% within-1 agreement |
 | Train time · images/s · peak memory | 9,417 s · 5.1 · 409 MB tensors / 1,009 MB pool | 24,770 s (final run) · 10.9 steps/s · 19,863 MB (CUDA) |
 | Hardware | Apple M4, MPS | NVIDIA RTX 4090 (lab PC), CUDA, bf16 |
 
-**Kaggle:** team PairProgramming_Team_06, public rank **11** (ranked on the team's best submission, Siva's v3).
+**Kaggle:** team PairProgramming_Team_06, public rank **11** (checked 2026-10-04, after both members' final entries). Kaggle ranks a team on its best submission, which is Siva's v3 (−45.9695).
 
 **Evidence:**
 

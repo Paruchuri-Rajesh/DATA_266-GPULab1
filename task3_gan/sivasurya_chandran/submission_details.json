@@ -15,5 +15,6 @@
   "n_eval": 300,
   "pred_dir": "outputs",
   "scorer": "instructor's Part3_Evaluation_Script.ipynb, executed as src/Part3_Evaluation_Script_run.ipynb (only folder paths changed), CPU",
-  "same_outputs_on_the_rtx4090": "FID 101.963, MiFID 0.4082 (kaggle_submissions/final_cuda_run_submission_details.json); the small difference is GPU vs CPU arithmetic in Inception-v3"
+  "same_outputs_on_the_rtx4090": "FID 101.963, MiFID 0.4082 (kaggle_submissions/final_cuda_run_submission_details.json); the small difference is GPU vs CPU arithmetic in Inception-v3",
+  "kaggle_public_score": "-51.1585 (final entry, uploaded 2026-10-04); team public rank 11, ranked on the team's best entry (v3, -45.9695)"
 }
