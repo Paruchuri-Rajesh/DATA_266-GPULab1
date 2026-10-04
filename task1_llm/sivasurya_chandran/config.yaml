@@ -1,0 +1,36 @@
+# Task 1 — GPT-from-scratch config
+data:
+  dataset_name: "roneneldan/TinyStories"   # HF dataset id used by preprocess.py
+  local_dataset_dir: "../data/tinystories"   # shared raw copy if present, else downloaded from the HF Hub
+  data_dir: "data_processed"
+  train_size: 100000
+  val_size: 10000
+  block_size: 128          # context length (characters)
+  seed: 1337
+
+model:
+  vocab_size: null         # filled in automatically from tokenizer
+  n_embd: 256
+  n_head: 8
+  n_layer: 6
+  dropout: 0.1
+
+train:
+  batch_size: 64
+  epochs: 10
+  lr: 3.0e-4
+  warmup_steps: 500
+  weight_decay: 0.01
+  grad_clip: 1.0
+  amp: true                 # fp16 autocast on CUDA (~2-3x faster on a T4); ignored on CPU/MPS
+  eval_interval: 500
+  eval_iters: 50
+  final_eval_iters: 200
+  device: "auto"            # cuda > mps > cpu
+  out_dir: "checkpoints"
+  log_file: "logs/train_raw.log"
+
+generate:
+  max_new_tokens: 300
+  temperature: 0.8
+  top_k: null

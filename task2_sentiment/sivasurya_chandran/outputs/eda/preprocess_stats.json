@@ -1,0 +1,77 @@
+{
+  "eda": {
+    "n_train": 560000,
+    "class_counts": {
+      "0": 280000,
+      "1": 280000
+    },
+    "class_balance_ratio_min_over_max": 1.0,
+    "length_words_mean": 133.0288732142857,
+    "length_words_median": 97.0,
+    "length_words_p95": 372.0,
+    "length_words_max": 1052,
+    "length_by_class_mean": {
+      "0": 151.5271857142857,
+      "1": 114.53056071428571
+    }
+  },
+  "removed_malformed_train": 24,
+  "exact_duplicates_train": 0,
+  "removed_malformed_test": 0,
+  "exact_duplicates_test": 0,
+  "vocab_size": 50000,
+  "raw_unique_tokens": 143116,
+  "token_len_mean_after_cleaning": 72.24642891866526,
+  "pct_truncated_at_max_seq_len": 2.3288668773897325,
+  "unk_rate_test": 0.004083937354743022,
+  "splits": {
+    "train": 503979,
+    "val": 55997,
+    "test": 38000
+  },
+  "example_cleaning": {
+    "raw": "Contrary to other reviews, I have zero complaints about the service or the prices. I have been getting tire service here for the past 5 years now, and compared to my experience with places like Pep Boys, these guys are experienced and know what they're doing. \\nAlso, this is one place that I do not ",
+    "tokens": [
+      "contrari",
+      "review",
+      "zero",
+      "complaint",
+      "servic",
+      "price",
+      "get",
+      "tire",
+      "servic",
+      "past",
+      "5",
+      "year",
+      "compar",
+      "experi",
+      "place",
+      "like",
+      "pep",
+      "boy",
+      "guy",
+      "experienc",
+      "know",
+      "also",
+      "one",
+      "place",
+      "not",
+      "feel",
+      "like",
+      "taken",
+      "advantag",
+      "gender",
+      "auto",
+      "mechan",
+      "notori",
+      "capit",
+      "ignor",
+      "car",
+      "suck",
+      "bank",
+      "account",
+      "dri"
+    ]
+  }
+}

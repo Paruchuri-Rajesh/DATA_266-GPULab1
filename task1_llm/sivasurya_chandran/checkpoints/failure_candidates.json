@@ -1,0 +1,33 @@
+{
+  "most_repetitive": {
+    "prompt": "The sun was shining and",
+    "mode": "greedy",
+    "temperature": 0.0,
+    "text": "The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the s",
+    "repeated_4gram_rate": 0.8405797101449275,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  "most_invented_words": {
+    "prompt": "Mom said, \"",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Mom said, \"Let me have a snack. I want to find some butter and some snacks for you.\"\n\nThey put some snacks and water and water and started to play with them all. They put their hands in and waited for the swan, but they were too strong and too late. The swans were gone forever. The swans were there, and the sw",
+    "repeated_4gram_rate": 0.015151515151515152,
+    "invented_word_rate": 0.028985507246376812,
+    "invented_words": [
+      "swans"
+    ]
+  },
+  "greedy_example": {
+    "prompt": "Once upon a time",
+    "mode": "greedy",
+    "temperature": 0.0,
+    "text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she went to the park with her mommy and daddy. They saw a big slide and wanted to go down it. \n\nLily went to the slide and sat down on the slide. She was having so much fun that she didn't notice the slide anym",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.014492753623188406,
+    "invented_words": [
+      "anym"
+    ]
+  }
+}

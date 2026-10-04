@@ -1,0 +1,17 @@
+# Versions verified with the smoke test (Python 3.9, macOS arm64). Newer versions should also work.
+torch==2.8.0
+torchvision==0.23.0
+numpy==2.0.2
+pyyaml==6.0.3
+scikit-learn==1.6.1
+scipy==1.13.1
+matplotlib==3.9.4
+pillow==11.3.0
+datasets==4.5.0
+nltk==3.9.2
+torchmetrics[image]==1.8.2
+torch-fidelity==0.4.0
+lpips==0.1.4
+jupyter==1.1.1
+nbconvert==7.16.6
+ipykernel==6.29.5

@@ -1,0 +1,17 @@
+metric,value
+Training cross-entropy (nats/char),0.6303
+Validation cross-entropy (nats/char),0.6385
+Perplexity (val),1.8937
+Bits-per-character (val),0.9212
+Generalization gap (val − train),0.0082
+Top-1 next-char accuracy (val),0.7955
+Distinct-1 / 2 / 3,0.2525 / 0.6764 / 0.8860
+Repeated 4-gram rate (sampled / greedy),0.0063 / 0.2671
+Grad norm mean / p95 / max,0.343 / 0.489 / 7.770
+NaN steps / loss spikes,0 / 0
+fp16 overflow steps skipped by GradScaler,41
+Parameter count,"4,827,648"
+Training tokens/sec,"133,346"
+Generation tokens/sec,217.1832
+Peak memory (MB),943.9868
+Total training time (s),"6,735.6416"

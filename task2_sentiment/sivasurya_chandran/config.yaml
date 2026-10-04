@@ -1,0 +1,47 @@
+# Task 2 — Yelp Polarity Sentiment Classification (full run)
+data:
+  dataset_name: "fancyzhx/yelp_polarity"
+  local_dataset_dir: "../data/yelp_polarity"   # shared raw copy if present, else downloaded from the HF Hub
+  data_dir: "data_processed"
+  train_subset: null        # null = all 560K training reviews
+  test_subset: null         # null = all 38K test reviews
+  val_fraction: 0.1
+  lowercase: true
+  remove_stopwords: true    # negations/contrast words are kept (see preprocess.py KEEP)
+  stem: true
+  max_vocab_size: 50000
+  min_freq: 3
+  max_seq_len: 256
+  seed: 1337
+
+models:
+  baseline:
+    type: "bag"
+    embed_dim: 128
+    hidden_dim: 128
+    dropout: 0.3
+    lr: 2.0e-3
+  experimental_1:
+    type: "cnn"
+    embed_dim: 128
+    num_filters: 128
+    kernel_sizes: [3, 4, 5]
+    dropout: 0.5
+    lr: 1.0e-3
+  experimental_2:
+    type: "bilstm"
+    embed_dim: 128
+    hidden_dim: 128
+    num_layers: 1
+    dropout: 0.3
+    lr: 1.0e-3
+
+train:
+  batch_size: 128
+  epochs: 5
+  patience: 2               # early stopping on validation macro-F1
+  weight_decay: 0.0
+  grad_clip: 5.0
+  device: "auto"
+  out_dir: "checkpoints"
+  log_file: "logs/train_raw.log"

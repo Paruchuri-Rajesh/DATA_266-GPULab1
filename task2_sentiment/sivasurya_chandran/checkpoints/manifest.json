@@ -1,0 +1,84 @@
+{
+  "python": "3.9.6",
+  "packages": {
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "numpy": "2.0.2",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.13.1",
+    "datasets": "4.5.0",
+    "nltk": "3.9.2",
+    "torchmetrics": "1.8.2",
+    "lpips": "0.1.4"
+  },
+  "hardware": {
+    "device": "mps",
+    "cpu": "arm",
+    "platform": "macOS-26.6-arm64-arm-64bit",
+    "cpu_count": 10,
+    "gpu": "Apple Silicon (MPS)"
+  },
+  "git_commit": "uncommitted",
+  "config": {
+    "data": {
+      "dataset_name": "fancyzhx/yelp_polarity",
+      "local_dataset_dir": "../data/yelp_polarity",
+      "data_dir": "data_processed",
+      "train_subset": null,
+      "test_subset": null,
+      "val_fraction": 0.1,
+      "lowercase": true,
+      "remove_stopwords": true,
+      "stem": true,
+      "max_vocab_size": 50000,
+      "min_freq": 3,
+      "max_seq_len": 256,
+      "seed": 1337
+    },
+    "models": {
+      "baseline": {
+        "type": "bag",
+        "embed_dim": 128,
+        "hidden_dim": 128,
+        "dropout": 0.3,
+        "lr": 0.002
+      },
+      "experimental_1": {
+        "type": "cnn",
+        "embed_dim": 128,
+        "num_filters": 128,
+        "kernel_sizes": [
+          3,
+          4,
+          5
+        ],
+        "dropout": 0.5,
+        "lr": 0.001
+      },
+      "experimental_2": {
+        "type": "bilstm",
+        "embed_dim": 128,
+        "hidden_dim": 128,
+        "num_layers": 1,
+        "dropout": 0.3,
+        "lr": 0.001
+      }
+    },
+    "train": {
+      "batch_size": 128,
+      "epochs": 5,
+      "patience": 2,
+      "weight_decay": 0.0,
+      "grad_clip": 5.0,
+      "device": "auto",
+      "out_dir": "checkpoints",
+      "log_file": "logs/train_raw.log"
+    }
+  },
+  "checkpoints": {
+    "baseline": "checkpoints/baseline.pt",
+    "experimental_1": "checkpoints/experimental_1.pt",
+    "experimental_2": "checkpoints/experimental_2.pt"
+  },
+  "results_file": "checkpoints/metrics_task2.json"
+}

@@ -1,0 +1,65 @@
+{
+  "python": "3.13.15",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.1.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3",
+    "datasets": "4.5.0",
+    "nltk": "3.9.2",
+    "torchmetrics": "1.8.2",
+    "lpips": "0.1.4"
+  },
+  "hardware": {
+    "device": "cuda",
+    "cpu": "x86_64",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "cpu_count": 2,
+    "gpu": "Tesla T4"
+  },
+  "git_commit": "uncommitted",
+  "config": {
+    "data": {
+      "dataset_name": "roneneldan/TinyStories",
+      "local_dataset_dir": "../data/tinystories",
+      "data_dir": "data_processed",
+      "train_size": 100000,
+      "val_size": 10000,
+      "block_size": 128,
+      "seed": 1337
+    },
+    "model": {
+      "vocab_size": null,
+      "n_embd": 256,
+      "n_head": 8,
+      "n_layer": 6,
+      "dropout": 0.1
+    },
+    "train": {
+      "batch_size": 64,
+      "epochs": 10,
+      "lr": 0.0003,
+      "warmup_steps": 500,
+      "weight_decay": 0.01,
+      "grad_clip": 1.0,
+      "amp": true,
+      "eval_interval": 500,
+      "eval_iters": 50,
+      "final_eval_iters": 200,
+      "device": "auto",
+      "out_dir": "checkpoints",
+      "log_file": "logs/train_raw.log"
+    },
+    "generate": {
+      "max_new_tokens": 300,
+      "temperature": 0.8,
+      "top_k": null
+    }
+  },
+  "checkpoints": {
+    "final": "checkpoints/gpt_final.pt",
+    "best_val": "checkpoints/gpt_best.pt"
+  },
+  "results_file": "checkpoints/metrics_train.json"
+}

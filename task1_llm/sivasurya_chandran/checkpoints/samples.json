@@ -1,0 +1,202 @@
+[
+  {
+    "prompt": "Once upon a time",
+    "mode": "greedy",
+    "temperature": 0.0,
+    "text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she went to the park with her mommy and daddy. They saw a big slide and wanted to go down it. \n\nLily went to the slide and sat down on the slide. She was having so much fun that she didn't notice the slide anym",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.014492753623188406,
+    "invented_words": [
+      "anym"
+    ]
+  },
+  {
+    "prompt": "Once upon a time",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Once upon a time, there was a farmer who loved to play outside. He would run and jump and throw the farmer and his fish. One day, the farmer wanted to pick some friends. So the farmer went to the park to play.\n\nWhen the farmer was finished, he saw something else in the garden. It was a big box! He was so excited th",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.014285714285714285,
+    "invented_words": [
+      "th"
+    ]
+  },
+  {
+    "prompt": "Once upon a time",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Once upon a time, there was a little boy named Timmy. Timmy loved to play outside and explore the world around him. One day, he saw a big rock in the park. \"Look, Mommy! I found a shiny rock!\" she said. \n\n\"Mommy, look what I found!\" said Jack.\n\nHis mom looked up and saw a big, brown rocket that was very shiny and h",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.012987012987012988,
+    "invented_words": [
+      "h"
+    ]
+  },
+  {
+    "prompt": "Once upon a time",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the grass and feel the wet sunshine on her face. One day, her mom told her to be careful of the truth and they went to the park.\n\nLily looked at her mom and said, \"Mom, the birds are so pretty. Do you want to be my friends?\" \n\nHer mo",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.013513513513513514,
+    "invented_words": [
+      "mo"
+    ]
+  },
+  {
+    "prompt": "One day, a little girl named Lily",
+    "mode": "greedy",
+    "temperature": 0.0,
+    "text": "One day, a little girl named Lily went to the park with her mom. They saw a big slide and wanted to go on it. But the slide was too fast and too fast. Lily wanted to go on the slide, but her mom said no. She said the slide was too high and too fast. Lily was sad and angry. She said the slide was too high and too fast. She said the ",
+    "repeated_4gram_rate": 0.19444444444444445,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "One day, a little girl named Lily",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "One day, a little girl named Lily went to the park with her mommy. They saw a big slide and thought it was very pretty. \n\nLily and her mommy went to the slide and slid down the slide. Lily felt happy and cozy and safe. She knew that the slide was so cool, it would break into amazing twigs.\nOnce upon a time, there was a little girl ",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "One day, a little girl named Lily",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "One day, a little girl named Lily went to the park with her mommy. They saw a big bird on the ground. The bird was so hungry that Lily couldn't fly anymore. \n\nLily's mommy saw her sad face and asked, \"What's wrong, Lily?\" Lily said, \"I can't see the bird's nest.\" They felt sad and asked her what was wrong. Lily told her about the b",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.013888888888888888,
+    "invented_words": [
+      "b"
+    ]
+  },
+  {
+    "prompt": "One day, a little girl named Lily",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "One day, a little girl named Lily went for a walk in the park. She saw a boy with a big red bow. The boy loved the bow and the red bow. \n\nLily was excited to go on an adventure with her friends. They packed her bag and went to the park. Lily saw a big slide and wanted to go down it. But she was still scared. She wanted to go home a",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "Tom and his dog went to the park",
+    "mode": "greedy",
+    "temperature": 0.0,
+    "text": "Tom and his dog went to the park. They saw a big slide and wanted to go on it. Tom wanted to go on the slide, but he was too scared. He said, \"Let's go on the slide!\" They ran to the slide and slid down the slide. They saw a big slide and a swing. They wanted to go on the slide.\n\n\"Let's go on the slide!\" Tom said. \"Maybe we can sl",
+    "repeated_4gram_rate": 0.17721518987341772,
+    "invented_word_rate": 0.012195121951219513,
+    "invented_words": [
+      "sl"
+    ]
+  },
+  {
+    "prompt": "Tom and his dog went to the park",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Tom and his dog went to the park.\n\nAt the park, Tom saw a big slide. He was hungry, so he asked his dad for some slices and a new slice of yummy food. His dad said yes and gave him a big hug. Soon, the slices were gone.\n\nThe little boy started to cry. His dad came in and saw him screaming.\n\nHis dad looked down and saw that he wasn",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "Tom and his dog went to the park",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Tom and his dog went to the park. They saw a big rock and thought it was so cool. They wanted to take it home and play.\n\nTom went to the slide and grabbed his ball. He threw it too hard and high. He caught it in his mouth and ran away. He did not want to jump in the hole. He wanted to jump on it and roll it in his mouth.\n\nBut his ",
+    "repeated_4gram_rate": 0.013888888888888888,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "Tom and his dog went to the park",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Tom and his dog went to the park. They saw the birds and the trees and the fences. They saw a boat and a dog. They saw a big dog. The dog was not selfish. It wanted to pet the dog.\n\n\"Let me see, Tom!\" Lily said. \"I don't want to watch the dog. He likes the dog.\"\n\nTom did not listen. He thought it was not fair. He thought it was a ",
+    "repeated_4gram_rate": 0.05063291139240506,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "The sun was shining and",
+    "mode": "greedy",
+    "temperature": 0.0,
+    "text": "The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the sky was blue. The sun was shining and the s",
+    "repeated_4gram_rate": 0.8405797101449275,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "The sun was shining and",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "The sun was shining and the whole world was bright. The cat loved to run and play. One day, the cat saw a big jar on the ground. The jar was very heavy and smelled very good.\n\nThe cat showed the cat how to hold it in his hands and it felt so yummy! The cat was so happy that he decided to take the cat home with him and kis",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.013888888888888888,
+    "invented_words": [
+      "kis"
+    ]
+  },
+  {
+    "prompt": "The sun was shining and",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "The sun was shining and the sky was grey. It was barking loudly and round and had a lot of fun.\n\nSuddenly, a big hole in the ground. He picked it up and took it home. When he got back home, he showed the ground to Sam. Sam was so excited to see his group.\n\nWhen they got back home, Sam and his mom were waiting for a long t",
+    "repeated_4gram_rate": 0.014084507042253521,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "The sun was shining and",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "The sun was shining and the little girl smiled. She wanted to explore the park.\n\nOne day the sun came out and she noticed a sunshine. She said to her mom, \"Mommy, can I go get that sunshine?\"\n\nHer mom said, \"Yes, you can.\" She practiced the sunshine together. After some time, Lily went back inside her house and saw her mo",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.013888888888888888,
+    "invented_words": [
+      "mo"
+    ]
+  },
+  {
+    "prompt": "Mom said, \"",
+    "mode": "greedy",
+    "temperature": 0.0,
+    "text": "Mom said, \"It's okay, Lily. I forgive you. But you have to be careful and respectful. And you have to be careful with the blocks. They are not for playing. They are not for playing. They are for the big boy. They are not happy. They are sad.\n\nThey see a big boy with a big bag. He has a big box of candy. He wan",
+    "repeated_4gram_rate": 0.1232876712328767,
+    "invented_word_rate": 0.013157894736842105,
+    "invented_words": [
+      "wan"
+    ]
+  },
+  {
+    "prompt": "Mom said, \"",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Mom said, \"I love you too, my loves. You are my friend. You are a good dog.\" He put the card on his head. He gives the toy car to Lily. He says, \"Now I have a better snack. But I have my card. I have a big box. I can use it to hold it. I can make music with it.\"\n\nTom and Lily felt sorry. They realized they had",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  },
+  {
+    "prompt": "Mom said, \"",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Mom said, \"Let me have a snack. I want to find some butter and some snacks for you.\"\n\nThey put some snacks and water and water and started to play with them all. They put their hands in and waited for the swan, but they were too strong and too late. The swans were gone forever. The swans were there, and the sw",
+    "repeated_4gram_rate": 0.015151515151515152,
+    "invented_word_rate": 0.028985507246376812,
+    "invented_words": [
+      "swans"
+    ]
+  },
+  {
+    "prompt": "Mom said, \"",
+    "mode": "temperature",
+    "temperature": 0.8,
+    "text": "Mom said, \"OK, I will try.\"\n\nSara and Ben stayed away from the rail and waited for Mom to eat. They learned their lesson. They decided to be careful and not touch anything they wanted.\nOne day, a little boy named Tim went outside to play. He saw a big sunflower on a table. The sunflower said, \"Thank you, Tim! ",
+    "repeated_4gram_rate": 0.0,
+    "invented_word_rate": 0.0,
+    "invented_words": []
+  }
+]

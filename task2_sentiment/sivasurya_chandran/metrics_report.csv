@@ -1,0 +1,37 @@
+metric,baseline (bag),experimental_1 (cnn),experimental_2 (bilstm)
+accuracy,0.9332,0.9502,0.9581
+precision_macro,0.9332,0.9502,0.9581
+recall_macro,0.9332,0.9502,0.9581
+f1_macro,0.9332,0.9502,0.9581
+precision_micro,0.9332,0.9502,0.9581
+recall_micro,0.9332,0.9502,0.9581
+f1_micro,0.9332,0.9502,0.9581
+precision_weighted,0.9332,0.9502,0.9581
+recall_weighted,0.9332,0.9502,0.9581
+f1_weighted,0.9332,0.9502,0.9581
+confusion_matrix,"[[17739, 1261], [1276, 17724]]","[[18002, 998], [895, 18105]]","[[18196, 804], [790, 18210]]"
+roc_auc,0.9812,0.9883,0.9921
+pr_auc,0.9816,0.9882,0.9923
+mcc,0.8665,0.9004,0.9161
+brier_score,0.0503,0.0384,0.0323
+ece,0.0082,0.0105,0.0124
+accuracy_ci95,"[0.930921052631579, 0.9358690789473684]","[0.9478677631578948, 0.9523157894736842]","[0.9560256578947369, 0.9601059210526315]"
+macro_f1_ci95,"[0.9309209271789292, 0.9358689820955971]","[0.9478665164974016, 0.9523052191382071]","[0.9560253784170959, 0.9601056781388531]"
+mcc_ci95,"[0.8618443163569325, 0.8717430549446907]","[0.8957393953832637, 0.9046367925464734]","[0.912051130079785, 0.9202146444818178]"
+param_count,"6,416,770","6,597,762","6,697,730"
+training_time_sec,173.3614,790.5147,"19,092.2710"
+train_examples_per_sec,"14,535.4996","3,187.6637",131.9851
+inference_examples_per_sec,"105,134","8,354.3140","2,959.1017"
+peak_memory_mb,"2,810.2812","2,827.5156","4,005.7969"
+mcnemar_p_value_vs_baseline,—,0.0000,0.0000
+slice_macro_f1:short_reviews(<=p25_words),0.9304,0.9483,0.9541
+slice_error_rate:short_reviews(<=p25_words),0.0668,0.0495,0.0441
+slice_macro_f1:long_reviews(>=p75_words),0.9305,0.9459,0.9543
+slice_error_rate:long_reviews(>=p75_words),0.0661,0.0516,0.0435
+slice_macro_f1:contains_negation,0.9247,0.9467,0.9553
+slice_error_rate:contains_negation,0.0705,0.0499,0.0419
+slice_macro_f1:contains_but_contrast,0.9241,0.9450,0.9530
+slice_error_rate:contains_but_contrast,0.0751,0.0544,0.0465
+slice_macro_f1:exclamation_heavy(>=3 '!'),0.9520,0.9656,0.9727
+slice_error_rate:exclamation_heavy(>=3 '!'),0.0468,0.0334,0.0265
+hardware,Apple Silicon (MPS),Apple Silicon (MPS),Apple Silicon (MPS)
