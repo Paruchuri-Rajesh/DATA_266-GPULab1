@@ -65,18 +65,24 @@ def estimate_loss_and_acc(model, data, block_size, batch_size, device, iters, am
     return float(np.mean(losses)), correct / total
 
 
-def plot_curves(history: dict, path: str):
-    plt.figure(figsize=(7, 4))
-    plt.plot(history["step"], history["train_loss"], label="train")
-    plt.plot(history["step"], history["val_loss"], label="validation")
-    plt.xlabel("step")
-    plt.ylabel("cross-entropy loss (nats)")
-    plt.title("Task 1 — training vs validation loss")
-    plt.legend()
-    plt.grid(alpha=0.3)
-    plt.tight_layout()
-    plt.savefig(path, dpi=120)
-    plt.close()
+def plot_curves(history: dict, path: str, zoom_from: int = 2000):
+    """Left: the whole run. Right: from `zoom_from` steps on, where the two curves sit close together.
+    Training is drawn last and dashed so it stays visible where it overlaps validation."""
+    steps, tr, va = np.array(history["step"]), np.array(history["train_loss"]), np.array(history["val_loss"])
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4))
+    for ax, keep in zip(axes, (np.ones_like(steps, dtype=bool), steps >= zoom_from)):
+        ax.plot(steps[keep], va[keep], color="tab:orange", lw=1.6, label="validation")
+        ax.plot(steps[keep], tr[keep], color="tab:blue", lw=1.3, ls="--", label="train")
+        ax.set_xlabel("step")
+        ax.grid(alpha=0.3)
+    axes[0].set_ylabel("cross-entropy loss (nats)")
+    axes[0].set_title("Whole run")
+    axes[1].set_title(f"From step {zoom_from:,} (zoomed)")
+    axes[0].legend()
+    fig.suptitle("Task 1 — training vs validation loss")
+    fig.tight_layout()
+    fig.savefig(path, dpi=120)
+    plt.close(fig)
 
 
 def main(cfg_path: str, resume: bool = False):
@@ -265,5 +271,11 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="config.yaml")
     ap.add_argument("--resume", action="store_true", help="continue from checkpoints/train_state.pt")
+    ap.add_argument("--replot", action="store_true", help="only redraw loss_curves.png from the saved metrics_train.json history")
     a = ap.parse_args()
-    main(a.config, a.resume)
+    if a.replot:
+        with open(a.config) as f:
+            out = yaml.safe_load(f)["train"]["out_dir"]
+        plot_curves(json.load(open(os.path.join(out, "metrics_train.json")))["history"], os.path.join(out, "loss_curves.png"))
+    else:
+        main(a.config, a.resume)

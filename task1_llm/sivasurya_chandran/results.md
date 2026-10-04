@@ -95,7 +95,7 @@ How each metric is computed:
 
 ![loss curves](checkpoints/loss_curves.png)
 
-Both curves drop sharply in the first ~2K steps, while the model works through the warm-up and learns basic character statistics. After that they fall slowly and stay almost on top of each other for all ten epochs.
+The left panel shows the whole run and the right panel zooms in from step 2,000. Training is dashed, because the two curves overlap so closely that it would otherwise be hidden behind validation. Both curves drop sharply in the first ~2K steps, while the model works through the warm-up and learns basic character statistics. After that they fall slowly, with training only slightly below validation for all ten epochs.
 
 Validation loss at the last evaluation in each epoch (50 batches each, so it is slightly noisier than the final 200-batch number in the table above):
 
