@@ -1,0 +1,38 @@
+[MSD_TEXTURE] device=cuda train A=6038 B=300 | holdout A=1000 B=0
+[MSD_TEXTURE] epoch=0/60 step=0 lr=2.00e-04 lam_cyc=10.00 loss_G=6.9479 adv=4.5352 cyc=0.1874 idt=0.2156 D_A=2.2637 D_B=1.6295 gnG=15.525 gnD=54.012 elapsed=0.2m eta=14350.2m
+[MSD_TEXTURE] epoch=0/60 step=200 lr=2.00e-04 lam_cyc=10.00 loss_G=5.0446 adv=0.5784 cyc=0.3537 idt=0.3719 D_A=0.3722 D_B=0.5223 gnG=48.326 gnD=15.187 elapsed=0.8m eta=241.7m
+[MSD_TEXTURE] epoch=0/60 step=400 lr=2.00e-04 lam_cyc=10.00 loss_G=3.0524 adv=0.3291 cyc=0.2181 idt=0.2169 D_A=0.3254 D_B=0.3277 gnG=11.427 gnD=14.565 elapsed=1.4m eta=200.9m
+[MSD_TEXTURE] epoch=0/60 step=600 lr=2.00e-04 lam_cyc=10.00 loss_G=3.3392 adv=0.5866 cyc=0.2296 idt=0.1826 D_A=0.2640 D_B=0.2716 gnG=15.677 gnD=8.820 elapsed=1.9m eta=187.6m
+[MSD_TEXTURE] epoch=0/60 step=800 lr=2.00e-04 lam_cyc=10.00 loss_G=3.7414 adv=0.7547 cyc=0.2228 idt=0.3036 D_A=0.2356 D_B=0.2122 gnG=13.154 gnD=10.805 elapsed=2.4m eta=181.0m
+[MSD_TEXTURE] epoch=0 select_score=58.668 (FID 116.92: photo->Monet 116.37, Monet->photo 117.47; MiFID 0.4181) raw_raw=61.960 ema_ema=58.668 [ema_ema, 600 held-out photos, 116s] [calibration] best=inf@epochNone(None)
+[MSD_TEXTURE] budget 12.67 h: epoch 0 took 178s (0.178 s/step), one FID check 116s -> 237 epochs x 1000 steps, LR decay from epoch 95, FID checks from epoch 24 every 31
+[MSD_TEXTURE] epoch=1/237 step=1000 lr=2.00e-04 lam_cyc=9.97 loss_G=3.7901 adv=0.5696 cyc=0.2458 idt=0.3088 D_A=0.3399 D_B=0.2855 gnG=16.567 gnD=15.471 elapsed=4.9m eta=1156.9m
+[MSD_TEXTURE] epoch=1/237 step=1200 lr=2.00e-04 lam_cyc=9.97 loss_G=3.7970 adv=0.6291 cyc=0.2615 idt=0.2249 D_A=0.4851 D_B=0.2701 gnG=16.983 gnD=30.775 elapsed=5.4m eta=1066.7m
+[MSD_TEXTURE] epoch=1/237 step=1400 lr=2.00e-04 lam_cyc=9.97 loss_G=3.1103 adv=1.2908 cyc=0.1417 idt=0.1631 D_A=0.2761 D_B=0.3479 gnG=13.011 gnD=21.678 elapsed=6.0m eta=1002.4m
+[MSD_TEXTURE] epoch=1/237 step=1600 lr=2.00e-04 lam_cyc=9.97 loss_G=3.0331 adv=0.3623 cyc=0.2136 idt=0.2172 D_A=0.2796 D_B=0.3149 gnG=15.222 gnD=13.096 elapsed=6.5m eta=953.8m
+[MSD_TEXTURE] epoch=1/237 step=1800 lr=2.00e-04 lam_cyc=9.97 loss_G=3.2060 adv=0.7193 cyc=0.1977 idt=0.2070 D_A=0.1138 D_B=0.2130 gnG=12.039 gnD=11.599 elapsed=7.0m eta=916.0m
+[MSD_TEXTURE] epoch=2/237 step=2000 lr=2.00e-04 lam_cyc=9.94 loss_G=3.1475 adv=0.5821 cyc=0.2052 idt=0.2116 D_A=0.3392 D_B=0.3534 gnG=15.920 gnD=22.428 elapsed=7.6m eta=887.5m
+[MSD_TEXTURE] epoch=2/237 step=2200 lr=2.00e-04 lam_cyc=9.94 loss_G=3.0327 adv=0.6774 cyc=0.1897 idt=0.1891 D_A=0.2601 D_B=0.2751 gnG=18.089 gnD=18.340 elapsed=8.1m eta=862.0m
+[MSD_TEXTURE] epoch=2/237 step=2400 lr=2.00e-04 lam_cyc=9.94 loss_G=3.1441 adv=0.6365 cyc=0.1975 idt=0.2188 D_A=0.3389 D_B=0.4256 gnG=14.051 gnD=17.203 elapsed=8.6m eta=840.7m
+[MSD_TEXTURE] epoch=2/237 step=2600 lr=2.00e-04 lam_cyc=9.94 loss_G=4.0203 adv=1.0753 cyc=0.2448 idt=0.2059 D_A=0.2972 D_B=0.3009 gnG=9.520 gnD=13.992 elapsed=9.1m eta=822.4m
+[MSD_TEXTURE] epoch=2/237 step=2800 lr=2.00e-04 lam_cyc=9.94 loss_G=3.4303 adv=1.1653 cyc=0.1806 idt=0.1891 D_A=0.2883 D_B=0.0904 gnG=12.154 gnD=24.010 elapsed=9.7m eta=806.9m
+[MSD_TEXTURE] epoch=3/237 step=3000 lr=2.00e-04 lam_cyc=9.91 loss_G=3.2390 adv=0.9300 cyc=0.1741 idt=0.2355 D_A=0.2678 D_B=0.2069 gnG=9.622 gnD=11.769 elapsed=10.2m eta=795.1m
+[MSD_TEXTURE] epoch=3/237 step=3200 lr=2.00e-04 lam_cyc=9.91 loss_G=4.7260 adv=0.6984 cyc=0.3237 idt=0.3309 D_A=0.2269 D_B=0.3054 gnG=14.590 gnD=11.385 elapsed=10.7m eta=784.1m
+[MSD_TEXTURE] epoch=3/237 step=3400 lr=2.00e-04 lam_cyc=9.91 loss_G=3.5614 adv=0.4731 cyc=0.2507 idt=0.2435 D_A=0.3508 D_B=0.2245 gnG=10.797 gnD=21.514 elapsed=11.3m eta=774.1m
+[MSD_TEXTURE] epoch=3/237 step=3600 lr=2.00e-04 lam_cyc=9.91 loss_G=3.3978 adv=0.6362 cyc=0.2311 idt=0.1901 D_A=0.2462 D_B=0.3032 gnG=12.978 gnD=13.008 elapsed=11.8m eta=765.5m
+[MSD_TEXTURE] epoch=3/237 step=3800 lr=2.00e-04 lam_cyc=9.91 loss_G=4.5597 adv=0.7451 cyc=0.3038 idt=0.3242 D_A=0.2947 D_B=0.2309 gnG=41.778 gnD=10.747 elapsed=12.3m eta=757.0m
+[MSD_TEXTURE] epoch=4/237 step=4000 lr=2.00e-04 lam_cyc=9.88 loss_G=3.6849 adv=0.5458 cyc=0.2647 idt=0.2120 D_A=0.1959 D_B=0.2226 gnG=13.603 gnD=8.603 elapsed=12.9m eta=750.3m
+[MSD_TEXTURE] epoch=4/237 step=4200 lr=2.00e-04 lam_cyc=9.88 loss_G=4.3825 adv=0.9634 cyc=0.2389 idt=0.4285 D_A=0.3112 D_B=0.2559 gnG=11.589 gnD=9.776 elapsed=13.4m eta=743.8m
+[MSD_TEXTURE] epoch=4/237 step=4400 lr=2.00e-04 lam_cyc=9.88 loss_G=5.2999 adv=0.3516 cyc=0.4113 idt=0.3578 D_A=0.3507 D_B=0.3178 gnG=15.816 gnD=15.748 elapsed=14.0m eta=737.9m
+[MSD_TEXTURE] epoch=4/237 step=4600 lr=2.00e-04 lam_cyc=9.88 loss_G=3.4275 adv=0.9416 cyc=0.2138 idt=0.1511 D_A=0.0842 D_B=0.1290 gnG=15.482 gnD=11.606 elapsed=14.5m eta=732.3m
+[MSD_TEXTURE] epoch=4/237 step=4800 lr=2.00e-04 lam_cyc=9.88 loss_G=3.2666 adv=0.8040 cyc=0.2084 idt=0.1633 D_A=0.3258 D_B=0.4250 gnG=14.261 gnD=16.877 elapsed=15.0m eta=726.9m
+[MSD_TEXTURE] epoch=5/237 step=5000 lr=2.00e-04 lam_cyc=9.85 loss_G=4.5236 adv=0.3431 cyc=0.3470 idt=0.3094 D_A=0.2887 D_B=0.3299 gnG=12.855 gnD=9.447 elapsed=15.6m eta=722.1m
+[MSD_TEXTURE] epoch=5/237 step=5200 lr=2.00e-04 lam_cyc=9.85 loss_G=4.4777 adv=0.5143 cyc=0.3183 idt=0.3360 D_A=0.3994 D_B=0.3327 gnG=13.291 gnD=12.394 elapsed=16.1m eta=717.2m
+[MSD_TEXTURE] epoch=5/237 step=5400 lr=2.00e-04 lam_cyc=9.85 loss_G=3.9863 adv=0.7251 cyc=0.2780 idt=0.2119 D_A=0.3256 D_B=0.1767 gnG=18.803 gnD=9.948 elapsed=16.6m eta=713.4m
+[MSD_TEXTURE] epoch=5/237 step=5600 lr=2.00e-04 lam_cyc=9.85 loss_G=4.2921 adv=0.8468 cyc=0.2857 idt=0.2561 D_A=0.2863 D_B=0.2363 gnG=17.924 gnD=13.510 elapsed=17.2m eta=709.6m
+[MSD_TEXTURE] epoch=5/237 step=5800 lr=2.00e-04 lam_cyc=9.85 loss_G=3.2750 adv=0.7706 cyc=0.2045 idt=0.1989 D_A=0.1774 D_B=0.2603 gnG=12.232 gnD=10.680 elapsed=17.7m eta=705.7m
+[MSD_TEXTURE] epoch=6/237 step=6000 lr=2.00e-04 lam_cyc=9.82 loss_G=4.7601 adv=0.6262 cyc=0.3621 idt=0.2352 D_A=0.2278 D_B=0.1872 gnG=16.448 gnD=12.865 elapsed=18.2m eta=702.4m
+[MSD_TEXTURE] epoch=6/237 step=6200 lr=2.00e-04 lam_cyc=9.82 loss_G=3.9903 adv=0.5321 cyc=0.2632 idt=0.3557 D_A=0.2894 D_B=0.2633 gnG=15.453 gnD=7.824 elapsed=18.8m eta=699.2m
+[MSD_TEXTURE] epoch=6/237 step=6400 lr=2.00e-04 lam_cyc=9.82 loss_G=3.9138 adv=0.7410 cyc=0.2603 idt=0.2511 D_A=0.0831 D_B=0.2397 gnG=17.667 gnD=7.184 elapsed=19.3m eta=696.1m
+[MSD_TEXTURE] epoch=6/237 step=6600 lr=2.00e-04 lam_cyc=9.82 loss_G=5.5544 adv=0.7117 cyc=0.3850 idt=0.4322 D_A=0.2284 D_B=0.2883 gnG=18.920 gnD=11.916 elapsed=19.9m eta=693.0m
+[MSD_TEXTURE] epoch=6/237 step=6800 lr=2.00e-04 lam_cyc=9.82 loss_G=2.9598 adv=0.6366 cyc=0.1854 idt=0.2045 D_A=0.1732 D_B=0.4007 gnG=13.272 gnD=10.935 elapsed=20.4m eta=690.0m

@@ -1,0 +1,74 @@
+# UVCGAN-v2-style run (isolated from the ResNet CycleGAN config).
+# Reference for the ideas only: Torbunov et al., https://github.com/LS4GAN/uvcgan2 (no code copied/executed).
+# Still CycleGAN-shaped: two generators, two discriminators, unpaired data, adversarial + cycle losses.
+# Baseline to beat (measured here with evaluate_local.py on v2): FID 117.297 / MiFID 0.4162 -> -58.8568
+data:
+  domain_a_dir: "../data/photo_jpg"     # A = photos
+  domain_b_dir: "../data/monet_jpg"     # B = Monet
+  image_size: 256
+  holdout_a: 1000
+  holdout_b: 0
+  seed: 1337
+
+model:
+  ngf: 64
+  ndf: 64
+  n_resblocks: 4          # residual blocks before the ViT bottleneck
+  vit_dim: 384
+  vit_depth: 4            # compact ViT
+  vit_heads: 6
+  d_layers: 3             # 70x70 PatchGAN
+  batchstat: true         # batch-statistics head (works at batch_size=1, detached cache)
+
+pretrain:                 # stage 1: generator inpainting pretraining on our own photo + Monet images
+  batch_size: 4
+  lr: 2.0e-4
+  mask_patch: 32
+  mask_prob: 0.40
+  hidden_weight: 2.0
+  clip: 5.0
+  log_every: 100
+
+train:
+  batch_size: 1
+  lr_g: 1.0e-4            # separate generator / discriminator learning rates
+  lr_d: 2.0e-4
+  beta1: 0.5
+  beta2: 0.999
+  lambda_cycle: 10.0
+  lambda_cycle_end: 10.0
+  lambda_identity: 2.5
+  lambda_lowres: 5.0      # 32x32 low-resolution consistency loss
+  lambda_dfeat: 0.0       # optional discriminator-feature cycle loss (0 = off)
+  r1_gamma: 1.0           # zero-centred R1 gradient penalty on real images
+  r1_every: 16            # lazy regularisation: apply R1 every N discriminator steps
+  pool_size: 50
+  diffaugment: "translation"
+  ema_decay: 0.999
+  clip: 5.0
+  max_steps_per_epoch: 1000
+  decay_frac: 0.4
+  min_epochs: 10
+  max_epochs: 1000
+  amp: true
+  amp_dtype: "bf16"
+  num_workers: 3
+  log_every: 200
+  sample_every: 5000
+  device: "auto"
+  out_dir: "uvcgan2/checkpoints"
+  log_file: "uvcgan2/logs/train_raw_uvcgan.log"
+  init_generators_from: "uvcgan2/checkpoints/pretrain/{name}.pt"   # set by run_uvcgan.py after stage 1
+
+select:                   # identical to the ResNet run: the instructor's metric via OfficialSelector
+  enabled: true
+  n_images: 300
+  n_sets: 2
+  from_frac: 0.1
+  n_evals: 8
+  from_epoch: 30
+  every: 2
+
+eval:
+  batch_size: 16
+  pred_dir: "uvcgan2/outputs"

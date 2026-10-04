@@ -1,0 +1,65 @@
+data:
+  domain_a_dir: ../data/photo_jpg
+  domain_b_dir: ../data/monet_jpg
+  image_size: 256
+  holdout_a: 1000
+  holdout_b: 0
+  seed: 1337
+model:
+  ngf: 64
+  ndf: 64
+  n_resblocks: 4
+  vit_dim: 384
+  vit_depth: 4
+  vit_heads: 6
+  d_layers: 3
+  batchstat: true
+pretrain:
+  batch_size: 4
+  lr: 0.0002
+  mask_patch: 32
+  mask_prob: 0.4
+  hidden_weight: 2.0
+  clip: 5.0
+  log_every: 100
+train:
+  batch_size: 1
+  lr_g: 0.0001
+  lr_d: 0.0002
+  beta1: 0.5
+  beta2: 0.999
+  lambda_cycle: 10.0
+  lambda_cycle_end: 10.0
+  lambda_identity: 2.5
+  lambda_lowres: 5.0
+  lambda_dfeat: 0.0
+  r1_gamma: 1.0
+  r1_every: 16
+  pool_size: 50
+  diffaugment: translation
+  ema_decay: 0.999
+  clip: 5.0
+  max_steps_per_epoch: 1000
+  decay_frac: 0.4
+  min_epochs: 6
+  max_epochs: 1000
+  amp: true
+  amp_dtype: bf16
+  num_workers: 3
+  log_every: 200
+  sample_every: 500
+  device: auto
+  out_dir: uvcgan2/pilot_checkpoints
+  log_file: uvcgan2/logs/train_raw_pilot.log
+  init_generators_from: uvcgan2/checkpoints/pretrain/{name}.pt
+select:
+  enabled: true
+  n_images: 300
+  n_sets: 2
+  from_frac: 0.15
+  n_evals: 4
+  from_epoch: 30
+  every: 2
+eval:
+  batch_size: 16
+  pred_dir: uvcgan2/pilot_outputs

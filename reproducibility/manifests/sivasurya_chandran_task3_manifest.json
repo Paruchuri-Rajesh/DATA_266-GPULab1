@@ -1,0 +1,88 @@
+{
+  "python": "3.9.13",
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "numpy": "2.0.2",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.13.1",
+    "torchmetrics": "1.8.2",
+    "lpips": "0.1.4"
+  },
+  "hardware": {
+    "device": "cuda",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "cpu_count": 32,
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "git_commit": "uncommitted",
+  "config": {
+    "data": {
+      "domain_a_dir": "../data/photo_jpg",
+      "domain_b_dir": "../data/monet_jpg",
+      "image_size": 256,
+      "holdout_a": 1000,
+      "holdout_b": 0,
+      "seed": 1337
+    },
+    "model": {
+      "ngf": 64,
+      "ndf": 64,
+      "n_resblocks": 9,
+      "upsample": "resize_conv",
+      "d_scales": 1
+    },
+    "train": {
+      "batch_size": 1,
+      "lr": 0.0002,
+      "beta1": 0.5,
+      "lambda_cycle": 10.0,
+      "lambda_identity": 2.5,
+      "pool_size": 50,
+      "diffaugment": "translation",
+      "ema_decay": 0.999,
+      "max_steps_per_epoch": 1000,
+      "decay_frac": 0.4,
+      "min_epochs": 20,
+      "max_epochs": 1000,
+      "epochs": 60,
+      "decay_start_epoch": 24,
+      "amp": true,
+      "amp_dtype": "bf16",
+      "num_workers": 3,
+      "log_every": 200,
+      "sample_every": 5000,
+      "device": "auto",
+      "out_dir": "checkpoints\\runs\\V2_CONTINUE",
+      "log_file": "logs/train_raw_V2_CONTINUE.log",
+      "lambda_cycle_end": 10.0,
+      "init_from": "checkpoints/v2/{name}.pt"
+    },
+    "select": {
+      "enabled": true,
+      "n_images": 300,
+      "n_sets": 2,
+      "from_frac": 0.1,
+      "n_evals": 8,
+      "from_epoch": 30,
+      "every": 2
+    },
+    "eval": {
+      "max_images": null,
+      "batch_size": 16,
+      "pred_dir": "outputs"
+    },
+    "submit": {
+      "csv": "submission.csv"
+    },
+    "variant": "V2_CONTINUE"
+  },
+  "checkpoints": {
+    "G_AB": "checkpoints\\runs\\V2_CONTINUE\\G_AB.pt",
+    "G_BA": "checkpoints\\runs\\V2_CONTINUE\\G_BA.pt",
+    "D_A": "checkpoints\\runs\\V2_CONTINUE\\D_A.pt",
+    "D_B": "checkpoints\\runs\\V2_CONTINUE\\D_B.pt"
+  },
+  "results_file": "checkpoints\\runs\\V2_CONTINUE\\metrics_train.json"
+}

@@ -1,0 +1,38 @@
+# Task 3 — CycleGAN, domain A = photo, domain B = Monet (full run)
+data:
+  domain_a_dir: "../data/photo_jpg"
+  domain_b_dir: "../data/monet_jpg"
+  image_size: 256
+  holdout_a: 300          # photos held out from training, used for evaluation
+  holdout_b: 30           # Monet paintings held out (Monet set is only ~300 images)
+  seed: 1337
+
+model:
+  ngf: 64
+  ndf: 64
+  n_resblocks: 9          # 9 blocks for 256x256 (paper setting)
+
+train:
+  batch_size: 1
+  epochs: 30
+  decay_start_epoch: 15   # constant LR, then linear decay to 0 (paper schedule)
+  lr: 2.0e-4
+  beta1: 0.5
+  lambda_cycle: 10.0
+  lambda_identity: 5.0    # 0.5 * lambda_cycle as in the paper
+  pool_size: 50           # history buffer of generated images for D updates
+  # One uncapped epoch = ~6.7K photos at batch 1 (~35 min on a T4), so 30 epochs would take 15+ h.
+  # Capping at 1000 steps gives 30K total steps (~2.5-3.5 h on a T4 with AMP, less on faster lab GPUs). Set null on a faster GPU.
+  max_steps_per_epoch: 1000
+  amp: true                # fp16 autocast on CUDA; ignored on CPU/MPS
+  num_workers: 4           # lower to 2 if the machine has few CPU cores
+  log_every: 100
+  sample_every: 1000
+  device: "auto"
+  out_dir: "checkpoints"
+  log_file: "logs/train_raw.log"
+
+eval:
+  max_images: null        # null = all held-out images (and all training Monet images as FID reference)
+  batch_size: 16
+  pred_dir: "outputs"      # competition naming (A = Monet, B = photo): pred_A2B = Monet->photo (all 300), pred_B2A = photo->Monet

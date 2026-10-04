@@ -119,7 +119,7 @@ def task3(member, ckpt, out_name, log_name):
         return print("task3: no metrics yet")
     rows = [[l, a, b] for l, a, b in both] + [[l, v, ""] for l, v in single]
     for name in (f"metrics_report{SFX}.csv", f"full_metrics_report{SFX}.csv"):
-        write_csv(os.path.join(mdir, name), ["metric", "photo_to_monet (A2B)", "monet_to_photo (B2A)"], rows)
+        write_csv(os.path.join(mdir, name), ["metric", "photo_to_monet (G_AB)", "monet_to_photo (G_BA)"], rows)
     out = os.path.join(mdir, out_name)
     for pat in ("loss_curves.png", "eval_*.png", "samples", "metrics_eval.json", "metrics_train.json", "audit/audit_results.json"):
         copy(os.path.join(mdir, ckpt, pat), out)

@@ -1,0 +1,7 @@
+device cuda | counts {'real_monet': 300, 'gen_b2a': 300, 'real_photo': 300, 'gen_a2b': 300}
+[Photo->Monet] FID=97.019  MiFID=0.4025
+[Monet->Photo] FID=106.907  MiFID=0.4139
+submission: FID=101.963 MiFID=0.4082 -> leaderboard -51.1856
+ID,FID,MiFID
+1,101.96297300048988,0.40821102261543274
+

@@ -1,0 +1,6 @@
+2026-10-01 18:00:08,973 device=cuda train A=6038 B=300 holdout A=1000 {'device': 'cuda', 'cpu': 'AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD', 'platform': 'Windows-10-10.0.22631-SP0', 'cpu_count': 32, 'gpu': 'NVIDIA GeForce RTX 4090'}
+2026-10-01 18:00:09,322 no pretrained generators at uvcgan2/checkpoints/pretrain/{name}.pt; random init
+2026-10-01 18:00:43,801 device=cuda train A=6038 B=300 holdout A=1000 {'device': 'cuda', 'cpu': 'AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD', 'platform': 'Windows-10-10.0.22631-SP0', 'cpu_count': 32, 'gpu': 'NVIDIA GeForce RTX 4090'}
+2026-10-01 18:00:44,131 no pretrained generators at uvcgan2/checkpoints/pretrain/{name}.pt; random init
+2026-10-01 18:00:59,352 epoch=0/1000 step=0 lr_g=1.00e-04 lam_cyc=10.00 loss_G=19.9513 adv=2.0799 cyc=1.0352 idt=1.0231 low=0.9923 r1=68.1872 D_A=0.4621 D_B=0.5263 gnG=308.252 gnD=1806.406 elapsed=0.2m
+2026-10-01 18:01:29,223 done: 200 steps in 0.01 h; best score inf at epoch None (None)

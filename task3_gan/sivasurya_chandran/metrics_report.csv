@@ -1,0 +1,27 @@
+metric,photo_to_monet (G_AB),monet_to_photo (G_BA)
+FID ↓,82.9969,89.6836
+KID ↓,0.0126,0.0257
+Precision ↑,0.5760,0.6967
+Recall ↑,0.6300,0.4280
+Density,0.5556,0.5847
+Coverage ↑,0.9333,0.3640
+Cycle-reconstruction L1 ↓,0.1053,0.0841
+LPIPS input vs translation,0.4204,0.4019
+Content cosine similarity ↑,0.7316,0.7708
+Identity L1 ↓,0.1003,0.0797
+"Submission FID, instructor's script (first 300) ↓",96.9560,106.8620
+"Submission MiFID, instructor's script (first 300) ↓",0.4024,0.4139
+Final cycle / identity loss,0.1593 / 0.1487,
+Final G adversarial / D_A / D_B loss,1.5841 / 0.0633 / 0.0352,
+Grad norm G mean/max,15.285 / 520.640,
+Grad norm D mean/max,9.333 / 69.857,
+NaN count,0,
+fp16 overflow steps skipped (G / D),0 / 0,
+Human audit score (1–5),—,
+Inter-rater κ (quadratic) / exact agreement %,—,
+Parameter count (G_AB+G_BA+D_A+D_B),"28,285,832",
+Training time (s),"24,770.4921",
+Images/sec,10.9001,
+Peak memory (MB),"19,863.1582",
+"submission.csv FID / MiFID (instructor's script, mean of both directions)",101.9088 / 0.4082,
+Kaggle public / private score,-51.1585 expected; not submitted yet,

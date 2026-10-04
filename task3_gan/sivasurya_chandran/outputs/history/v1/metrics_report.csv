@@ -1,0 +1,24 @@
+metric,photo_to_monet (A2B),monet_to_photo (B2A)
+FID ↓,127.3707,109.8857
+KID ↓,0.0349,0.0315
+Precision ↑,0.2800,0.6333
+Recall ↑,0.7500,0.3933
+Density,0.1433,0.6947
+Coverage ↑,0.3600,0.6867
+Cycle-reconstruction L1 ↓,0.1212,0.1001
+LPIPS input vs translation,0.4047,0.3046
+Content cosine similarity ↑,0.7262,0.8091
+Identity L1 ↓,0.1133,0.1092
+Final cycle / identity loss,0.1872 / 0.1897,
+Final G adversarial / D_A / D_B loss,0.8281 / 0.1441 / 0.1508,
+Grad norm G mean/max,28.126 / 251.080,
+Grad norm D mean/max,15.243 / 277.422,
+NaN count,0,
+fp16 overflow steps skipped (G / D),15 / 15,
+Human audit score (1–5),—,
+Inter-rater κ (quadratic) / exact agreement %,—,
+Parameter count (G_AB+G_BA+D_A+D_B),"28,285,832",
+Training time (s),"7,028.4590",
+Images/sec,4.2684,
+Peak memory (MB),"1,569.9014",
+Kaggle public / private score,fill in after submission,

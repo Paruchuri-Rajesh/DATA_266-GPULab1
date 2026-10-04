@@ -1,0 +1,36 @@
+{
+  "photo_to_monet": {
+    "n_inputs": 1000,
+    "n_reference_real": 300,
+    "fid": 108.83392945019975,
+    "kid_mean": 0.03335737317854079,
+    "kid_std": 0.0015339884507974343,
+    "precision": 0.316,
+    "recall": 0.5933333333333334,
+    "density": 0.1892,
+    "coverage": 0.7033333333333334,
+    "k": 5,
+    "cycle_reconstruction_l1": 0.12136704474687576,
+    "lpips_input_vs_translation": 0.3991759717464447,
+    "lpips_input_vs_reconstruction": 0.36331507563591003,
+    "content_cosine_input_vs_translation": 0.7384774560903008,
+    "identity_l1": 0.13072554767131805
+  },
+  "monet_to_photo": {
+    "n_inputs": 300,
+    "n_reference_real": 1000,
+    "fid": 113.41148371291354,
+    "kid_mean": 0.048046850960885484,
+    "kid_std": 0.0014247459036539737,
+    "precision": 0.4666666666666667,
+    "recall": 0.4,
+    "density": 0.2653333333333333,
+    "coverage": 0.206,
+    "k": 5,
+    "cycle_reconstruction_l1": 0.10502629727125168,
+    "lpips_input_vs_translation": 0.3543665409088135,
+    "lpips_input_vs_reconstruction": 0.4579024314880371,
+    "content_cosine_input_vs_translation": 0.7765984106425649,
+    "identity_l1": 0.12627020478248596
+  }
+}

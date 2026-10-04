@@ -1,0 +1,51 @@
+# Task 3 — CycleGAN v2, domain A = photo, domain B = Monet (full run; v1 = config.yaml)
+# Changes vs v1, each aimed at a problem seen in v1 (checkerboard textures, a strong/overfitting D with
+# only ~300 Monet paintings, photo colours surviving translation):
+#   - resize-conv upsampling instead of transposed convs (removes checkerboard artifacts)
+#   - DiffAugment on every discriminator input (data-efficient GAN training for the 300-painting domain)
+#   - all 300 Monet paintings used for training (host: the Monet set has no test split)
+#   - lambda_identity 5 -> 2.5 (less pull towards the photo's own colours)
+#   - 50K steps instead of 30K, and checkpoint selection by FID on 1,000 held-out photos
+data:
+  domain_a_dir: "../data/photo_jpg"
+  domain_b_dir: "../data/monet_jpg"
+  image_size: 256
+  holdout_a: 1000         # photos never trained on: checkpoint selection + evaluation
+  holdout_b: 0            # train on all 300 Monet paintings
+  seed: 1337
+
+model:
+  ngf: 64
+  ndf: 64
+  n_resblocks: 9
+  upsample: "resize_conv" # v1: transposed convolutions
+
+train:
+  batch_size: 1
+  epochs: 50
+  decay_start_epoch: 25   # constant LR, then linear decay to 0
+  lr: 2.0e-4
+  beta1: 0.5
+  lambda_cycle: 10.0
+  lambda_identity: 2.5
+  pool_size: 50
+  diffaugment: "color,translation,cutout"
+  max_steps_per_epoch: 1000   # 50K steps, ~3.5 h on a T4 with AMP
+  amp: true
+  num_workers: 4
+  log_every: 100
+  sample_every: 1000
+  device: "auto"
+  out_dir: "checkpoints/v2"
+  log_file: "logs/train_raw_v2.log"
+
+select:
+  enabled: true
+  from_epoch: 20          # score every epoch from here (plus the last) and keep the best as G_AB.pt
+  n_images: 1000          # the held-out photos
+  stats: "../data/competition_files/real_stats.npz"
+
+eval:
+  max_images: null
+  batch_size: 16
+  pred_dir: "outputs/v2"

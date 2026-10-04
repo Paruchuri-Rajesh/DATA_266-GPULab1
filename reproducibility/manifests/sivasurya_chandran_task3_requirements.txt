@@ -1,0 +1,15 @@
+# Task 3 only, unpinned (any recent Python 3.10-3.13). Install the CUDA build of torch/torchvision first:
+#   Linux:   pip install torch torchvision                     (PyPI wheels include CUDA)
+#   Windows: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# then:     pip install -r task3_gan/requirements-task3.txt
+numpy
+scipy
+pillow
+pyyaml
+matplotlib
+scikit-learn
+torchmetrics[image]
+torch-fidelity
+lpips
+kaggle>=1.8
+ipykernel

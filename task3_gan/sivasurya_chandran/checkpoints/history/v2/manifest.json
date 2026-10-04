@@ -1,0 +1,75 @@
+{
+  "python": "3.13.15",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.1.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3",
+    "datasets": "4.5.0",
+    "nltk": "3.9.2",
+    "torchmetrics": "1.8.2",
+    "lpips": "0.1.4"
+  },
+  "hardware": {
+    "device": "cuda",
+    "cpu": "x86_64",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "cpu_count": 2,
+    "gpu": "Tesla T4"
+  },
+  "git_commit": "uncommitted",
+  "config": {
+    "data": {
+      "domain_a_dir": "../data/photo_jpg",
+      "domain_b_dir": "../data/monet_jpg",
+      "image_size": 256,
+      "holdout_a": 1000,
+      "holdout_b": 0,
+      "seed": 1337
+    },
+    "model": {
+      "ngf": 64,
+      "ndf": 64,
+      "n_resblocks": 9,
+      "upsample": "resize_conv"
+    },
+    "train": {
+      "batch_size": 1,
+      "epochs": 50,
+      "decay_start_epoch": 25,
+      "lr": 0.0002,
+      "beta1": 0.5,
+      "lambda_cycle": 10.0,
+      "lambda_identity": 2.5,
+      "pool_size": 50,
+      "diffaugment": "color,translation,cutout",
+      "max_steps_per_epoch": 1000,
+      "amp": true,
+      "num_workers": 4,
+      "log_every": 100,
+      "sample_every": 1000,
+      "device": "auto",
+      "out_dir": "checkpoints/v2",
+      "log_file": "logs/train_raw_v2.log"
+    },
+    "select": {
+      "enabled": true,
+      "from_epoch": 20,
+      "n_images": 1000,
+      "stats": "../data/competition_files/real_stats.npz"
+    },
+    "eval": {
+      "max_images": null,
+      "batch_size": 16,
+      "pred_dir": "outputs/v2"
+    }
+  },
+  "checkpoints": {
+    "G_AB": "checkpoints/v2/G_AB.pt",
+    "G_BA": "checkpoints/v2/G_BA.pt",
+    "D_A": "checkpoints/v2/D_A.pt",
+    "D_B": "checkpoints/v2/D_B.pt"
+  },
+  "results_file": "checkpoints/v2/metrics_train.json"
+}

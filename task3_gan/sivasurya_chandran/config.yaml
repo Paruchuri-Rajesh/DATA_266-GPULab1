@@ -1,0 +1,91 @@
+# Task 3 — final CycleGAN run (photo -> Monet), built for one GPU session on an RTX 4090.
+#   python src/run_final.py --hours 9.5
+# trains the variants below in parallel (each sized to the time budget from its measured speed), keeps each
+# variant's best epoch by the instructor's metric on held-out photos (both directions), promotes the best variant to
+# checkpoints/ and logs/train_raw.log, then evaluates both directions, writes outputs/pred_A2B (all 300 Monet ->
+# photo) and outputs/pred_B2A (all 7,038 photos -> Monet) and scores them with evaluate_local.py (the instructor's
+# Part3_Evaluation_Script.ipynb) into submission.csv. Never submits to Kaggle.
+#
+# What earlier runs showed (configs/history/, logs/history/, kaggle_submissions/). "Official" = the instructor's
+# script on each run's pred_A2B (300) + pred_B2A (all photos); untranslated images score FID 126.48 / -63.46:
+#   v1 transposed-conv upsampling, no D augmentation, 30K steps    official FID 116.88 (photo->Monet 118.6, Monet->photo 115.1) -58.65
+#   v2 resize-conv, DiffAugment, all 300 Monet, 50K steps          official FID 115.94 (113.8 / 118.1)                             -58.18
+#   v3 v2 + a second LR cycle (warm start), translation-only aug   official FID 114.36 (112.6 / 116.2)                             -57.39
+#   (the Kaggle entries -49.257 / -46.353 / -45.970 were computed with an earlier photo->Monet-only scorer, before the
+#   instructor's script was available; see HISTORY.md)
+#   FID fell only while the learning rate decayed; colour statistics already match Monet (matching them exactly
+#   gains 1.3); blurring costs +11 (brushstroke texture matters); the covariance term is 85 of the 95 points, i.e.
+#   the translations keep too much photo-specific structure.
+# Hence: a much longer run with a long linear LR decay (60% of it), EMA generators, and four variants trained in
+# parallel that test a stronger discriminator (two scales) and weaker pulls back to the photo (cycle weight decayed
+# over training, or lower cycle/identity weights throughout). The best variant by held-out FID is kept.
+data:
+  domain_a_dir: "../data/photo_jpg"
+  domain_b_dir: "../data/monet_jpg"
+  image_size: 256
+  holdout_a: 1000         # photos never trained on: checkpoint/variant selection (and the evaluate.py metrics)
+  holdout_b: 0            # all 300 Monet paintings train D_B (the host: the Monet set has no test split)
+  seed: 1337
+
+model:
+  ngf: 64
+  ndf: 64
+  n_resblocks: 9
+  upsample: "resize_conv" # nearest resize + conv: no checkerboard artifacts (v1 had them with transposed convs)
+  d_scales: 1             # PatchGAN scales per discriminator (2 = full + half resolution, pix2pixHD)
+
+train:
+  batch_size: 1
+  lr: 2.0e-4
+  beta1: 0.5
+  lambda_cycle: 10.0      # constant unless a variant sets lambda_cycle_end (linear change over the run)
+  lambda_identity: 2.5
+  pool_size: 50
+  diffaugment: "translation,cutout"   # on every discriminator input; no colour jitter, so D judges the Monet palette
+  ema_decay: 0.999        # EMA copies of both generators; each FID check scores raw and EMA weights and keeps the better
+  max_steps_per_epoch: 1000
+  # time-budgeted schedule (src/run_final.py passes --budget_hours): epochs are sized after epoch 0 from the
+  # measured speed; constant LR for the first 40%, then linear decay to 0
+  decay_frac: 0.4
+  min_epochs: 20
+  max_epochs: 1000
+  # fixed schedule, used only when train.py runs without --budget_hours
+  epochs: 60
+  decay_start_epoch: 24
+  amp: true
+  amp_dtype: "bf16"       # RTX 30/40 series; falls back to fp16 + GradScaler on GPUs without bf16
+  num_workers: 3          # per variant process
+  log_every: 200
+  sample_every: 5000
+  device: "auto"
+  out_dir: "checkpoints"
+  log_file: "logs/train_raw.log"
+
+select:                   # the instructor's metric, both directions, on held-out photos (never the 300 it scores)
+  enabled: true
+  n_images: 300           # photos per set, as in the official script
+  n_sets: 2               # disjoint held-out sets averaged (300-image FID is noisy)
+  from_frac: 0.1          # FID checks from 10% of the run (early ones show it is working), denser late
+  n_evals: 8
+  from_epoch: 30          # fixed-schedule equivalents
+  every: 2
+
+variants:                 # overrides of the settings above; generator architecture is shared by all variants
+  # Both variants are warm started from v2's weights (v2 uses the same resize_conv generator). On the RTX 4090 they
+  # were at checkpoints/v2/; in this repo the identical files are at checkpoints/history/v2/.
+  V2_CONTINUE:                                # v3's recipe (translation-only aug) on v2's weights, run long
+    model: {d_scales: 1}
+    train: {lambda_cycle: 10.0, lambda_cycle_end: 10.0, lambda_identity: 2.5, diffaugment: "translation",
+            init_from: "checkpoints/history/v2/{name}.pt"}
+  MSD_TEXTURE:                                # v2 generators + fresh two-scale D + cycle weight 10 -> 3
+    model: {d_scales: 2}
+    train: {lambda_cycle: 10.0, lambda_cycle_end: 3.0, lambda_identity: 2.5, diffaugment: "translation",
+            init_generators_from: "checkpoints/history/v2/{name}.pt"}
+
+eval:
+  max_images: null
+  batch_size: 16
+  pred_dir: "outputs"     # competition naming (A = Monet, B = photo): pred_A2B = Monet->photo (all 300), pred_B2A = photo->Monet (all 7,038)
+
+submit:
+  csv: "submission.csv"

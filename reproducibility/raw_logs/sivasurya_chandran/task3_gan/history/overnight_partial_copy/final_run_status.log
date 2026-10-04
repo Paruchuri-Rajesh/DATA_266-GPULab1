@@ -1,0 +1,21 @@
+[2026-10-01 17:34:15] === Task 3 final run | GPU: NVIDIA GeForce RTX 4090 (24 GB) | budget 13.00 h (training 12.67 h) | variants: V2_CONTINUE, MSD_TEXTURE ===
+[2026-10-01 17:34:15] V2_CONTINUE: started (pid 34476)
+[2026-10-01 17:34:20] MSD_TEXTURE: started (pid 34616)
+[2026-10-01 17:34:25] V2_CONTINUE: 
+[2026-10-01 17:34:25] MSD_TEXTURE: 
+[2026-10-01 17:39:25] V2_CONTINUE: [V2_CONTINUE] epoch=1/270 step=1000 lr=2.00e-04 lam_cyc=10.00 loss_G=4.5071 adv=0.9150 cyc=0.2843 idt=0.2997 D_A=0.1160 D_B=0.1794 gnG=14.047 gnD=6.302 elapsed=4.6m eta=1
+    [V2_CONTINUE] budget 12.67 h: epoch 0 took 156s (0.156 s/step), one FID check 121s -> 270 epochs x 1000 steps, LR decay from epoch 108, FID checks from epoch 27 every 35
+[2026-10-01 17:39:25] MSD_TEXTURE: [MSD_TEXTURE] epoch=0/60 step=800 lr=2.00e-04 lam_cyc=10.00 loss_G=3.7414 adv=0.7547 cyc=0.2228 idt=0.3036 D_A=0.2356 D_B=0.2122 gnG=13.154 gnD=10.805 elapsed=2.4m eta=18
+    [MSD_TEXTURE] budget 12.67 h: epoch 0 took 178s (0.178 s/step), one FID check 116s -> 237 epochs x 1000 steps, LR decay from epoch 95, FID checks from epoch 24 every 31
+[2026-10-01 17:44:25] V2_CONTINUE: [V2_CONTINUE] epoch=3/270 step=3400 lr=2.00e-04 lam_cyc=10.00 loss_G=4.0487 adv=0.5948 cyc=0.2758 idt=0.2785 D_A=0.2382 D_B=0.1875 gnG=15.938 gnD=8.375 elapsed=9.8m eta=7
+    [V2_CONTINUE] budget 12.67 h: epoch 0 took 156s (0.156 s/step), one FID check 121s -> 270 epochs x 1000 steps, LR decay from epoch 108, FID checks from epoch 27 every 35
+[2026-10-01 17:44:25] MSD_TEXTURE: [MSD_TEXTURE] epoch=2/237 step=2800 lr=2.00e-04 lam_cyc=9.94 loss_G=3.4303 adv=1.1653 cyc=0.1806 idt=0.1891 D_A=0.2883 D_B=0.0904 gnG=12.154 gnD=24.010 elapsed=9.7m eta=8
+    [MSD_TEXTURE] budget 12.67 h: epoch 0 took 178s (0.178 s/step), one FID check 116s -> 237 epochs x 1000 steps, LR decay from epoch 95, FID checks from epoch 24 every 31
+[2026-10-01 17:49:25] V2_CONTINUE: [V2_CONTINUE] epoch=5/270 step=5600 lr=2.00e-04 lam_cyc=10.00 loss_G=5.4736 adv=0.8229 cyc=0.3856 idt=0.3180 D_A=0.2782 D_B=0.2125 gnG=28.279 gnD=8.837 elapsed=14.8m eta=
+    [V2_CONTINUE] budget 12.67 h: epoch 0 took 156s (0.156 s/step), one FID check 121s -> 270 epochs x 1000 steps, LR decay from epoch 108, FID checks from epoch 27 every 35
+[2026-10-01 17:49:25] MSD_TEXTURE: [MSD_TEXTURE] epoch=4/237 step=4600 lr=2.00e-04 lam_cyc=9.88 loss_G=3.4275 adv=0.9416 cyc=0.2138 idt=0.1511 D_A=0.0842 D_B=0.1290 gnG=15.482 gnD=11.606 elapsed=14.5m eta=
+    [MSD_TEXTURE] budget 12.67 h: epoch 0 took 178s (0.178 s/step), one FID check 116s -> 237 epochs x 1000 steps, LR decay from epoch 95, FID checks from epoch 24 every 31
+[2026-10-01 17:54:25] V2_CONTINUE: [V2_CONTINUE] epoch=7/270 step=7800 lr=2.00e-04 lam_cyc=10.00 loss_G=4.3897 adv=0.8889 cyc=0.2639 idt=0.3448 D_A=0.3137 D_B=0.3202 gnG=19.760 gnD=17.962 elapsed=19.7m eta
+    [V2_CONTINUE] budget 12.67 h: epoch 0 took 156s (0.156 s/step), one FID check 121s -> 270 epochs x 1000 steps, LR decay from epoch 108, FID checks from epoch 27 every 35
+[2026-10-01 17:54:25] MSD_TEXTURE: [MSD_TEXTURE] epoch=6/237 step=6600 lr=2.00e-04 lam_cyc=9.82 loss_G=5.5544 adv=0.7117 cyc=0.3850 idt=0.4322 D_A=0.2284 D_B=0.2883 gnG=18.920 gnD=11.916 elapsed=19.9m eta=
+    [MSD_TEXTURE] budget 12.67 h: epoch 0 took 178s (0.178 s/step), one FID check 116s -> 237 epochs x 1000 steps, LR decay from epoch 95, FID checks from epoch 24 every 31

@@ -1,0 +1,67 @@
+{
+  "winner": "V2_CONTINUE",
+  "selection": "lowest held-out score, instructor's metric, both directions (photos never trained on)",
+  "variants": [
+    {
+      "variant": "V2_CONTINUE",
+      "status": "ok",
+      "best_score": 49.26694891074646,
+      "best_fid": 98.12764541495538,
+      "best_fid_b2a": 94.72897584711953,
+      "best_fid_a2b": 101.52631498279123,
+      "best_epoch": 269,
+      "best_weights": "raw_raw",
+      "epochs": 270,
+      "steps": 270000,
+      "training_time_sec": 24770,
+      "sec_per_step": 0.0917,
+      "d_scales": 1,
+      "lambda_cycle": 10.0,
+      "lambda_identity": 2.5,
+      "diffaugment": "translation",
+      "ema_decay": 0.999,
+      "fid_history": [
+        {
+          "epoch": 27,
+          "raw": 54.13752716233438,
+          "ema": 54.5967428140261
+        },
+        {
+          "epoch": 62,
+          "raw": 52.93027908626249,
+          "ema": 51.80669050158058
+        },
+        {
+          "epoch": 97,
+          "raw": 53.05624090527104,
+          "ema": 51.24451614410652
+        },
+        {
+          "epoch": 132,
+          "raw": 51.72070972599145,
+          "ema": 50.407640630637864
+        },
+        {
+          "epoch": 167,
+          "raw": 52.5354703411016,
+          "ema": 50.738986123049116
+        },
+        {
+          "epoch": 202,
+          "raw": 51.55660684206096,
+          "ema": 50.042224379063796
+        },
+        {
+          "epoch": 237,
+          "raw": 49.35804064428839,
+          "ema": 49.6773073906448
+        },
+        {
+          "epoch": 269,
+          "raw": 49.26694891074646,
+          "ema": 49.29621110036382
+        }
+      ]
+    }
+  ]
+}

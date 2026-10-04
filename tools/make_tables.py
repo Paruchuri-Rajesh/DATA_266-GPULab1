@@ -104,6 +104,7 @@ def task3_rows(member, ckpt):
     base = os.path.join(ROOT, TASKS["task3"], member, ckpt)
     t, e = load(os.path.join(base, "metrics_train.json")), load(os.path.join(base, "metrics_eval.json"))
     a = load(os.path.join(base, "audit", "audit_results.json"))
+    sub = load(os.path.join(ROOT, TASKS["task3"], member, "submission_details.json"))  # instructor's evaluation script
     if not t or not e:
         return None, None
     p2m, m2p = e["photo_to_monet"], e["monet_to_photo"]
@@ -116,6 +117,9 @@ def task3_rows(member, ckpt):
             ("Identity L1 ↓", "identity_l1"),
         ]
     ]
+    if sub and "FID_B2A_photo_to_monet" in sub:
+        both.append(("Submission FID, instructor's script (first 300) ↓", sub["FID_B2A_photo_to_monet"], sub["FID_A2B_monet_to_photo"]))
+        both.append(("Submission MiFID, instructor's script (first 300) ↓", sub["MiFID_B2A_photo_to_monet"], sub["MiFID_A2B_monet_to_photo"]))
     single = [
         ("Final cycle / identity loss", f"{fmt(t['final_cycle_loss'])} / {fmt(t['final_identity_loss'])}"),
         ("Final G adversarial / D_A / D_B loss", f"{fmt(t['final_loss_G_adv'])} / {fmt(t['final_loss_D_A'])} / {fmt(t['final_loss_D_B'])}"),
@@ -129,7 +133,10 @@ def task3_rows(member, ckpt):
         ("Training time (s)", t["training_time_sec"]),
         ("Images/sec", t["images_per_sec"]),
         ("Peak memory (MB)", t["peak_memory_mb"]),
-        ("Kaggle public / private score", "fill in after submission"),
+        ("submission.csv FID / MiFID (instructor's script, mean of both directions)",
+         f"{fmt(sub['FID'])} / {fmt(sub['MiFID'])}" if sub else "—"),
+        ("Kaggle public / private score", sub.get("kaggle_public_score", f"{fmt(-(sub['FID'] + sub['MiFID']) / 2)} expected; not submitted yet")
+         if sub else "fill in after submission"),
     ]
     return both, single
 

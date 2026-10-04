@@ -1,0 +1,77 @@
+{
+  "python": "3.9.6",
+  "packages": {
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "numpy": "2.0.2",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.13.1",
+    "datasets": "4.5.0",
+    "nltk": "3.9.2",
+    "torchmetrics": "1.8.2",
+    "lpips": "0.1.4"
+  },
+  "hardware": {
+    "device": "mps",
+    "cpu": "arm",
+    "platform": "macOS-26.6-arm64-arm-64bit",
+    "cpu_count": 10,
+    "gpu": "Apple M5 GPU (MPS)"
+  },
+  "git_commit": "uncommitted",
+  "config": {
+    "data": {
+      "domain_a_dir": "../data/photo_jpg",
+      "domain_b_dir": "../data/monet_jpg",
+      "image_size": 256,
+      "holdout_a": 1000,
+      "holdout_b": 0,
+      "seed": 1337
+    },
+    "model": {
+      "ngf": 64,
+      "ndf": 64,
+      "n_resblocks": 9,
+      "upsample": "resize_conv"
+    },
+    "train": {
+      "init_from": "checkpoints/v2/{name}.pt",
+      "batch_size": 1,
+      "epochs": 12,
+      "decay_start_epoch": 2,
+      "lr": 0.0001,
+      "beta1": 0.5,
+      "lambda_cycle": 10.0,
+      "lambda_identity": 2.5,
+      "pool_size": 50,
+      "diffaugment": "translation",
+      "max_steps_per_epoch": 1000,
+      "amp": true,
+      "num_workers": 4,
+      "log_every": 100,
+      "sample_every": 1000,
+      "device": "auto",
+      "out_dir": "checkpoints/v3",
+      "log_file": "logs/train_raw_v3.log"
+    },
+    "select": {
+      "enabled": true,
+      "from_epoch": 1,
+      "every": 2,
+      "n_images": 1000,
+      "stats": "../data/competition_files/real_stats.npz"
+    },
+    "eval": {
+      "max_images": null,
+      "batch_size": 16,
+      "pred_dir": "outputs/v3"
+    }
+  },
+  "checkpoints": {
+    "G_AB": "checkpoints/v3/G_AB.pt",
+    "G_BA": "checkpoints/v3/G_BA.pt",
+    "D_A": "checkpoints/v3/D_A.pt",
+    "D_B": "checkpoints/v3/D_B.pt"
+  },
+  "results_file": "checkpoints/v3/metrics_train.json"
+}

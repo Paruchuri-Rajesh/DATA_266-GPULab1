@@ -1,0 +1,1 @@
+translated 7038 images with checkpoints\G_AB.pt -> outputs\pred_B2A

@@ -1,0 +1,10 @@
+{
+  "n_generated": 7038,
+  "FID": 92.29620711746244,
+  "MiFID": 0.4101237760414028,
+  "MiFID_all_pairs": 0.41186038606420156,
+  "score_mean": 46.35316544675192,
+  "gen_dir": "submission/v2/images",
+  "stats": "../data/competition_files/real_stats.npz",
+  "seed": 0
+}

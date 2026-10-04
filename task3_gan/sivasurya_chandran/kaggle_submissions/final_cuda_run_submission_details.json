@@ -1,0 +1,18 @@
+{
+  "FID": 101.96297300048988,
+  "MiFID": 0.40821102261543274,
+  "FID_B2A_photo_to_monet": 97.01872409489124,
+  "MiFID_B2A_photo_to_monet": 0.4025084674358368,
+  "FID_A2B_monet_to_photo": 106.90722190608854,
+  "MiFID_A2B_monet_to_photo": 0.4139135777950287,
+  "counts": {
+    "real_monet": 300,
+    "gen_b2a": 300,
+    "real_photo": 300,
+    "gen_a2b": 300
+  },
+  "score_mean": 51.18559201155266,
+  "pred_dir": "outputs",
+  "n_eval": 300,
+  "scorer": "instructor Part3_Evaluation_Script.ipynb"
+}

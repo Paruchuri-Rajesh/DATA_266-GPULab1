@@ -1,0 +1,2 @@
+wrote 30 blinded pairs to checkpoints\audit/images (left=input, right=translation)
+each rater fills their CSV independently with integers 1-5

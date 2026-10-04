@@ -1,0 +1,2 @@
+V2_CONTINUE
+files copied from checkpoints\runs\V2_CONTINUE; logs/train_raw.log is a byte copy of logs\train_raw_V2_CONTINUE.log

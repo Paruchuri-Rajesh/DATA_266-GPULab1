@@ -1,0 +1,19 @@
+{
+  "FID": 101.90883359049133,
+  "MiFID": 0.40815766155719757,
+  "leaderboard_score": -51.15849562602426,
+  "FID_B2A_photo_to_monet": 96.956,
+  "MiFID_B2A_photo_to_monet": 0.4024,
+  "FID_A2B_monet_to_photo": 106.862,
+  "MiFID_A2B_monet_to_photo": 0.4139,
+  "counts": {
+    "real_monet": 300,
+    "gen_b2a": 300,
+    "real_photo": 300,
+    "gen_a2b": 300
+  },
+  "n_eval": 300,
+  "pred_dir": "outputs",
+  "scorer": "instructor's Part3_Evaluation_Script.ipynb, executed as src/Part3_Evaluation_Script_run.ipynb (only folder paths changed), CPU",
+  "same_outputs_on_the_rtx4090": "FID 101.963, MiFID 0.4082 (kaggle_submissions/final_cuda_run_submission_details.json); the small difference is GPU vs CPU arithmetic in Inception-v3"
+}

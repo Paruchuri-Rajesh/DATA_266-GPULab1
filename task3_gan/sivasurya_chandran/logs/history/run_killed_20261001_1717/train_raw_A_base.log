@@ -1,0 +1,59 @@
+2026-10-01 16:56:17,573 config={"data": {"domain_a_dir": "../data/photo_jpg", "domain_b_dir": "../data/monet_jpg", "image_size": 256, "holdout_a": 1000, "holdout_b": 0, "seed": 1337}, "model": {"ngf": 64, "ndf": 64, "n_resblocks": 9, "upsample": "resize_conv", "d_scales": 1}, "train": {"batch_size": 1, "lr": 0.0002, "beta1": 0.5, "lambda_cycle": 10.0, "lambda_identity": 2.5, "pool_size": 50, "diffaugment": "translation,cutout", "ema_decay": 0.999, "max_steps_per_epoch": 1000, "decay_frac": 0.4, "min_epochs": 20, "max_epochs": 1000, "epochs": 60, "decay_start_epoch": 24, "amp": true, "amp_dtype": "bf16", "num_workers": 3, "log_every": 200, "sample_every": 5000, "device": "auto", "out_dir": "checkpoints\\runs\\A_base", "log_file": "logs/train_raw_A_base.log"}, "select": {"enabled": true, "n_images": 300, "n_sets": 2, "from_frac": 0.1, "n_evals": 20, "from_epoch": 30, "every": 2}, "eval": {"max_images": null, "batch_size": 16, "pred_dir": "outputs"}, "submit": {"csv": "submission.csv"}, "variant": "A_base"}
+2026-10-01 16:56:17,585 hardware={'device': 'cuda', 'cpu': 'AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD', 'platform': 'Windows-10-10.0.22631-SP0', 'cpu_count': 32, 'gpu': 'NVIDIA GeForce RTX 4090'}
+2026-10-01 16:56:17,915 params={'G_AB': 11378179, 'G_BA': 11378179, 'D_A': 2764737, 'D_B': 2764737, 'total': 28285832}
+2026-10-01 16:56:17,915 amp=True dtype=bf16
+2026-10-01 16:56:17,925 diffaugment='translation,cutout' upsample=resize_conv d_scales=1 lambda_cycle=10.0->10.0 lambda_identity=2.5 (scaled with cycle) ema_decay=0.999 budget_hours=14.667
+2026-10-01 16:56:35,106 epoch=0/60 step=0 lr=2.00e-04 lam_cyc=10.00 loss_G=21.3756 adv=6.4498 cyc=1.1981 idt=1.1777 D_A=3.0879 D_B=1.6935 gnG=179.498 gnD=108.606 elapsed=0.2m eta=12227.9m
+2026-10-01 16:57:00,109 epoch=0/60 step=200 lr=2.00e-04 lam_cyc=10.00 loss_G=5.5371 adv=0.7121 cyc=0.3959 idt=0.3465 D_A=0.3122 D_B=0.2790 gnG=36.935 gnD=23.564 elapsed=0.6m eta=184.6m
+2026-10-01 16:57:27,215 epoch=0/60 step=400 lr=2.00e-04 lam_cyc=10.00 loss_G=8.6387 adv=0.7595 cyc=0.6423 idt=0.5825 D_A=0.2405 D_B=0.3242 gnG=85.089 gnD=15.584 elapsed=1.1m eta=159.4m
+2026-10-01 16:57:54,362 epoch=0/60 step=600 lr=2.00e-04 lam_cyc=10.00 loss_G=8.3606 adv=0.8291 cyc=0.6362 idt=0.4678 D_A=0.1893 D_B=0.2184 gnG=48.901 gnD=12.796 elapsed=1.5m eta=150.7m
+2026-10-01 16:58:21,472 epoch=0/60 step=800 lr=2.00e-04 lam_cyc=10.00 loss_G=9.9205 adv=0.8509 cyc=0.7342 idt=0.6911 D_A=0.1544 D_B=0.3393 gnG=49.006 gnD=36.607 elapsed=2.0m eta=146.1m
+2026-10-01 16:59:45,413 epoch=0 select_score=91.784 (FID 183.13: photo->Monet 180.97, Monet->photo 185.29; MiFID 0.4372) raw=100.707 ema=91.784 [ema, 600 held-out photos, 57s] [calibration] best=inf@epochNone(None)
+2026-10-01 16:59:45,413 budget 14.67 h: epoch 0 took 146s (0.146 s/step), one FID check 57s -> 336 epochs x 1000 steps, LR decay from epoch 134, FID checks from epoch 34 every 16
+2026-10-01 16:59:45,933 epoch=0 done, checkpoints + train_state saved
+2026-10-01 16:59:46,423 epoch=1/336 step=1000 lr=2.00e-04 lam_cyc=10.00 loss_G=7.3218 adv=1.2452 cyc=0.4898 idt=0.4715 D_A=0.3858 D_B=0.1276 gnG=32.412 gnD=45.823 elapsed=3.4m eta=1135.3m
+2026-10-01 17:00:09,767 epoch=1/336 step=1200 lr=2.00e-04 lam_cyc=10.00 loss_G=7.1071 adv=0.6002 cyc=0.5267 idt=0.4959 D_A=0.2836 D_B=0.1699 gnG=48.226 gnD=9.254 elapsed=3.8m eta=1054.2m
+2026-10-01 17:00:36,304 epoch=1/336 step=1400 lr=2.00e-04 lam_cyc=10.00 loss_G=7.2117 adv=1.3999 cyc=0.4697 idt=0.4459 D_A=0.3440 D_B=0.1755 gnG=38.360 gnD=34.918 elapsed=4.2m eta=1008.8m
+2026-10-01 17:01:03,286 epoch=1/336 step=1600 lr=2.00e-04 lam_cyc=10.00 loss_G=10.7143 adv=1.3058 cyc=0.7778 idt=0.6522 D_A=0.2154 D_B=0.1457 gnG=41.407 gnD=22.243 elapsed=4.7m eta=976.1m
+2026-10-01 17:01:30,570 epoch=1/336 step=1800 lr=2.00e-04 lam_cyc=10.00 loss_G=5.3614 adv=0.5967 cyc=0.3849 idt=0.3661 D_A=0.2551 D_B=0.2117 gnG=23.292 gnD=19.425 elapsed=5.1m eta=951.6m
+2026-10-01 17:01:57,939 epoch=1 done, checkpoints + train_state saved
+2026-10-01 17:01:58,168 epoch=2/336 step=2000 lr=2.00e-04 lam_cyc=10.00 loss_G=5.9124 adv=1.1646 cyc=0.3858 idt=0.3559 D_A=0.1404 D_B=0.1823 gnG=27.477 gnD=20.746 elapsed=5.6m eta=932.8m
+2026-10-01 17:02:25,734 epoch=2/336 step=2200 lr=2.00e-04 lam_cyc=10.00 loss_G=4.7999 adv=0.6242 cyc=0.3364 idt=0.3246 D_A=0.3126 D_B=0.1192 gnG=26.612 gnD=17.722 elapsed=6.0m eta=917.2m
+2026-10-01 17:02:52,968 epoch=2/336 step=2400 lr=2.00e-04 lam_cyc=10.00 loss_G=4.8645 adv=0.3414 cyc=0.3613 idt=0.3641 D_A=0.2099 D_B=0.2682 gnG=27.085 gnD=13.253 elapsed=6.5m eta=903.3m
+2026-10-01 17:03:20,618 epoch=2/336 step=2600 lr=2.00e-04 lam_cyc=10.00 loss_G=6.6484 adv=0.9706 cyc=0.4575 idt=0.4412 D_A=0.2561 D_B=0.2257 gnG=27.728 gnD=32.097 elapsed=7.0m eta=892.4m
+2026-10-01 17:03:48,183 epoch=2/336 step=2800 lr=2.00e-04 lam_cyc=10.00 loss_G=7.5250 adv=0.8029 cyc=0.5313 idt=0.5635 D_A=0.2104 D_B=0.1842 gnG=30.507 gnD=20.483 elapsed=7.4m eta=882.9m
+2026-10-01 17:04:15,937 epoch=2 done, checkpoints + train_state saved
+2026-10-01 17:04:16,151 epoch=3/336 step=3000 lr=2.00e-04 lam_cyc=10.00 loss_G=8.4165 adv=0.6679 cyc=0.6330 idt=0.5676 D_A=0.3079 D_B=0.1116 gnG=47.012 gnD=14.767 elapsed=7.9m eta=875.3m
+2026-10-01 17:04:44,128 epoch=3/336 step=3200 lr=2.00e-04 lam_cyc=10.00 loss_G=5.8631 adv=0.7091 cyc=0.4138 idt=0.4063 D_A=0.1221 D_B=0.1899 gnG=21.169 gnD=9.082 elapsed=8.4m eta=868.6m
+2026-10-01 17:05:11,631 epoch=3/336 step=3400 lr=2.00e-04 lam_cyc=10.00 loss_G=5.2448 adv=0.7386 cyc=0.3617 idt=0.3556 D_A=0.3258 D_B=0.1719 gnG=24.788 gnD=9.382 elapsed=8.8m eta=861.8m
+2026-10-01 17:05:39,378 epoch=3/336 step=3600 lr=2.00e-04 lam_cyc=10.00 loss_G=5.5484 adv=0.6638 cyc=0.4001 idt=0.3533 D_A=0.2141 D_B=0.3775 gnG=27.943 gnD=18.794 elapsed=9.3m eta=856.2m
+2026-10-01 17:06:07,138 epoch=3/336 step=3800 lr=2.00e-04 lam_cyc=10.00 loss_G=6.6851 adv=0.4085 cyc=0.4864 idt=0.5648 D_A=0.1540 D_B=0.0913 gnG=30.416 gnD=8.258 elapsed=9.7m eta=851.1m
+2026-10-01 17:06:35,800 epoch=3 done, checkpoints + train_state saved
+2026-10-01 17:06:35,952 epoch=4/336 step=4000 lr=2.00e-04 lam_cyc=10.00 loss_G=5.1280 adv=0.7280 cyc=0.3452 idt=0.3791 D_A=0.1353 D_B=0.2569 gnG=30.547 gnD=19.824 elapsed=10.2m eta=847.9m
+2026-10-01 17:07:04,042 epoch=4/336 step=4200 lr=2.00e-04 lam_cyc=10.00 loss_G=5.3055 adv=0.8453 cyc=0.3627 idt=0.3332 D_A=0.1729 D_B=0.2368 gnG=24.921 gnD=14.717 elapsed=10.7m eta=844.0m
+2026-10-01 17:07:32,322 epoch=4/336 step=4400 lr=2.00e-04 lam_cyc=10.00 loss_G=7.3372 adv=1.1955 cyc=0.4919 idt=0.4890 D_A=0.2118 D_B=0.1922 gnG=28.765 gnD=13.258 elapsed=11.2m eta=840.7m
+2026-10-01 17:08:00,515 epoch=4/336 step=4600 lr=2.00e-04 lam_cyc=10.00 loss_G=6.9540 adv=0.4277 cyc=0.5234 idt=0.5169 D_A=0.3220 D_B=0.5206 gnG=99.215 gnD=23.080 elapsed=11.6m eta=837.5m
+2026-10-01 17:08:28,411 epoch=4/336 step=4800 lr=2.00e-04 lam_cyc=10.00 loss_G=5.7175 adv=0.5301 cyc=0.4134 idt=0.4212 D_A=0.2296 D_B=0.4169 gnG=34.759 gnD=34.098 elapsed=12.1m eta=834.2m
+2026-10-01 17:08:56,746 epoch=4 done, checkpoints + train_state saved
+2026-10-01 17:08:56,888 epoch=5/336 step=5000 lr=2.00e-04 lam_cyc=10.00 loss_G=5.8715 adv=1.0688 cyc=0.3773 idt=0.4118 D_A=0.2900 D_B=0.0380 gnG=42.737 gnD=8.568 elapsed=12.6m eta=831.8m
+2026-10-01 17:09:24,587 epoch=5/336 step=5200 lr=2.00e-04 lam_cyc=10.00 loss_G=7.1960 adv=0.6337 cyc=0.5245 idt=0.5268 D_A=0.2798 D_B=0.2292 gnG=29.877 gnD=22.898 elapsed=13.0m eta=828.6m
+2026-10-01 17:09:52,806 epoch=5/336 step=5400 lr=2.00e-04 lam_cyc=10.00 loss_G=5.0696 adv=1.1971 cyc=0.3017 idt=0.3422 D_A=0.2517 D_B=0.2452 gnG=19.497 gnD=23.847 elapsed=13.5m eta=826.3m
+2026-10-01 17:10:20,742 epoch=5/336 step=5600 lr=2.00e-04 lam_cyc=10.00 loss_G=4.7421 adv=0.5401 cyc=0.3334 idt=0.3470 D_A=0.1078 D_B=0.1804 gnG=22.990 gnD=12.121 elapsed=14.0m eta=823.8m
+2026-10-01 17:10:48,547 epoch=5/336 step=5800 lr=2.00e-04 lam_cyc=10.00 loss_G=5.5764 adv=0.5852 cyc=0.4155 idt=0.3343 D_A=0.2763 D_B=0.1832 gnG=34.385 gnD=16.397 elapsed=14.4m eta=821.2m
+2026-10-01 17:11:17,022 epoch=5 done, checkpoints + train_state saved
+2026-10-01 17:11:17,317 epoch=6/336 step=6000 lr=2.00e-04 lam_cyc=10.00 loss_G=9.0124 adv=0.6668 cyc=0.6731 idt=0.6458 D_A=0.1618 D_B=0.0977 gnG=24.761 gnD=21.111 elapsed=14.9m eta=819.8m
+2026-10-01 17:11:45,730 epoch=6/336 step=6200 lr=2.00e-04 lam_cyc=10.00 loss_G=5.3678 adv=1.6765 cyc=0.2988 idt=0.2813 D_A=0.1270 D_B=0.1501 gnG=24.087 gnD=21.475 elapsed=15.4m eta=818.0m
+2026-10-01 17:12:13,776 epoch=6/336 step=6400 lr=2.00e-04 lam_cyc=10.00 loss_G=5.9834 adv=1.3253 cyc=0.3742 idt=0.3663 D_A=0.1299 D_B=0.0991 gnG=28.125 gnD=7.231 elapsed=15.8m eta=816.1m
+2026-10-01 17:12:43,108 epoch=6/336 step=6600 lr=2.00e-04 lam_cyc=10.00 loss_G=7.1691 adv=0.9188 cyc=0.5014 idt=0.4943 D_A=0.1800 D_B=0.0734 gnG=37.521 gnD=23.585 elapsed=16.3m eta=815.2m
+2026-10-01 17:13:11,744 epoch=6/336 step=6800 lr=2.00e-04 lam_cyc=10.00 loss_G=5.3338 adv=0.7326 cyc=0.3610 idt=0.3963 D_A=0.2029 D_B=0.1251 gnG=27.787 gnD=10.094 elapsed=16.8m eta=813.9m
+2026-10-01 17:13:39,891 epoch=6 done, checkpoints + train_state saved
+2026-10-01 17:13:40,154 epoch=7/336 step=7000 lr=2.00e-04 lam_cyc=10.00 loss_G=7.7797 adv=1.0372 cyc=0.5681 idt=0.4245 D_A=0.4058 D_B=0.4950 gnG=40.861 gnD=26.481 elapsed=17.3m eta=812.4m
+2026-10-01 17:14:08,276 epoch=7/336 step=7200 lr=2.00e-04 lam_cyc=10.00 loss_G=5.2062 adv=0.9194 cyc=0.3236 idt=0.4205 D_A=0.2794 D_B=0.2200 gnG=27.081 gnD=20.253 elapsed=17.8m eta=810.8m
+2026-10-01 17:14:36,499 epoch=7/336 step=7400 lr=2.00e-04 lam_cyc=10.00 loss_G=5.0239 adv=0.6138 cyc=0.3530 idt=0.3520 D_A=0.2519 D_B=0.2461 gnG=29.944 gnD=20.174 elapsed=18.2m eta=809.3m
+2026-10-01 17:15:04,681 epoch=7/336 step=7600 lr=2.00e-04 lam_cyc=10.00 loss_G=4.5654 adv=0.7262 cyc=0.2940 idt=0.3597 D_A=0.3044 D_B=0.3037 gnG=22.093 gnD=21.789 elapsed=18.7m eta=807.8m
+2026-10-01 17:15:33,913 epoch=7/336 step=7800 lr=2.00e-04 lam_cyc=10.00 loss_G=5.4332 adv=0.9636 cyc=0.3570 idt=0.3598 D_A=0.2594 D_B=0.0720 gnG=27.317 gnD=18.454 elapsed=19.2m eta=807.1m
+2026-10-01 17:16:02,046 epoch=7 done, checkpoints + train_state saved
+2026-10-01 17:16:02,306 epoch=8/336 step=8000 lr=2.00e-04 lam_cyc=10.00 loss_G=6.9380 adv=0.8747 cyc=0.4748 idt=0.5263 D_A=0.3529 D_B=0.0392 gnG=26.774 gnD=13.600 elapsed=19.7m eta=805.8m
+2026-10-01 17:16:30,891 epoch=8/336 step=8200 lr=2.00e-04 lam_cyc=10.00 loss_G=5.9145 adv=0.5665 cyc=0.4429 idt=0.3676 D_A=0.1929 D_B=0.1189 gnG=29.858 gnD=13.171 elapsed=20.1m eta=804.8m
+2026-10-01 17:16:59,276 epoch=8/336 step=8400 lr=2.00e-04 lam_cyc=10.00 loss_G=4.3788 adv=0.3874 cyc=0.3171 idt=0.3283 D_A=0.3710 D_B=0.1879 gnG=21.711 gnD=11.249 elapsed=20.6m eta=803.6m
+2026-10-01 17:17:27,879 epoch=8/336 step=8600 lr=2.00e-04 lam_cyc=10.00 loss_G=4.7435 adv=0.3557 cyc=0.3583 idt=0.3217 D_A=0.1632 D_B=0.0940 gnG=28.700 gnD=19.047 elapsed=21.1m eta=802.5m

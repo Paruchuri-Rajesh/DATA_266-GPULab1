@@ -1,0 +1,339 @@
+2026-09-30 07:04:37,694 config={"data": {"domain_a_dir": "../data/photo_jpg", "domain_b_dir": "../data/monet_jpg", "image_size": 256, "holdout_a": 300, "holdout_b": 30, "seed": 1337}, "model": {"ngf": 64, "ndf": 64, "n_resblocks": 9}, "train": {"batch_size": 1, "epochs": 30, "decay_start_epoch": 15, "lr": 0.0002, "beta1": 0.5, "lambda_cycle": 10.0, "lambda_identity": 5.0, "pool_size": 50, "max_steps_per_epoch": 1000, "amp": true, "num_workers": 4, "log_every": 100, "sample_every": 1000, "device": "auto", "out_dir": "checkpoints", "log_file": "logs/train_raw.log"}, "eval": {"max_images": null, "batch_size": 16, "pred_dir": "outputs"}}
+2026-09-30 07:04:37,718 hardware={'device': 'cuda', 'cpu': 'x86_64', 'platform': 'Linux-6.6.122+-x86_64-with-glibc2.39', 'cpu_count': 2, 'gpu': 'Tesla T4'}
+2026-09-30 07:07:56,249 config={"data": {"domain_a_dir": "../data/photo_jpg", "domain_b_dir": "../data/monet_jpg", "image_size": 256, "holdout_a": 300, "holdout_b": 30, "seed": 1337}, "model": {"ngf": 64, "ndf": 64, "n_resblocks": 9}, "train": {"batch_size": 1, "epochs": 30, "decay_start_epoch": 15, "lr": 0.0002, "beta1": 0.5, "lambda_cycle": 10.0, "lambda_identity": 5.0, "pool_size": 50, "max_steps_per_epoch": 1000, "amp": true, "num_workers": 4, "log_every": 100, "sample_every": 1000, "device": "auto", "out_dir": "checkpoints", "log_file": "logs/train_raw.log"}, "eval": {"max_images": null, "batch_size": 16, "pred_dir": "outputs"}}
+2026-09-30 07:07:56,275 hardware={'device': 'cuda', 'cpu': 'x86_64', 'platform': 'Linux-6.6.122+-x86_64-with-glibc2.39', 'cpu_count': 2, 'gpu': 'Tesla T4'}
+2026-09-30 07:10:45,656 config={"data": {"domain_a_dir": "../data/photo_jpg", "domain_b_dir": "../data/monet_jpg", "image_size": 256, "holdout_a": 300, "holdout_b": 30, "seed": 1337}, "model": {"ngf": 64, "ndf": 64, "n_resblocks": 9}, "train": {"batch_size": 1, "epochs": 30, "decay_start_epoch": 15, "lr": 0.0002, "beta1": 0.5, "lambda_cycle": 10.0, "lambda_identity": 5.0, "pool_size": 50, "max_steps_per_epoch": 1000, "amp": true, "num_workers": 4, "log_every": 100, "sample_every": 1000, "device": "auto", "out_dir": "checkpoints", "log_file": "logs/train_raw.log"}, "eval": {"max_images": null, "batch_size": 16, "pred_dir": "outputs"}}
+2026-09-30 07:10:45,686 hardware={'device': 'cuda', 'cpu': 'x86_64', 'platform': 'Linux-6.6.122+-x86_64-with-glibc2.39', 'cpu_count': 2, 'gpu': 'Tesla T4'}
+2026-09-30 07:10:46,430 params={'G_AB': 11378179, 'G_BA': 11378179, 'D_A': 2764737, 'D_B': 2764737, 'total': 28285832}
+2026-09-30 07:10:46,431 amp_fp16=True
+2026-09-30 07:10:47,936 epoch=0 step=0 lr=2.00e-04 loss_G=20.5278 adv=4.1218 cyc=1.1061 idt=1.0689 D_A=2.0266 D_B=1.6190 gnG=inf gnD=inf elapsed=0.0m eta=733.5m
+2026-09-30 07:11:08,822 epoch=0 step=100 lr=2.00e-04 loss_G=11.0088 adv=0.4211 cyc=0.7106 idt=0.6964 D_A=0.3347 D_B=0.4170 gnG=63.629 gnD=16.842 elapsed=0.4m eta=110.3m
+2026-09-30 07:11:29,844 epoch=0 step=200 lr=2.00e-04 loss_G=9.2339 adv=0.6475 cyc=0.5914 idt=0.5346 D_A=0.3520 D_B=0.4158 gnG=43.504 gnD=29.289 elapsed=0.7m eta=107.2m
+2026-09-30 07:11:51,086 epoch=0 step=300 lr=2.00e-04 loss_G=8.3073 adv=0.8490 cyc=0.4959 idt=0.4999 D_A=0.2567 D_B=0.2363 gnG=46.025 gnD=23.671 elapsed=1.1m eta=106.3m
+2026-09-30 07:12:12,953 epoch=0 step=400 lr=2.00e-04 loss_G=5.7142 adv=0.9549 cyc=0.3321 idt=0.2877 D_A=0.3176 D_B=0.2577 gnG=24.007 gnD=30.961 elapsed=1.4m eta=106.4m
+2026-09-30 07:12:35,419 epoch=0 step=500 lr=2.00e-04 loss_G=10.9125 adv=0.5847 cyc=0.6852 idt=0.6951 D_A=0.3047 D_B=0.2368 gnG=47.816 gnD=10.762 elapsed=1.8m eta=106.9m
+2026-09-30 07:12:58,326 epoch=0 step=600 lr=2.00e-04 loss_G=10.6993 adv=0.3947 cyc=0.7262 idt=0.6084 D_A=0.2836 D_B=0.2006 gnG=46.305 gnD=9.180 elapsed=2.2m eta=107.5m
+2026-09-30 07:13:21,636 epoch=0 step=700 lr=2.00e-04 loss_G=7.5637 adv=0.8638 cyc=0.4790 idt=0.3819 D_A=0.1990 D_B=0.2260 gnG=39.755 gnD=25.525 elapsed=2.6m eta=108.1m
+2026-09-30 07:13:44,443 epoch=0 step=800 lr=2.00e-04 loss_G=7.2228 adv=0.6833 cyc=0.4452 idt=0.4176 D_A=0.1834 D_B=0.2605 gnG=36.714 gnD=12.894 elapsed=3.0m eta=108.1m
+2026-09-30 07:14:07,038 epoch=0 step=900 lr=2.00e-04 loss_G=8.7914 adv=0.8819 cyc=0.5066 idt=0.5688 D_A=0.1779 D_B=0.2405 gnG=51.244 gnD=21.563 elapsed=3.3m eta=108.0m
+2026-09-30 07:14:33,556 epoch=0 done, checkpoints + train_state saved
+2026-09-30 07:14:34,026 epoch=1 step=1000 lr=2.00e-04 loss_G=9.1009 adv=1.2199 cyc=0.5404 idt=0.4955 D_A=0.1564 D_B=0.2070 gnG=39.998 gnD=15.844 elapsed=3.8m eta=109.9m
+2026-09-30 07:14:58,268 epoch=1 step=1100 lr=2.00e-04 loss_G=6.4298 adv=0.8882 cyc=0.3851 idt=0.3381 D_A=0.1202 D_B=0.1678 gnG=46.630 gnD=11.707 elapsed=4.2m eta=110.2m
+2026-09-30 07:15:21,272 epoch=1 step=1200 lr=2.00e-04 loss_G=7.1716 adv=0.9495 cyc=0.4453 idt=0.3538 D_A=0.1413 D_B=0.1902 gnG=37.671 gnD=24.395 elapsed=4.6m eta=109.8m
+2026-09-30 07:15:44,058 epoch=1 step=1300 lr=2.00e-04 loss_G=8.0556 adv=1.0932 cyc=0.4868 idt=0.4189 D_A=0.1360 D_B=0.3429 gnG=47.112 gnD=40.728 elapsed=5.0m eta=109.4m
+2026-09-30 07:16:06,919 epoch=1 step=1400 lr=2.00e-04 loss_G=6.4086 adv=0.7934 cyc=0.3892 idt=0.3447 D_A=0.1595 D_B=0.1745 gnG=35.140 gnD=14.845 elapsed=5.3m eta=109.0m
+2026-09-30 07:16:29,836 epoch=1 step=1500 lr=2.00e-04 loss_G=6.8299 adv=1.0540 cyc=0.3945 idt=0.3663 D_A=0.2101 D_B=0.1879 gnG=33.151 gnD=24.017 elapsed=5.7m eta=108.7m
+2026-09-30 07:16:52,721 epoch=1 step=1600 lr=2.00e-04 loss_G=8.6517 adv=1.4210 cyc=0.5119 idt=0.4223 D_A=0.2659 D_B=0.5573 gnG=46.996 gnD=27.120 elapsed=6.1m eta=108.3m
+2026-09-30 07:17:15,636 epoch=1 step=1700 lr=2.00e-04 loss_G=9.9427 adv=0.4545 cyc=0.6399 idt=0.6179 D_A=0.2485 D_B=0.2085 gnG=63.038 gnD=25.531 elapsed=6.5m eta=107.9m
+2026-09-30 07:17:38,542 epoch=1 step=1800 lr=2.00e-04 loss_G=9.4179 adv=0.3463 cyc=0.6102 idt=0.5939 D_A=0.1609 D_B=0.1668 gnG=44.652 gnD=23.499 elapsed=6.9m eta=107.5m
+2026-09-30 07:18:01,418 epoch=1 step=1900 lr=2.00e-04 loss_G=8.0067 adv=1.3009 cyc=0.4840 idt=0.3732 D_A=0.1934 D_B=0.1130 gnG=37.082 gnD=30.357 elapsed=7.2m eta=107.2m
+2026-09-30 07:18:25,519 epoch=1 done, checkpoints + train_state saved
+2026-09-30 07:18:25,923 epoch=2 step=2000 lr=2.00e-04 loss_G=5.9910 adv=0.5950 cyc=0.3695 idt=0.3403 D_A=0.2525 D_B=0.1664 gnG=27.730 gnD=29.091 elapsed=7.7m eta=107.1m
+2026-09-30 07:18:50,928 epoch=2 step=2100 lr=2.00e-04 loss_G=6.6889 adv=0.5946 cyc=0.4233 idt=0.3724 D_A=0.2465 D_B=0.2397 gnG=36.966 gnD=27.916 elapsed=8.1m eta=107.2m
+2026-09-30 07:19:15,471 epoch=2 step=2200 lr=2.00e-04 loss_G=8.3928 adv=0.8504 cyc=0.5351 idt=0.4383 D_A=0.3362 D_B=0.1026 gnG=43.888 gnD=30.916 elapsed=8.5m eta=107.1m
+2026-09-30 07:19:38,463 epoch=2 step=2300 lr=2.00e-04 loss_G=13.2592 adv=1.2644 cyc=0.8412 idt=0.7166 D_A=0.0829 D_B=0.5953 gnG=58.261 gnD=39.154 elapsed=8.9m eta=106.7m
+2026-09-30 07:20:01,340 epoch=2 step=2400 lr=2.00e-04 loss_G=7.6114 adv=0.9750 cyc=0.4651 idt=0.3971 D_A=0.1949 D_B=0.1007 gnG=31.415 gnD=14.924 elapsed=9.2m eta=106.3m
+2026-09-30 07:20:24,235 epoch=2 step=2500 lr=2.00e-04 loss_G=6.3602 adv=0.7556 cyc=0.3700 idt=0.3809 D_A=0.2629 D_B=0.1496 gnG=37.106 gnD=22.494 elapsed=9.6m eta=105.9m
+2026-09-30 07:20:47,091 epoch=2 step=2600 lr=2.00e-04 loss_G=7.3269 adv=1.2595 cyc=0.4172 idt=0.3790 D_A=0.1507 D_B=0.2367 gnG=32.931 gnD=17.431 elapsed=10.0m eta=105.4m
+2026-09-30 07:21:09,939 epoch=2 step=2700 lr=2.00e-04 loss_G=6.7998 adv=1.1458 cyc=0.3891 idt=0.3525 D_A=0.3487 D_B=0.1160 gnG=35.635 gnD=28.050 elapsed=10.4m eta=105.0m
+2026-09-30 07:21:32,882 epoch=2 step=2800 lr=2.00e-04 loss_G=8.2633 adv=0.5870 cyc=0.5768 idt=0.3816 D_A=0.4316 D_B=0.4212 gnG=45.577 gnD=23.691 elapsed=10.8m eta=104.6m
+2026-09-30 07:21:55,828 epoch=2 step=2900 lr=2.00e-04 loss_G=7.1979 adv=0.9812 cyc=0.4148 idt=0.4137 D_A=0.1749 D_B=0.1586 gnG=36.992 gnD=28.685 elapsed=11.2m eta=104.2m
+2026-09-30 07:22:23,033 epoch=2 done, checkpoints + train_state saved
+2026-09-30 07:22:23,482 epoch=3 step=3000 lr=2.00e-04 loss_G=8.6227 adv=1.5553 cyc=0.4635 idt=0.4865 D_A=0.0723 D_B=0.2605 gnG=36.430 gnD=24.956 elapsed=11.6m eta=104.5m
+2026-09-30 07:22:48,620 epoch=3 step=3100 lr=2.00e-04 loss_G=6.1255 adv=0.5231 cyc=0.3865 idt=0.3474 D_A=0.1475 D_B=0.0447 gnG=26.770 gnD=11.527 elapsed=12.0m eta=104.4m
+2026-09-30 07:23:12,073 epoch=3 step=3200 lr=2.00e-04 loss_G=5.0621 adv=0.5411 cyc=0.3114 idt=0.2813 D_A=0.1828 D_B=0.1425 gnG=28.511 gnD=12.390 elapsed=12.4m eta=104.0m
+2026-09-30 07:23:34,945 epoch=3 step=3300 lr=2.00e-04 loss_G=9.6040 adv=0.5127 cyc=0.6262 idt=0.5658 D_A=0.1960 D_B=0.3904 gnG=34.693 gnD=20.700 elapsed=12.8m eta=103.6m
+2026-09-30 07:23:57,791 epoch=3 step=3400 lr=2.00e-04 loss_G=5.6359 adv=1.0066 cyc=0.3253 idt=0.2753 D_A=0.2016 D_B=0.1847 gnG=25.486 gnD=19.720 elapsed=13.2m eta=103.1m
+2026-09-30 07:24:20,697 epoch=3 step=3500 lr=2.00e-04 loss_G=5.7597 adv=0.4304 cyc=0.3787 idt=0.3086 D_A=0.3704 D_B=0.1907 gnG=38.899 gnD=21.444 elapsed=13.6m eta=102.7m
+2026-09-30 07:24:43,733 epoch=3 step=3600 lr=2.00e-04 loss_G=8.1661 adv=1.5512 cyc=0.4628 idt=0.3974 D_A=0.1427 D_B=0.1788 gnG=51.273 gnD=27.961 elapsed=14.0m eta=102.3m
+2026-09-30 07:25:06,653 epoch=3 step=3700 lr=2.00e-04 loss_G=6.3527 adv=0.7659 cyc=0.3899 idt=0.3375 D_A=0.2106 D_B=0.3220 gnG=29.301 gnD=18.096 elapsed=14.3m eta=101.9m
+2026-09-30 07:25:29,441 epoch=3 step=3800 lr=2.00e-04 loss_G=4.0820 adv=1.0439 cyc=0.2103 idt=0.1869 D_A=0.1812 D_B=0.0635 gnG=20.126 gnD=19.104 elapsed=14.7m eta=101.4m
+2026-09-30 07:25:52,334 epoch=3 step=3900 lr=2.00e-04 loss_G=9.9847 adv=1.5347 cyc=0.5989 idt=0.4922 D_A=0.2900 D_B=0.0239 gnG=40.879 gnD=21.731 elapsed=15.1m eta=101.0m
+2026-09-30 07:26:20,808 epoch=3 done, checkpoints + train_state saved
+2026-09-30 07:26:21,273 epoch=4 step=4000 lr=2.00e-04 loss_G=7.4517 adv=0.7103 cyc=0.4657 idt=0.4168 D_A=0.1428 D_B=0.6903 gnG=26.043 gnD=43.848 elapsed=15.6m eta=101.2m
+2026-09-30 07:26:46,633 epoch=4 step=4100 lr=2.00e-04 loss_G=5.2567 adv=0.9561 cyc=0.2900 idt=0.2802 D_A=0.0658 D_B=0.1108 gnG=28.785 gnD=9.230 elapsed=16.0m eta=101.1m
+2026-09-30 07:27:10,042 epoch=4 step=4200 lr=2.00e-04 loss_G=8.6000 adv=1.1375 cyc=0.5199 idt=0.4526 D_A=0.1009 D_B=0.2528 gnG=48.903 gnD=21.538 elapsed=16.4m eta=100.7m
+2026-09-30 07:27:32,805 epoch=4 step=4300 lr=2.00e-04 loss_G=7.1350 adv=0.7728 cyc=0.4371 idt=0.3982 D_A=0.1336 D_B=0.2477 gnG=33.113 gnD=19.425 elapsed=16.8m eta=100.2m
+2026-09-30 07:27:55,614 epoch=4 step=4400 lr=2.00e-04 loss_G=6.6978 adv=1.5850 cyc=0.3483 idt=0.3259 D_A=0.1092 D_B=0.2060 gnG=41.745 gnD=21.581 elapsed=17.2m eta=99.8m
+2026-09-30 07:28:18,537 epoch=4 step=4500 lr=2.00e-04 loss_G=5.4506 adv=1.0470 cyc=0.3096 idt=0.2615 D_A=0.2115 D_B=0.1466 gnG=26.720 gnD=9.439 elapsed=17.5m eta=99.3m
+2026-09-30 07:28:41,429 epoch=4 step=4600 lr=2.00e-04 loss_G=6.1733 adv=1.6899 cyc=0.3101 idt=0.2765 D_A=0.3085 D_B=0.1729 gnG=26.798 gnD=27.223 elapsed=17.9m eta=98.9m
+2026-09-30 07:29:04,319 epoch=4 step=4700 lr=2.00e-04 loss_G=7.1587 adv=1.3281 cyc=0.4351 idt=0.2958 D_A=0.0690 D_B=0.1075 gnG=32.696 gnD=10.897 elapsed=18.3m eta=98.5m
+2026-09-30 07:29:27,230 epoch=4 step=4800 lr=2.00e-04 loss_G=8.8572 adv=0.8400 cyc=0.5560 idt=0.4915 D_A=0.4091 D_B=0.5369 gnG=31.556 gnD=33.375 elapsed=18.7m eta=98.0m
+2026-09-30 07:29:50,022 epoch=4 step=4900 lr=2.00e-04 loss_G=5.2636 adv=0.7267 cyc=0.3075 idt=0.2923 D_A=0.1968 D_B=0.1198 gnG=25.029 gnD=8.135 elapsed=19.1m eta=97.6m
+2026-09-30 07:30:14,231 epoch=4 done, checkpoints + train_state saved
+2026-09-30 07:30:14,616 epoch=5 step=5000 lr=2.00e-04 loss_G=6.2637 adv=1.3852 cyc=0.3169 idt=0.3420 D_A=0.0606 D_B=0.0591 gnG=32.837 gnD=15.922 elapsed=19.5m eta=97.3m
+2026-09-30 07:30:39,305 epoch=5 step=5100 lr=2.00e-04 loss_G=6.9517 adv=0.7789 cyc=0.3940 idt=0.4466 D_A=0.1674 D_B=0.2981 gnG=29.828 gnD=28.459 elapsed=19.9m eta=97.0m
+2026-09-30 07:31:02,600 epoch=5 step=5200 lr=2.00e-04 loss_G=5.4339 adv=0.8804 cyc=0.3328 idt=0.2451 D_A=0.1975 D_B=0.1211 gnG=25.978 gnD=16.870 elapsed=20.3m eta=96.6m
+2026-09-30 07:31:25,503 epoch=5 step=5300 lr=2.00e-04 loss_G=5.7747 adv=1.1055 cyc=0.3488 idt=0.2363 D_A=0.2841 D_B=0.2456 gnG=37.744 gnD=24.592 elapsed=20.7m eta=96.2m
+2026-09-30 07:31:48,448 epoch=5 step=5400 lr=2.00e-04 loss_G=6.6544 adv=0.6033 cyc=0.4244 idt=0.3615 D_A=0.1172 D_B=0.1823 gnG=37.141 gnD=13.149 elapsed=21.0m eta=95.8m
+2026-09-30 07:32:11,394 epoch=5 step=5500 lr=2.00e-04 loss_G=8.0985 adv=0.5165 cyc=0.5085 idt=0.4995 D_A=0.1487 D_B=0.2758 gnG=33.438 gnD=14.138 elapsed=21.4m eta=95.4m
+2026-09-30 07:32:34,271 epoch=5 step=5600 lr=2.00e-04 loss_G=8.4217 adv=0.5084 cyc=0.5494 idt=0.4838 D_A=0.3053 D_B=0.1967 gnG=40.604 gnD=18.205 elapsed=21.8m eta=95.0m
+2026-09-30 07:32:57,217 epoch=5 step=5700 lr=2.00e-04 loss_G=5.4691 adv=1.0963 cyc=0.2822 idt=0.3101 D_A=0.4069 D_B=0.0923 gnG=27.829 gnD=29.976 elapsed=22.2m eta=94.5m
+2026-09-30 07:33:20,174 epoch=5 step=5800 lr=2.00e-04 loss_G=6.2988 adv=0.9544 cyc=0.3693 idt=0.3303 D_A=0.1702 D_B=0.1161 gnG=20.643 gnD=18.657 elapsed=22.6m eta=94.1m
+2026-09-30 07:33:42,990 epoch=5 step=5900 lr=2.00e-04 loss_G=5.2540 adv=0.8033 cyc=0.3018 idt=0.2866 D_A=0.0231 D_B=0.1242 gnG=30.656 gnD=4.262 elapsed=22.9m eta=93.7m
+2026-09-30 07:34:07,249 epoch=5 done, checkpoints + train_state saved
+2026-09-30 07:34:07,639 epoch=6 step=6000 lr=2.00e-04 loss_G=6.6907 adv=1.1324 cyc=0.3936 idt=0.3244 D_A=0.0347 D_B=0.1757 gnG=41.178 gnD=27.619 elapsed=23.4m eta=93.4m
+2026-09-30 07:34:32,299 epoch=6 step=6100 lr=2.00e-04 loss_G=5.5952 adv=1.5871 cyc=0.2678 idt=0.2659 D_A=0.1917 D_B=0.2178 gnG=19.946 gnD=24.100 elapsed=23.8m eta=93.1m
+2026-09-30 07:34:55,708 epoch=6 step=6200 lr=2.00e-04 loss_G=6.3984 adv=1.5166 cyc=0.3438 idt=0.2887 D_A=0.2018 D_B=0.2922 gnG=26.251 gnD=14.956 elapsed=24.2m eta=92.7m
+2026-09-30 07:35:18,628 epoch=6 step=6300 lr=2.00e-04 loss_G=9.3649 adv=1.4789 cyc=0.5557 idt=0.4657 D_A=0.2567 D_B=0.1529 gnG=31.616 gnD=25.243 elapsed=24.5m eta=92.3m
+2026-09-30 07:35:41,624 epoch=6 step=6400 lr=2.00e-04 loss_G=5.5275 adv=0.9487 cyc=0.3099 idt=0.2959 D_A=0.1289 D_B=0.2073 gnG=21.701 gnD=16.894 elapsed=24.9m eta=91.9m
+2026-09-30 07:36:04,496 epoch=6 step=6500 lr=2.00e-04 loss_G=6.4607 adv=1.1578 cyc=0.3644 idt=0.3318 D_A=0.0185 D_B=0.0898 gnG=35.902 gnD=8.755 elapsed=25.3m eta=91.5m
+2026-09-30 07:36:27,329 epoch=6 step=6600 lr=2.00e-04 loss_G=5.1361 adv=0.4492 cyc=0.3242 idt=0.2889 D_A=0.3495 D_B=0.4143 gnG=36.674 gnD=21.294 elapsed=25.7m eta=91.0m
+2026-09-30 07:36:50,192 epoch=6 step=6700 lr=2.00e-04 loss_G=6.8927 adv=1.5491 cyc=0.3647 idt=0.3393 D_A=0.1136 D_B=0.5653 gnG=30.018 gnD=33.186 elapsed=26.1m eta=90.6m
+2026-09-30 07:37:13,113 epoch=6 step=6800 lr=2.00e-04 loss_G=5.3084 adv=0.8645 cyc=0.3192 idt=0.2504 D_A=0.1964 D_B=0.1966 gnG=28.661 gnD=14.450 elapsed=26.4m eta=90.2m
+2026-09-30 07:37:35,890 epoch=6 step=6900 lr=2.00e-04 loss_G=5.7094 adv=1.2998 cyc=0.2907 idt=0.3006 D_A=0.2533 D_B=0.1454 gnG=18.041 gnD=24.467 elapsed=26.8m eta=89.8m
+2026-09-30 07:38:00,001 epoch=6 done, checkpoints + train_state saved
+2026-09-30 07:38:00,384 epoch=7 step=7000 lr=2.00e-04 loss_G=5.5476 adv=1.3191 cyc=0.2819 idt=0.2818 D_A=0.1225 D_B=0.0556 gnG=22.990 gnD=7.196 elapsed=27.2m eta=89.5m
+2026-09-30 07:38:25,652 epoch=7 step=7100 lr=2.00e-04 loss_G=4.1486 adv=0.3003 cyc=0.2558 idt=0.2580 D_A=0.2512 D_B=0.2064 gnG=18.372 gnD=13.398 elapsed=27.7m eta=89.2m
+2026-09-30 07:38:48,831 epoch=7 step=7200 lr=2.00e-04 loss_G=4.4533 adv=0.7653 cyc=0.2506 idt=0.2363 D_A=0.2235 D_B=0.1963 gnG=24.595 gnD=30.043 elapsed=28.0m eta=88.8m
+2026-09-30 07:39:11,719 epoch=7 step=7300 lr=2.00e-04 loss_G=7.0938 adv=0.6721 cyc=0.4226 idt=0.4390 D_A=0.2513 D_B=0.2865 gnG=42.692 gnD=21.242 elapsed=28.4m eta=88.4m
+2026-09-30 07:39:34,677 epoch=7 step=7400 lr=2.00e-04 loss_G=5.2124 adv=0.5989 cyc=0.3195 idt=0.2838 D_A=0.2905 D_B=0.4273 gnG=17.415 gnD=22.305 elapsed=28.8m eta=88.0m
+2026-09-30 07:39:57,604 epoch=7 step=7500 lr=2.00e-04 loss_G=7.2434 adv=0.8043 cyc=0.4668 idt=0.3541 D_A=0.2118 D_B=0.2336 gnG=35.017 gnD=13.735 elapsed=29.2m eta=87.5m
+2026-09-30 07:40:20,451 epoch=7 step=7600 lr=2.00e-04 loss_G=5.8397 adv=0.9896 cyc=0.3186 idt=0.3327 D_A=0.1104 D_B=0.1713 gnG=27.597 gnD=14.146 elapsed=29.6m eta=87.1m
+2026-09-30 07:40:43,371 epoch=7 step=7700 lr=2.00e-04 loss_G=8.1164 adv=0.4093 cyc=0.5497 idt=0.4420 D_A=0.2381 D_B=0.1307 gnG=45.450 gnD=19.654 elapsed=29.9m eta=86.7m
+2026-09-30 07:41:06,287 epoch=7 step=7800 lr=2.00e-04 loss_G=5.8852 adv=1.3004 cyc=0.2981 idt=0.3208 D_A=0.0795 D_B=0.0823 gnG=22.897 gnD=14.284 elapsed=30.3m eta=86.3m
+2026-09-30 07:41:29,171 epoch=7 step=7900 lr=2.00e-04 loss_G=6.6380 adv=1.0828 cyc=0.3823 idt=0.3465 D_A=0.2272 D_B=0.3122 gnG=35.294 gnD=26.321 elapsed=30.7m eta=85.9m
+2026-09-30 07:41:53,360 epoch=7 done, checkpoints + train_state saved
+2026-09-30 07:41:53,750 epoch=8 step=8000 lr=2.00e-04 loss_G=6.2564 adv=1.3097 cyc=0.3529 idt=0.2836 D_A=0.0697 D_B=0.1960 gnG=20.177 gnD=11.583 elapsed=31.1m eta=85.6m
+2026-09-30 07:42:18,655 epoch=8 step=8100 lr=2.00e-04 loss_G=8.1190 adv=0.8224 cyc=0.4946 idt=0.4702 D_A=0.0984 D_B=0.2320 gnG=37.277 gnD=8.443 elapsed=31.5m eta=85.3m
+2026-09-30 07:42:41,852 epoch=8 step=8200 lr=2.00e-04 loss_G=5.7648 adv=0.6285 cyc=0.3436 idt=0.3401 D_A=0.2335 D_B=0.1681 gnG=28.387 gnD=17.839 elapsed=31.9m eta=84.9m
+2026-09-30 07:43:04,693 epoch=8 step=8300 lr=2.00e-04 loss_G=4.1959 adv=1.1051 cyc=0.1941 idt=0.2300 D_A=0.4188 D_B=0.2311 gnG=14.613 gnD=28.177 elapsed=32.3m eta=84.4m
+2026-09-30 07:43:27,664 epoch=8 step=8400 lr=2.00e-04 loss_G=6.8848 adv=0.2847 cyc=0.4881 idt=0.3439 D_A=0.2281 D_B=0.4892 gnG=43.879 gnD=28.549 elapsed=32.7m eta=84.0m
+2026-09-30 07:43:50,551 epoch=8 step=8500 lr=2.00e-04 loss_G=5.0906 adv=0.6038 cyc=0.3049 idt=0.2875 D_A=0.2212 D_B=0.1472 gnG=37.349 gnD=13.031 elapsed=33.1m eta=83.6m
+2026-09-30 07:44:13,365 epoch=8 step=8600 lr=2.00e-04 loss_G=6.8000 adv=0.8806 cyc=0.4095 idt=0.3650 D_A=0.0399 D_B=0.2114 gnG=33.374 gnD=8.387 elapsed=33.4m eta=83.2m
+2026-09-30 07:44:36,203 epoch=8 step=8700 lr=2.00e-04 loss_G=7.4766 adv=0.8242 cyc=0.4537 idt=0.4231 D_A=0.0348 D_B=0.2414 gnG=40.953 gnD=23.071 elapsed=33.8m eta=82.8m
+2026-09-30 07:44:59,243 epoch=8 step=8800 lr=2.00e-04 loss_G=4.4725 adv=0.6967 cyc=0.2574 idt=0.2404 D_A=0.1738 D_B=0.2234 gnG=21.131 gnD=20.789 elapsed=34.2m eta=82.4m
+2026-09-30 07:45:22,082 epoch=8 step=8900 lr=2.00e-04 loss_G=5.5256 adv=0.5498 cyc=0.3507 idt=0.2937 D_A=0.1318 D_B=0.1869 gnG=23.692 gnD=11.128 elapsed=34.6m eta=82.0m
+2026-09-30 07:45:50,839 epoch=8 done, checkpoints + train_state saved
+2026-09-30 07:45:51,296 epoch=9 step=9000 lr=2.00e-04 loss_G=6.9546 adv=0.7183 cyc=0.4306 idt=0.3862 D_A=0.1139 D_B=0.2737 gnG=32.556 gnD=23.125 elapsed=35.1m eta=81.8m
+2026-09-30 07:46:17,167 epoch=9 step=9100 lr=2.00e-04 loss_G=5.1394 adv=0.5626 cyc=0.3011 idt=0.3132 D_A=0.6451 D_B=0.3102 gnG=70.795 gnD=25.601 elapsed=35.5m eta=81.5m
+2026-09-30 07:46:40,488 epoch=9 step=9200 lr=2.00e-04 loss_G=5.9703 adv=0.1546 cyc=0.4163 idt=0.3305 D_A=0.5953 D_B=0.3186 gnG=37.612 gnD=19.990 elapsed=35.9m eta=81.2m
+2026-09-30 07:47:03,248 epoch=9 step=9300 lr=2.00e-04 loss_G=5.5429 adv=1.0296 cyc=0.3159 idt=0.2708 D_A=0.0518 D_B=0.1051 gnG=28.327 gnD=8.826 elapsed=36.3m eta=80.7m
+2026-09-30 07:47:26,023 epoch=9 step=9400 lr=2.00e-04 loss_G=4.1855 adv=0.5719 cyc=0.2435 idt=0.2357 D_A=0.1506 D_B=0.2126 gnG=20.898 gnD=14.925 elapsed=36.7m eta=80.3m
+2026-09-30 07:47:48,950 epoch=9 step=9500 lr=2.00e-04 loss_G=5.6235 adv=0.8307 cyc=0.3127 idt=0.3331 D_A=0.1857 D_B=0.1470 gnG=23.533 gnD=24.119 elapsed=37.0m eta=79.9m
+2026-09-30 07:48:11,860 epoch=9 step=9600 lr=2.00e-04 loss_G=7.1497 adv=1.2875 cyc=0.3876 idt=0.3973 D_A=0.0888 D_B=0.1450 gnG=29.494 gnD=10.072 elapsed=37.4m eta=79.5m
+2026-09-30 07:48:34,721 epoch=9 step=9700 lr=2.00e-04 loss_G=4.3742 adv=0.7450 cyc=0.2527 idt=0.2204 D_A=0.1585 D_B=0.2966 gnG=28.863 gnD=22.205 elapsed=37.8m eta=79.1m
+2026-09-30 07:48:57,668 epoch=9 step=9800 lr=2.00e-04 loss_G=6.3758 adv=1.5173 cyc=0.3399 idt=0.2919 D_A=0.0504 D_B=0.0627 gnG=22.906 gnD=13.579 elapsed=38.2m eta=78.7m
+2026-09-30 07:49:20,499 epoch=9 step=9900 lr=2.00e-04 loss_G=5.6259 adv=0.6833 cyc=0.3293 idt=0.3299 D_A=0.2570 D_B=0.1066 gnG=27.788 gnD=12.381 elapsed=38.6m eta=78.3m
+2026-09-30 07:49:44,878 epoch=9 done, checkpoints + train_state saved
+2026-09-30 07:49:45,470 epoch=10 step=10000 lr=2.00e-04 loss_G=5.6543 adv=0.7669 cyc=0.3401 idt=0.2972 D_A=0.5893 D_B=0.4464 gnG=22.756 gnD=14.755 elapsed=39.0m eta=78.0m
+2026-09-30 07:50:09,976 epoch=10 step=10100 lr=2.00e-04 loss_G=5.5834 adv=0.7782 cyc=0.3061 idt=0.3489 D_A=0.2439 D_B=0.1172 gnG=26.023 gnD=13.057 elapsed=39.4m eta=77.6m
+2026-09-30 07:50:33,365 epoch=10 step=10200 lr=2.00e-04 loss_G=4.5001 adv=0.5447 cyc=0.2745 idt=0.2420 D_A=0.2913 D_B=0.1110 gnG=18.763 gnD=15.637 elapsed=39.8m eta=77.2m
+2026-09-30 07:50:56,237 epoch=10 step=10300 lr=2.00e-04 loss_G=6.7991 adv=1.1019 cyc=0.3592 idt=0.4211 D_A=0.1177 D_B=0.2402 gnG=33.252 gnD=12.117 elapsed=40.2m eta=76.8m
+2026-09-30 07:51:19,061 epoch=10 step=10400 lr=2.00e-04 loss_G=9.6693 adv=1.0357 cyc=0.5499 idt=0.6269 D_A=0.2983 D_B=0.3733 gnG=37.742 gnD=29.344 elapsed=40.5m eta=76.4m
+2026-09-30 07:51:41,931 epoch=10 step=10500 lr=2.00e-04 loss_G=5.4605 adv=0.7523 cyc=0.3383 idt=0.2651 D_A=0.2114 D_B=0.2052 gnG=35.971 gnD=19.722 elapsed=40.9m eta=76.0m
+2026-09-30 07:52:04,815 epoch=10 step=10600 lr=2.00e-04 loss_G=6.2695 adv=0.9058 cyc=0.3736 idt=0.3255 D_A=0.2420 D_B=0.2841 gnG=22.284 gnD=12.191 elapsed=41.3m eta=75.6m
+2026-09-30 07:52:27,759 epoch=10 step=10700 lr=2.00e-04 loss_G=7.1953 adv=0.6631 cyc=0.4397 idt=0.4271 D_A=0.2585 D_B=0.1881 gnG=28.197 gnD=21.908 elapsed=41.7m eta=75.2m
+2026-09-30 07:52:50,749 epoch=10 step=10800 lr=2.00e-04 loss_G=7.0029 adv=0.8480 cyc=0.4118 idt=0.4073 D_A=0.4005 D_B=0.2593 gnG=37.365 gnD=25.845 elapsed=42.1m eta=74.8m
+2026-09-30 07:53:13,651 epoch=10 step=10900 lr=2.00e-04 loss_G=6.0084 adv=0.7035 cyc=0.3467 idt=0.3676 D_A=0.2501 D_B=0.1294 gnG=24.125 gnD=17.061 elapsed=42.5m eta=74.4m
+2026-09-30 07:53:37,769 epoch=10 done, checkpoints + train_state saved
+2026-09-30 07:53:38,160 epoch=11 step=11000 lr=2.00e-04 loss_G=6.0240 adv=0.8478 cyc=0.3578 idt=0.3197 D_A=0.0681 D_B=0.0921 gnG=38.354 gnD=8.634 elapsed=42.9m eta=74.0m
+2026-09-30 07:54:03,065 epoch=11 step=11100 lr=2.00e-04 loss_G=7.1613 adv=1.2200 cyc=0.4207 idt=0.3469 D_A=0.0745 D_B=0.2874 gnG=34.795 gnD=5.831 elapsed=43.3m eta=73.7m
+2026-09-30 07:54:27,252 epoch=11 step=11200 lr=2.00e-04 loss_G=5.9580 adv=1.0621 cyc=0.3341 idt=0.3111 D_A=0.0706 D_B=0.1208 gnG=20.739 gnD=4.883 elapsed=43.7m eta=73.3m
+2026-09-30 07:54:50,187 epoch=11 step=11300 lr=2.00e-04 loss_G=7.0580 adv=1.2555 cyc=0.4318 idt=0.2969 D_A=0.2913 D_B=0.5114 gnG=36.116 gnD=29.465 elapsed=44.1m eta=72.9m
+2026-09-30 07:55:13,077 epoch=11 step=11400 lr=2.00e-04 loss_G=4.5555 adv=0.4817 cyc=0.2771 idt=0.2605 D_A=0.3114 D_B=0.2098 gnG=19.077 gnD=12.533 elapsed=44.4m eta=72.5m
+2026-09-30 07:55:36,025 epoch=11 step=11500 lr=2.00e-04 loss_G=7.0137 adv=0.9885 cyc=0.4036 idt=0.3979 D_A=0.3490 D_B=0.2386 gnG=37.114 gnD=24.289 elapsed=44.8m eta=72.1m
+2026-09-30 07:55:58,957 epoch=11 step=11600 lr=2.00e-04 loss_G=6.4658 adv=1.1587 cyc=0.3700 idt=0.3215 D_A=0.0604 D_B=0.0580 gnG=26.846 gnD=11.554 elapsed=45.2m eta=71.7m
+2026-09-30 07:56:21,813 epoch=11 step=11700 lr=2.00e-04 loss_G=4.4209 adv=1.0373 cyc=0.2311 idt=0.2146 D_A=0.1650 D_B=0.0662 gnG=25.322 gnD=10.389 elapsed=45.6m eta=71.3m
+2026-09-30 07:56:44,767 epoch=11 step=11800 lr=2.00e-04 loss_G=4.0721 adv=0.6117 cyc=0.2354 idt=0.2213 D_A=0.1102 D_B=0.1918 gnG=22.344 gnD=11.568 elapsed=46.0m eta=70.9m
+2026-09-30 07:57:07,644 epoch=11 step=11900 lr=2.00e-04 loss_G=6.1211 adv=1.8024 cyc=0.3110 idt=0.2417 D_A=0.1151 D_B=0.0448 gnG=32.055 gnD=16.019 elapsed=46.4m eta=70.5m
+2026-09-30 07:57:31,790 epoch=11 done, checkpoints + train_state saved
+2026-09-30 07:57:32,320 epoch=12 step=12000 lr=2.00e-04 loss_G=7.9947 adv=0.8816 cyc=0.4892 idt=0.4443 D_A=0.0989 D_B=0.2478 gnG=37.133 gnD=18.048 elapsed=46.8m eta=70.1m
+2026-09-30 07:57:56,936 epoch=12 step=12100 lr=2.00e-04 loss_G=6.2879 adv=1.2082 cyc=0.3722 idt=0.2716 D_A=0.1222 D_B=0.0953 gnG=27.225 gnD=12.501 elapsed=47.2m eta=69.8m
+2026-09-30 07:58:20,237 epoch=12 step=12200 lr=2.00e-04 loss_G=5.1417 adv=0.7762 cyc=0.2985 idt=0.2760 D_A=0.2356 D_B=0.1224 gnG=19.237 gnD=10.120 elapsed=47.6m eta=69.4m
+2026-09-30 07:58:43,242 epoch=12 step=12300 lr=2.00e-04 loss_G=6.6527 adv=1.4555 cyc=0.3324 idt=0.3747 D_A=0.1709 D_B=0.3533 gnG=32.341 gnD=24.447 elapsed=47.9m eta=69.0m
+2026-09-30 07:59:06,171 epoch=12 step=12400 lr=2.00e-04 loss_G=6.2709 adv=1.6649 cyc=0.3199 idt=0.2815 D_A=0.1939 D_B=0.3927 gnG=22.830 gnD=23.915 elapsed=48.3m eta=68.6m
+2026-09-30 07:59:29,089 epoch=12 step=12500 lr=2.00e-04 loss_G=5.2078 adv=0.9378 cyc=0.2856 idt=0.2828 D_A=0.1649 D_B=0.2176 gnG=21.824 gnD=13.928 elapsed=48.7m eta=68.2m
+2026-09-30 07:59:52,053 epoch=12 step=12600 lr=2.00e-04 loss_G=5.1522 adv=1.0135 cyc=0.2686 idt=0.2906 D_A=0.2382 D_B=0.2265 gnG=27.715 gnD=19.623 elapsed=49.1m eta=67.8m
+2026-09-30 08:00:14,859 epoch=12 step=12700 lr=2.00e-04 loss_G=5.9572 adv=0.9985 cyc=0.3233 idt=0.3452 D_A=0.1908 D_B=0.2474 gnG=22.307 gnD=25.812 elapsed=49.5m eta=67.4m
+2026-09-30 08:00:37,871 epoch=12 step=12800 lr=2.00e-04 loss_G=5.2882 adv=0.9409 cyc=0.2926 idt=0.2843 D_A=0.2518 D_B=0.2743 gnG=25.631 gnD=16.905 elapsed=49.9m eta=67.0m
+2026-09-30 08:01:00,853 epoch=12 step=12900 lr=2.00e-04 loss_G=3.5929 adv=0.6033 cyc=0.2012 idt=0.1955 D_A=0.3457 D_B=0.1311 gnG=13.026 gnD=12.517 elapsed=50.2m eta=66.6m
+2026-09-30 08:01:25,577 epoch=12 done, checkpoints + train_state saved
+2026-09-30 08:01:26,126 epoch=13 step=13000 lr=2.00e-04 loss_G=4.6961 adv=0.3545 cyc=0.2987 idt=0.2709 D_A=0.3163 D_B=0.0993 gnG=23.759 gnD=8.291 elapsed=50.7m eta=66.2m
+2026-09-30 08:01:50,875 epoch=13 step=13100 lr=2.00e-04 loss_G=10.2182 adv=1.5227 cyc=0.6286 idt=0.4820 D_A=0.3030 D_B=0.4878 gnG=43.584 gnD=25.961 elapsed=51.1m eta=65.9m
+2026-09-30 08:02:14,444 epoch=13 step=13200 lr=2.00e-04 loss_G=5.6823 adv=0.5298 cyc=0.3438 idt=0.3429 D_A=0.3604 D_B=0.2574 gnG=21.257 gnD=11.260 elapsed=51.5m eta=65.5m
+2026-09-30 08:02:37,356 epoch=13 step=13300 lr=2.00e-04 loss_G=5.7162 adv=0.4033 cyc=0.3511 idt=0.3603 D_A=0.5516 D_B=0.1752 gnG=27.290 gnD=18.084 elapsed=51.8m eta=65.1m
+2026-09-30 08:03:00,123 epoch=13 step=13400 lr=2.00e-04 loss_G=6.9918 adv=0.9824 cyc=0.4101 idt=0.3817 D_A=0.1094 D_B=0.0859 gnG=24.607 gnD=14.830 elapsed=52.2m eta=64.7m
+2026-09-30 08:03:23,006 epoch=13 step=13500 lr=2.00e-04 loss_G=3.9067 adv=0.5557 cyc=0.2240 idt=0.2221 D_A=0.5908 D_B=0.4290 gnG=19.499 gnD=35.292 elapsed=52.6m eta=64.3m
+2026-09-30 08:03:45,947 epoch=13 step=13600 lr=2.00e-04 loss_G=5.8201 adv=1.1960 cyc=0.3062 idt=0.3123 D_A=0.0770 D_B=0.1179 gnG=20.755 gnD=5.854 elapsed=53.0m eta=63.9m
+2026-09-30 08:04:08,815 epoch=13 step=13700 lr=2.00e-04 loss_G=4.0641 adv=0.8960 cyc=0.2019 idt=0.2298 D_A=0.1792 D_B=0.2538 gnG=22.470 gnD=12.301 elapsed=53.4m eta=63.5m
+2026-09-30 08:04:31,743 epoch=13 step=13800 lr=2.00e-04 loss_G=5.9948 adv=0.8936 cyc=0.3586 idt=0.3031 D_A=0.3624 D_B=0.1200 gnG=44.153 gnD=17.231 elapsed=53.8m eta=63.1m
+2026-09-30 08:04:54,780 epoch=13 step=13900 lr=2.00e-04 loss_G=3.7871 adv=0.7488 cyc=0.2039 idt=0.1999 D_A=0.1799 D_B=0.1377 gnG=18.502 gnD=14.172 elapsed=54.1m eta=62.7m
+2026-09-30 08:05:19,253 epoch=13 done, checkpoints + train_state saved
+2026-09-30 08:05:19,833 epoch=14 step=14000 lr=2.00e-04 loss_G=4.8054 adv=0.6985 cyc=0.2822 idt=0.2569 D_A=0.3028 D_B=0.4550 gnG=25.113 gnD=14.977 elapsed=54.6m eta=62.3m
+2026-09-30 08:05:45,082 epoch=14 step=14100 lr=2.00e-04 loss_G=4.4259 adv=1.0326 cyc=0.2184 idt=0.2419 D_A=0.0936 D_B=0.1323 gnG=13.644 gnD=13.347 elapsed=55.0m eta=62.0m
+2026-09-30 08:06:08,917 epoch=14 step=14200 lr=2.00e-04 loss_G=5.7106 adv=0.3170 cyc=0.3894 idt=0.2999 D_A=0.2270 D_B=0.2491 gnG=29.038 gnD=15.475 elapsed=55.4m eta=61.6m
+2026-09-30 08:06:32,001 epoch=14 step=14300 lr=2.00e-04 loss_G=4.3073 adv=0.9519 cyc=0.2200 idt=0.2310 D_A=0.4649 D_B=0.3304 gnG=18.908 gnD=18.202 elapsed=55.8m eta=61.2m
+2026-09-30 08:06:55,085 epoch=14 step=14400 lr=2.00e-04 loss_G=7.9429 adv=1.6344 cyc=0.4268 idt=0.4082 D_A=0.3251 D_B=0.3172 gnG=32.060 gnD=21.887 elapsed=56.1m eta=60.8m
+2026-09-30 08:07:18,193 epoch=14 step=14500 lr=2.00e-04 loss_G=5.1983 adv=1.2710 cyc=0.2598 idt=0.2658 D_A=0.4283 D_B=0.2495 gnG=23.543 gnD=26.582 elapsed=56.5m eta=60.4m
+2026-09-30 08:07:41,141 epoch=14 step=14600 lr=2.00e-04 loss_G=5.3359 adv=0.9921 cyc=0.2985 idt=0.2718 D_A=0.2181 D_B=0.1649 gnG=22.843 gnD=18.590 elapsed=56.9m eta=60.0m
+2026-09-30 08:08:04,121 epoch=14 step=14700 lr=2.00e-04 loss_G=3.8813 adv=0.4561 cyc=0.2338 idt=0.2174 D_A=0.1852 D_B=0.1808 gnG=22.184 gnD=6.348 elapsed=57.3m eta=59.6m
+2026-09-30 08:08:27,279 epoch=14 step=14800 lr=2.00e-04 loss_G=5.0609 adv=0.9822 cyc=0.2676 idt=0.2805 D_A=0.3713 D_B=0.2759 gnG=16.811 gnD=23.221 elapsed=57.7m eta=59.2m
+2026-09-30 08:08:50,395 epoch=14 step=14900 lr=2.00e-04 loss_G=7.4907 adv=0.9942 cyc=0.4515 idt=0.3963 D_A=0.1452 D_B=0.1829 gnG=41.077 gnD=13.539 elapsed=58.1m eta=58.8m
+2026-09-30 08:09:15,218 epoch=14 done, checkpoints + train_state saved
+2026-09-30 08:09:15,822 epoch=15 step=15000 lr=2.00e-04 loss_G=6.4307 adv=0.8254 cyc=0.4037 idt=0.3136 D_A=0.0422 D_B=0.2509 gnG=36.086 gnD=21.361 elapsed=58.5m eta=58.5m
+2026-09-30 08:09:41,003 epoch=15 step=15100 lr=2.00e-04 loss_G=6.3520 adv=0.5502 cyc=0.4002 idt=0.3600 D_A=0.2669 D_B=0.2178 gnG=23.487 gnD=21.080 elapsed=58.9m eta=58.1m
+2026-09-30 08:10:04,773 epoch=15 step=15200 lr=2.00e-04 loss_G=7.8035 adv=1.1257 cyc=0.4584 idt=0.4187 D_A=0.0578 D_B=0.1133 gnG=59.392 gnD=12.329 elapsed=59.3m eta=57.7m
+2026-09-30 08:10:27,884 epoch=15 step=15300 lr=2.00e-04 loss_G=6.3860 adv=0.4037 cyc=0.3927 idt=0.4110 D_A=0.2356 D_B=0.2552 gnG=31.834 gnD=9.387 elapsed=59.7m eta=57.3m
+2026-09-30 08:10:50,878 epoch=15 step=15400 lr=2.00e-04 loss_G=5.2522 adv=0.9160 cyc=0.2896 idt=0.2880 D_A=0.3475 D_B=0.0565 gnG=19.947 gnD=12.679 elapsed=60.1m eta=56.9m
+2026-09-30 08:11:13,970 epoch=15 step=15500 lr=2.00e-04 loss_G=4.8602 adv=1.1018 cyc=0.2615 idt=0.2287 D_A=0.1816 D_B=0.1887 gnG=18.359 gnD=19.767 elapsed=60.5m eta=56.6m
+2026-09-30 08:11:37,027 epoch=15 step=15600 lr=2.00e-04 loss_G=5.1264 adv=0.9938 cyc=0.2904 idt=0.2458 D_A=0.1730 D_B=0.2380 gnG=27.667 gnD=11.994 elapsed=60.8m eta=56.2m
+2026-09-30 08:11:59,962 epoch=15 step=15700 lr=2.00e-04 loss_G=4.9633 adv=1.1442 cyc=0.2724 idt=0.2191 D_A=0.2257 D_B=0.2052 gnG=25.229 gnD=22.811 elapsed=61.2m eta=55.8m
+2026-09-30 08:12:23,031 epoch=15 step=15800 lr=2.00e-04 loss_G=6.7163 adv=0.7392 cyc=0.4150 idt=0.3654 D_A=0.1617 D_B=0.0772 gnG=57.780 gnD=19.553 elapsed=61.6m eta=55.4m
+2026-09-30 08:12:46,004 epoch=15 step=15900 lr=2.00e-04 loss_G=4.8575 adv=0.6631 cyc=0.2891 idt=0.2608 D_A=0.2727 D_B=0.2493 gnG=19.354 gnD=9.658 elapsed=62.0m eta=55.0m
+2026-09-30 08:13:10,247 epoch=15 done, checkpoints + train_state saved
+2026-09-30 08:13:10,796 epoch=16 step=16000 lr=1.87e-04 loss_G=4.7658 adv=0.4264 cyc=0.2966 idt=0.2746 D_A=0.2055 D_B=0.2215 gnG=22.909 gnD=8.016 elapsed=62.4m eta=54.6m
+2026-09-30 08:13:35,723 epoch=16 step=16100 lr=1.87e-04 loss_G=6.4473 adv=0.4889 cyc=0.4276 idt=0.3364 D_A=0.1892 D_B=0.3037 gnG=36.616 gnD=7.803 elapsed=62.8m eta=54.2m
+2026-09-30 08:13:58,920 epoch=16 step=16200 lr=1.87e-04 loss_G=6.1237 adv=0.4593 cyc=0.4113 idt=0.3103 D_A=0.3202 D_B=0.0577 gnG=28.714 gnD=4.317 elapsed=63.2m eta=53.8m
+2026-09-30 08:14:21,860 epoch=16 step=16300 lr=1.87e-04 loss_G=3.8919 adv=1.1010 cyc=0.1894 idt=0.1794 D_A=0.0744 D_B=0.4747 gnG=26.533 gnD=12.973 elapsed=63.6m eta=53.4m
+2026-09-30 08:14:44,718 epoch=16 step=16400 lr=1.87e-04 loss_G=5.9484 adv=1.5392 cyc=0.2904 idt=0.3010 D_A=0.0743 D_B=0.0843 gnG=23.974 gnD=8.748 elapsed=64.0m eta=53.0m
+2026-09-30 08:15:07,589 epoch=16 step=16500 lr=1.87e-04 loss_G=4.7323 adv=1.4171 cyc=0.2330 idt=0.1970 D_A=0.2129 D_B=0.1395 gnG=22.558 gnD=13.467 elapsed=64.4m eta=52.6m
+2026-09-30 08:15:30,436 epoch=16 step=16600 lr=1.87e-04 loss_G=3.9199 adv=0.5466 cyc=0.2256 idt=0.2234 D_A=0.1874 D_B=0.1998 gnG=20.640 gnD=12.590 elapsed=64.7m eta=52.2m
+2026-09-30 08:15:53,231 epoch=16 step=16700 lr=1.87e-04 loss_G=5.2257 adv=1.6661 cyc=0.2501 idt=0.2118 D_A=0.1157 D_B=0.8250 gnG=19.040 gnD=31.280 elapsed=65.1m eta=51.8m
+2026-09-30 08:16:16,174 epoch=16 step=16800 lr=1.87e-04 loss_G=6.1111 adv=1.3768 cyc=0.3513 idt=0.2443 D_A=0.3655 D_B=0.2561 gnG=25.072 gnD=20.290 elapsed=65.5m eta=51.5m
+2026-09-30 08:16:39,166 epoch=16 step=16900 lr=1.87e-04 loss_G=7.3205 adv=0.6924 cyc=0.4645 idt=0.3966 D_A=0.1798 D_B=0.1530 gnG=33.082 gnD=5.286 elapsed=65.9m eta=51.1m
+2026-09-30 08:17:03,936 epoch=16 done, checkpoints + train_state saved
+2026-09-30 08:17:04,459 epoch=17 step=17000 lr=1.73e-04 loss_G=4.6636 adv=0.2546 cyc=0.3069 idt=0.2679 D_A=0.3631 D_B=0.3476 gnG=31.102 gnD=16.620 elapsed=66.3m eta=50.7m
+2026-09-30 08:17:29,059 epoch=17 step=17100 lr=1.73e-04 loss_G=4.7942 adv=0.5593 cyc=0.2770 idt=0.2931 D_A=0.1260 D_B=0.1257 gnG=21.289 gnD=8.092 elapsed=66.7m eta=50.3m
+2026-09-30 08:17:52,677 epoch=17 step=17200 lr=1.73e-04 loss_G=5.1120 adv=1.1823 cyc=0.2762 idt=0.2335 D_A=0.0847 D_B=0.0315 gnG=25.928 gnD=4.691 elapsed=67.1m eta=49.9m
+2026-09-30 08:18:15,596 epoch=17 step=17300 lr=1.73e-04 loss_G=6.2491 adv=0.6532 cyc=0.4191 idt=0.2809 D_A=0.0896 D_B=0.1481 gnG=41.538 gnD=13.642 elapsed=67.5m eta=49.5m
+2026-09-30 08:18:38,411 epoch=17 step=17400 lr=1.73e-04 loss_G=6.4729 adv=0.8214 cyc=0.3835 idt=0.3633 D_A=0.2906 D_B=0.2412 gnG=26.683 gnD=11.825 elapsed=67.9m eta=49.1m
+2026-09-30 08:19:01,369 epoch=17 step=17500 lr=1.73e-04 loss_G=5.5438 adv=1.2345 cyc=0.2916 idt=0.2786 D_A=0.0939 D_B=0.0391 gnG=31.818 gnD=8.551 elapsed=68.2m eta=48.7m
+2026-09-30 08:19:24,365 epoch=17 step=17600 lr=1.73e-04 loss_G=4.6527 adv=0.8255 cyc=0.2513 idt=0.2629 D_A=0.2223 D_B=0.1681 gnG=22.622 gnD=8.214 elapsed=68.6m eta=48.3m
+2026-09-30 08:19:47,247 epoch=17 step=17700 lr=1.73e-04 loss_G=4.1537 adv=0.8757 cyc=0.2250 idt=0.2055 D_A=0.0165 D_B=0.1074 gnG=16.530 gnD=12.672 elapsed=69.0m eta=48.0m
+2026-09-30 08:20:10,171 epoch=17 step=17800 lr=1.73e-04 loss_G=5.6173 adv=1.2090 cyc=0.2893 idt=0.3031 D_A=0.3471 D_B=0.1050 gnG=31.663 gnD=14.672 elapsed=69.4m eta=47.6m
+2026-09-30 08:20:33,133 epoch=17 step=17900 lr=1.73e-04 loss_G=4.2629 adv=0.7954 cyc=0.2327 idt=0.2280 D_A=0.1441 D_B=0.2323 gnG=16.839 gnD=10.884 elapsed=69.8m eta=47.2m
+2026-09-30 08:20:57,733 epoch=17 done, checkpoints + train_state saved
+2026-09-30 08:20:58,358 epoch=18 step=18000 lr=1.60e-04 loss_G=5.7411 adv=1.1673 cyc=0.2923 idt=0.3301 D_A=0.0915 D_B=0.2172 gnG=27.377 gnD=18.143 elapsed=70.2m eta=46.8m
+2026-09-30 08:21:23,153 epoch=18 step=18100 lr=1.60e-04 loss_G=6.4741 adv=1.1449 cyc=0.3753 idt=0.3153 D_A=0.1365 D_B=0.1748 gnG=26.771 gnD=10.472 elapsed=70.6m eta=46.4m
+2026-09-30 08:21:46,788 epoch=18 step=18200 lr=1.60e-04 loss_G=5.4588 adv=0.8427 cyc=0.3196 idt=0.2840 D_A=0.1842 D_B=0.1055 gnG=21.612 gnD=9.623 elapsed=71.0m eta=46.0m
+2026-09-30 08:22:09,792 epoch=18 step=18300 lr=1.60e-04 loss_G=4.1824 adv=1.3784 cyc=0.2037 idt=0.1535 D_A=0.0947 D_B=0.0367 gnG=28.335 gnD=11.417 elapsed=71.4m eta=45.6m
+2026-09-30 08:22:32,658 epoch=18 step=18400 lr=1.60e-04 loss_G=4.2922 adv=1.0301 cyc=0.2167 idt=0.2190 D_A=0.1293 D_B=0.1235 gnG=19.834 gnD=7.726 elapsed=71.8m eta=45.2m
+2026-09-30 08:22:55,651 epoch=18 step=18500 lr=1.60e-04 loss_G=4.1915 adv=0.7761 cyc=0.2473 idt=0.1885 D_A=0.2198 D_B=0.0653 gnG=24.489 gnD=4.460 elapsed=72.2m eta=44.8m
+2026-09-30 08:23:18,748 epoch=18 step=18600 lr=1.60e-04 loss_G=5.6065 adv=1.3213 cyc=0.2891 idt=0.2789 D_A=0.1750 D_B=0.1854 gnG=20.529 gnD=17.649 elapsed=72.5m eta=44.5m
+2026-09-30 08:23:41,730 epoch=18 step=18700 lr=1.60e-04 loss_G=4.1556 adv=1.1200 cyc=0.1919 idt=0.2234 D_A=0.4891 D_B=0.2125 gnG=17.980 gnD=20.766 elapsed=72.9m eta=44.1m
+2026-09-30 08:24:04,787 epoch=18 step=18800 lr=1.60e-04 loss_G=5.1097 adv=0.8372 cyc=0.2843 idt=0.2859 D_A=0.1624 D_B=0.3633 gnG=20.026 gnD=14.878 elapsed=73.3m eta=43.7m
+2026-09-30 08:24:27,847 epoch=18 step=18900 lr=1.60e-04 loss_G=6.1116 adv=0.8239 cyc=0.3774 idt=0.3027 D_A=0.3054 D_B=0.1910 gnG=30.432 gnD=23.489 elapsed=73.7m eta=43.3m
+2026-09-30 08:24:52,674 epoch=18 done, checkpoints + train_state saved
+2026-09-30 08:24:53,224 epoch=19 step=19000 lr=1.47e-04 loss_G=5.3298 adv=0.9826 cyc=0.2846 idt=0.3003 D_A=0.0218 D_B=0.0677 gnG=25.227 gnD=5.509 elapsed=74.1m eta=42.9m
+2026-09-30 08:25:17,916 epoch=19 step=19100 lr=1.47e-04 loss_G=4.8624 adv=0.8174 cyc=0.2787 idt=0.2516 D_A=0.1879 D_B=0.0972 gnG=29.573 gnD=10.017 elapsed=74.5m eta=42.5m
+2026-09-30 08:25:41,899 epoch=19 step=19200 lr=1.47e-04 loss_G=4.1248 adv=1.1457 cyc=0.1995 idt=0.1968 D_A=0.0929 D_B=0.1824 gnG=33.306 gnD=15.068 elapsed=74.9m eta=42.1m
+2026-09-30 08:26:04,923 epoch=19 step=19300 lr=1.47e-04 loss_G=4.8967 adv=0.2877 cyc=0.3143 idt=0.2932 D_A=0.5380 D_B=0.3731 gnG=23.260 gnD=8.662 elapsed=75.3m eta=41.7m
+2026-09-30 08:26:27,822 epoch=19 step=19400 lr=1.47e-04 loss_G=5.1098 adv=0.6947 cyc=0.3041 idt=0.2748 D_A=0.1624 D_B=0.1229 gnG=36.259 gnD=8.728 elapsed=75.7m eta=41.3m
+2026-09-30 08:26:50,761 epoch=19 step=19500 lr=1.47e-04 loss_G=4.6745 adv=1.0339 cyc=0.2339 idt=0.2603 D_A=0.1474 D_B=0.1176 gnG=21.513 gnD=6.788 elapsed=76.1m eta=41.0m
+2026-09-30 08:27:13,673 epoch=19 step=19600 lr=1.47e-04 loss_G=3.9988 adv=0.5264 cyc=0.2304 idt=0.2336 D_A=0.2946 D_B=0.2711 gnG=15.187 gnD=12.580 elapsed=76.5m eta=40.6m
+2026-09-30 08:27:36,542 epoch=19 step=19700 lr=1.47e-04 loss_G=4.2064 adv=0.9930 cyc=0.2184 idt=0.2059 D_A=0.2174 D_B=0.3027 gnG=13.809 gnD=15.632 elapsed=76.8m eta=40.2m
+2026-09-30 08:27:59,462 epoch=19 step=19800 lr=1.47e-04 loss_G=5.5774 adv=1.0694 cyc=0.3039 idt=0.2938 D_A=0.1201 D_B=0.1064 gnG=19.638 gnD=8.751 elapsed=77.2m eta=39.8m
+2026-09-30 08:28:22,458 epoch=19 step=19900 lr=1.47e-04 loss_G=6.2253 adv=0.8289 cyc=0.3499 idt=0.3796 D_A=0.1876 D_B=0.0681 gnG=23.985 gnD=9.700 elapsed=77.6m eta=39.4m
+2026-09-30 08:28:47,071 epoch=19 done, checkpoints + train_state saved
+2026-09-30 08:28:47,528 epoch=20 step=20000 lr=1.33e-04 loss_G=5.2068 adv=0.8852 cyc=0.2881 idt=0.2881 D_A=0.1927 D_B=0.1431 gnG=26.663 gnD=12.121 elapsed=78.0m eta=39.0m
+2026-09-30 08:29:12,633 epoch=20 step=20100 lr=1.33e-04 loss_G=4.1549 adv=0.5447 cyc=0.2601 idt=0.2018 D_A=0.1804 D_B=0.0998 gnG=23.885 gnD=17.458 elapsed=78.4m eta=38.6m
+2026-09-30 08:29:35,979 epoch=20 step=20200 lr=1.33e-04 loss_G=4.0841 adv=0.8008 cyc=0.2522 idt=0.1523 D_A=0.1203 D_B=0.1968 gnG=25.238 gnD=9.487 elapsed=78.8m eta=38.2m
+2026-09-30 08:29:58,954 epoch=20 step=20300 lr=1.33e-04 loss_G=6.0914 adv=0.5050 cyc=0.3818 idt=0.3537 D_A=0.1499 D_B=0.3077 gnG=43.011 gnD=7.538 elapsed=79.2m eta=37.8m
+2026-09-30 08:30:21,919 epoch=20 step=20400 lr=1.33e-04 loss_G=4.6222 adv=1.2797 cyc=0.2223 idt=0.2239 D_A=0.0541 D_B=0.0724 gnG=17.696 gnD=9.357 elapsed=79.6m eta=37.4m
+2026-09-30 08:30:44,874 epoch=20 step=20500 lr=1.33e-04 loss_G=4.0478 adv=0.7771 cyc=0.2192 idt=0.2157 D_A=0.1019 D_B=0.2336 gnG=20.710 gnD=20.768 elapsed=80.0m eta=37.1m
+2026-09-30 08:31:07,888 epoch=20 step=20600 lr=1.33e-04 loss_G=4.9276 adv=0.9397 cyc=0.2753 idt=0.2470 D_A=0.3805 D_B=0.0432 gnG=22.230 gnD=8.948 elapsed=80.4m eta=36.7m
+2026-09-30 08:31:30,838 epoch=20 step=20700 lr=1.33e-04 loss_G=3.3421 adv=0.8876 cyc=0.1675 idt=0.1559 D_A=0.1575 D_B=0.2583 gnG=16.945 gnD=9.362 elapsed=80.7m eta=36.3m
+2026-09-30 08:31:53,714 epoch=20 step=20800 lr=1.33e-04 loss_G=3.5713 adv=0.9063 cyc=0.1843 idt=0.1645 D_A=0.2176 D_B=0.1677 gnG=23.080 gnD=14.048 elapsed=81.1m eta=35.9m
+2026-09-30 08:32:16,698 epoch=20 step=20900 lr=1.33e-04 loss_G=4.0657 adv=0.9888 cyc=0.1922 idt=0.2311 D_A=0.1321 D_B=0.4015 gnG=20.002 gnD=20.379 elapsed=81.5m eta=35.5m
+2026-09-30 08:32:41,426 epoch=20 done, checkpoints + train_state saved
+2026-09-30 08:32:41,895 epoch=21 step=21000 lr=1.20e-04 loss_G=4.7891 adv=0.7611 cyc=0.2830 idt=0.2396 D_A=0.0473 D_B=0.1277 gnG=29.113 gnD=3.462 elapsed=81.9m eta=35.1m
+2026-09-30 08:33:06,819 epoch=21 step=21100 lr=1.20e-04 loss_G=6.3015 adv=0.5626 cyc=0.3945 idt=0.3589 D_A=0.1727 D_B=0.1785 gnG=23.759 gnD=10.498 elapsed=82.3m eta=34.7m
+2026-09-30 08:33:31,153 epoch=21 step=21200 lr=1.20e-04 loss_G=3.4517 adv=0.7572 cyc=0.1773 idt=0.1842 D_A=0.3264 D_B=0.2386 gnG=33.003 gnD=8.724 elapsed=82.7m eta=34.3m
+2026-09-30 08:33:54,251 epoch=21 step=21300 lr=1.20e-04 loss_G=4.8243 adv=0.7522 cyc=0.2679 idt=0.2787 D_A=0.4071 D_B=0.1206 gnG=24.730 gnD=13.197 elapsed=83.1m eta=33.9m
+2026-09-30 08:34:17,193 epoch=21 step=21400 lr=1.20e-04 loss_G=4.6279 adv=0.6324 cyc=0.2807 idt=0.2376 D_A=0.1770 D_B=0.0642 gnG=19.963 gnD=4.914 elapsed=83.5m eta=33.6m
+2026-09-30 08:34:40,175 epoch=21 step=21500 lr=1.20e-04 loss_G=4.2266 adv=0.4342 cyc=0.2608 idt=0.2369 D_A=0.1278 D_B=0.2006 gnG=21.539 gnD=12.731 elapsed=83.9m eta=33.2m
+2026-09-30 08:35:03,232 epoch=21 step=21600 lr=1.20e-04 loss_G=4.2890 adv=0.7922 cyc=0.2331 idt=0.2332 D_A=0.1204 D_B=0.1961 gnG=26.144 gnD=9.074 elapsed=84.3m eta=32.8m
+2026-09-30 08:35:26,279 epoch=21 step=21700 lr=1.20e-04 loss_G=5.0912 adv=1.1853 cyc=0.2588 idt=0.2636 D_A=0.4375 D_B=0.1700 gnG=22.685 gnD=23.575 elapsed=84.7m eta=32.4m
+2026-09-30 08:35:49,339 epoch=21 step=21800 lr=1.20e-04 loss_G=5.1282 adv=1.3154 cyc=0.2458 idt=0.2710 D_A=0.2592 D_B=0.1754 gnG=31.218 gnD=17.622 elapsed=85.0m eta=32.0m
+2026-09-30 08:36:12,452 epoch=21 step=21900 lr=1.20e-04 loss_G=3.5321 adv=0.2925 cyc=0.2075 idt=0.2329 D_A=0.4799 D_B=0.2173 gnG=23.522 gnD=12.438 elapsed=85.4m eta=31.6m
+2026-09-30 08:36:37,366 epoch=21 done, checkpoints + train_state saved
+2026-09-30 08:36:37,837 epoch=22 step=22000 lr=1.07e-04 loss_G=5.4335 adv=0.8526 cyc=0.2961 idt=0.3239 D_A=0.1877 D_B=0.1497 gnG=32.005 gnD=16.635 elapsed=85.9m eta=31.2m
+2026-09-30 08:37:03,105 epoch=22 step=22100 lr=1.07e-04 loss_G=3.9635 adv=0.6798 cyc=0.2408 idt=0.1751 D_A=0.0785 D_B=0.1225 gnG=18.227 gnD=10.829 elapsed=86.3m eta=30.8m
+2026-09-30 08:37:26,965 epoch=22 step=22200 lr=1.07e-04 loss_G=4.4430 adv=1.0133 cyc=0.2411 idt=0.2038 D_A=0.1908 D_B=0.1296 gnG=21.161 gnD=9.284 elapsed=86.7m eta=30.4m
+2026-09-30 08:37:50,049 epoch=22 step=22300 lr=1.07e-04 loss_G=3.7346 adv=0.4195 cyc=0.2463 idt=0.1705 D_A=0.2062 D_B=0.1909 gnG=24.818 gnD=12.076 elapsed=87.1m eta=30.1m
+2026-09-30 08:38:13,017 epoch=22 step=22400 lr=1.07e-04 loss_G=5.8060 adv=1.5198 cyc=0.2655 idt=0.3263 D_A=0.0756 D_B=0.0392 gnG=30.338 gnD=7.237 elapsed=87.4m eta=29.7m
+2026-09-30 08:38:36,075 epoch=22 step=22500 lr=1.07e-04 loss_G=3.8980 adv=0.7825 cyc=0.2244 idt=0.1744 D_A=0.1949 D_B=0.1014 gnG=30.145 gnD=7.632 elapsed=87.8m eta=29.3m
+2026-09-30 08:38:59,209 epoch=22 step=22600 lr=1.07e-04 loss_G=5.1451 adv=0.3442 cyc=0.3288 idt=0.3026 D_A=0.3967 D_B=0.2622 gnG=42.108 gnD=11.739 elapsed=88.2m eta=28.9m
+2026-09-30 08:39:22,118 epoch=22 step=22700 lr=1.07e-04 loss_G=4.2964 adv=0.9651 cyc=0.2381 idt=0.1900 D_A=0.0968 D_B=0.1595 gnG=24.591 gnD=10.554 elapsed=88.6m eta=28.5m
+2026-09-30 08:39:45,096 epoch=22 step=22800 lr=1.07e-04 loss_G=4.9260 adv=1.1080 cyc=0.2501 idt=0.2633 D_A=0.0379 D_B=0.1723 gnG=29.243 gnD=7.406 elapsed=89.0m eta=28.1m
+2026-09-30 08:40:08,126 epoch=22 step=22900 lr=1.07e-04 loss_G=3.5958 adv=0.8177 cyc=0.2006 idt=0.1545 D_A=0.0930 D_B=0.3566 gnG=17.045 gnD=12.028 elapsed=89.4m eta=27.7m
+2026-09-30 08:40:32,871 epoch=22 done, checkpoints + train_state saved
+2026-09-30 08:40:33,405 epoch=23 step=23000 lr=9.33e-05 loss_G=3.3470 adv=0.6747 cyc=0.1890 idt=0.1565 D_A=0.1549 D_B=0.1655 gnG=13.396 gnD=7.614 elapsed=89.8m eta=27.3m
+2026-09-30 08:40:58,040 epoch=23 step=23100 lr=9.33e-05 loss_G=5.3558 adv=0.7442 cyc=0.3143 idt=0.2936 D_A=0.1666 D_B=0.0847 gnG=30.169 gnD=8.810 elapsed=90.2m eta=26.9m
+2026-09-30 08:41:22,468 epoch=23 step=23200 lr=9.33e-05 loss_G=3.1114 adv=0.7181 cyc=0.1665 idt=0.1457 D_A=0.0264 D_B=0.1836 gnG=22.544 gnD=12.912 elapsed=90.6m eta=26.6m
+2026-09-30 08:41:45,475 epoch=23 step=23300 lr=9.33e-05 loss_G=4.7982 adv=0.4058 cyc=0.2721 idt=0.3343 D_A=0.3394 D_B=0.2204 gnG=20.612 gnD=15.466 elapsed=91.0m eta=26.2m
+2026-09-30 08:42:08,321 epoch=23 step=23400 lr=9.33e-05 loss_G=4.7308 adv=0.9240 cyc=0.3093 idt=0.1427 D_A=0.0833 D_B=0.1828 gnG=30.678 gnD=9.430 elapsed=91.4m eta=25.8m
+2026-09-30 08:42:31,371 epoch=23 step=23500 lr=9.33e-05 loss_G=5.3860 adv=0.8459 cyc=0.2889 idt=0.3302 D_A=0.0275 D_B=0.1804 gnG=33.668 gnD=7.975 elapsed=91.7m eta=25.4m
+2026-09-30 08:42:54,442 epoch=23 step=23600 lr=9.33e-05 loss_G=4.7920 adv=1.3309 cyc=0.2448 idt=0.2027 D_A=0.0847 D_B=0.1884 gnG=23.345 gnD=6.644 elapsed=92.1m eta=25.0m
+2026-09-30 08:43:17,500 epoch=23 step=23700 lr=9.33e-05 loss_G=4.4270 adv=0.7867 cyc=0.2477 idt=0.2327 D_A=0.0406 D_B=0.1363 gnG=42.773 gnD=8.329 elapsed=92.5m eta=24.6m
+2026-09-30 08:43:40,624 epoch=23 step=23800 lr=9.33e-05 loss_G=3.9614 adv=0.6658 cyc=0.2278 idt=0.2035 D_A=0.3077 D_B=0.1909 gnG=17.752 gnD=11.237 elapsed=92.9m eta=24.2m
+2026-09-30 08:44:03,619 epoch=23 step=23900 lr=9.33e-05 loss_G=4.5745 adv=0.9627 cyc=0.2672 idt=0.1879 D_A=0.1184 D_B=0.1249 gnG=33.846 gnD=9.449 elapsed=93.3m eta=23.8m
+2026-09-30 08:44:28,435 epoch=23 done, checkpoints + train_state saved
+2026-09-30 08:44:29,015 epoch=24 step=24000 lr=8.00e-05 loss_G=4.4073 adv=0.8719 cyc=0.2354 idt=0.2362 D_A=0.2826 D_B=0.0988 gnG=30.538 gnD=12.835 elapsed=93.7m eta=23.4m
+2026-09-30 08:44:53,974 epoch=24 step=24100 lr=8.00e-05 loss_G=4.8036 adv=1.3598 cyc=0.2152 idt=0.2583 D_A=0.1478 D_B=0.2016 gnG=20.996 gnD=16.501 elapsed=94.1m eta=23.0m
+2026-09-30 08:45:17,529 epoch=24 step=24200 lr=8.00e-05 loss_G=6.3322 adv=0.5873 cyc=0.3643 idt=0.4203 D_A=0.0890 D_B=0.2402 gnG=30.469 gnD=9.871 elapsed=94.5m eta=22.6m
+2026-09-30 08:45:40,569 epoch=24 step=24300 lr=8.00e-05 loss_G=6.3648 adv=0.5136 cyc=0.4194 idt=0.3314 D_A=0.1058 D_B=0.1329 gnG=31.450 gnD=13.610 elapsed=94.9m eta=22.3m
+2026-09-30 08:46:03,452 epoch=24 step=24400 lr=8.00e-05 loss_G=4.1268 adv=0.6250 cyc=0.2315 idt=0.2373 D_A=0.4869 D_B=0.1146 gnG=23.453 gnD=19.177 elapsed=95.3m eta=21.9m
+2026-09-30 08:46:26,460 epoch=24 step=24500 lr=8.00e-05 loss_G=3.6012 adv=0.8272 cyc=0.1833 idt=0.1883 D_A=0.0886 D_B=0.2274 gnG=20.873 gnD=8.260 elapsed=95.7m eta=21.5m
+2026-09-30 08:46:49,501 epoch=24 step=24600 lr=8.00e-05 loss_G=4.1826 adv=0.8732 cyc=0.2544 idt=0.1531 D_A=0.1062 D_B=0.2065 gnG=31.844 gnD=8.310 elapsed=96.1m eta=21.1m
+2026-09-30 08:47:12,414 epoch=24 step=24700 lr=8.00e-05 loss_G=4.2643 adv=0.8393 cyc=0.2303 idt=0.2244 D_A=0.2132 D_B=0.0154 gnG=19.626 gnD=9.216 elapsed=96.4m eta=20.7m
+2026-09-30 08:47:35,385 epoch=24 step=24800 lr=8.00e-05 loss_G=4.1662 adv=0.7743 cyc=0.2290 idt=0.2204 D_A=0.2525 D_B=0.1126 gnG=18.946 gnD=11.002 elapsed=96.8m eta=20.3m
+2026-09-30 08:47:58,380 epoch=24 step=24900 lr=8.00e-05 loss_G=3.7801 adv=0.7819 cyc=0.1938 idt=0.2121 D_A=0.0907 D_B=0.1466 gnG=18.647 gnD=7.305 elapsed=97.2m eta=19.9m
+2026-09-30 08:48:23,120 epoch=24 done, checkpoints + train_state saved
+2026-09-30 08:48:23,763 epoch=25 step=25000 lr=6.67e-05 loss_G=3.9230 adv=0.9773 cyc=0.2065 idt=0.1761 D_A=0.1875 D_B=0.2347 gnG=19.861 gnD=11.244 elapsed=97.6m eta=19.5m
+2026-09-30 08:48:48,837 epoch=25 step=25100 lr=6.67e-05 loss_G=3.5213 adv=0.5212 cyc=0.1859 idt=0.2282 D_A=0.2179 D_B=0.1027 gnG=15.635 gnD=5.618 elapsed=98.0m eta=19.1m
+2026-09-30 08:49:12,435 epoch=25 step=25200 lr=6.67e-05 loss_G=3.8104 adv=1.1846 cyc=0.1774 idt=0.1703 D_A=0.1213 D_B=0.1975 gnG=18.475 gnD=11.033 elapsed=98.4m eta=18.7m
+2026-09-30 08:49:35,529 epoch=25 step=25300 lr=6.67e-05 loss_G=2.8730 adv=0.3445 cyc=0.1809 idt=0.1438 D_A=0.0472 D_B=0.1673 gnG=28.639 gnD=10.510 elapsed=98.8m eta=18.4m
+2026-09-30 08:49:58,341 epoch=25 step=25400 lr=6.67e-05 loss_G=3.9057 adv=0.6772 cyc=0.1977 idt=0.2503 D_A=0.2426 D_B=0.1201 gnG=26.796 gnD=19.502 elapsed=99.2m eta=18.0m
+2026-09-30 08:50:21,310 epoch=25 step=25500 lr=6.67e-05 loss_G=4.5907 adv=0.6862 cyc=0.2613 idt=0.2583 D_A=0.1185 D_B=0.1598 gnG=28.678 gnD=11.548 elapsed=99.6m eta=17.6m
+2026-09-30 08:50:44,343 epoch=25 step=25600 lr=6.67e-05 loss_G=3.8891 adv=0.8647 cyc=0.2126 idt=0.1798 D_A=0.0973 D_B=0.0884 gnG=21.005 gnD=6.695 elapsed=100.0m eta=17.2m
+2026-09-30 08:51:07,352 epoch=25 step=25700 lr=6.67e-05 loss_G=3.7185 adv=0.6047 cyc=0.2066 idt=0.2096 D_A=0.2783 D_B=0.1441 gnG=17.695 gnD=9.007 elapsed=100.3m eta=16.8m
+2026-09-30 08:51:30,433 epoch=25 step=25800 lr=6.67e-05 loss_G=3.9657 adv=0.9344 cyc=0.2120 idt=0.1822 D_A=0.2782 D_B=0.1060 gnG=19.733 gnD=10.885 elapsed=100.7m eta=16.4m
+2026-09-30 08:51:53,485 epoch=25 step=25900 lr=6.67e-05 loss_G=3.9533 adv=0.9913 cyc=0.1932 idt=0.2060 D_A=0.3005 D_B=0.1051 gnG=18.226 gnD=10.167 elapsed=101.1m eta=16.0m
+2026-09-30 08:52:18,100 epoch=25 done, checkpoints + train_state saved
+2026-09-30 08:52:18,574 epoch=26 step=26000 lr=5.33e-05 loss_G=4.8018 adv=1.1570 cyc=0.2235 idt=0.2819 D_A=0.2429 D_B=0.1364 gnG=34.054 gnD=19.244 elapsed=101.5m eta=15.6m
+2026-09-30 08:52:43,456 epoch=26 step=26100 lr=5.33e-05 loss_G=3.5019 adv=0.6609 cyc=0.1843 idt=0.1996 D_A=0.1304 D_B=0.1422 gnG=25.127 gnD=6.191 elapsed=101.9m eta=15.2m
+2026-09-30 08:53:07,376 epoch=26 step=26200 lr=5.33e-05 loss_G=4.1607 adv=0.9254 cyc=0.2154 idt=0.2163 D_A=0.1191 D_B=0.1236 gnG=24.467 gnD=10.298 elapsed=102.3m eta=14.8m
+2026-09-30 08:53:30,308 epoch=26 step=26300 lr=5.33e-05 loss_G=5.8245 adv=1.0269 cyc=0.3298 idt=0.2998 D_A=0.1449 D_B=0.1491 gnG=33.081 gnD=7.484 elapsed=102.7m eta=14.4m
+2026-09-30 08:53:53,284 epoch=26 step=26400 lr=5.33e-05 loss_G=2.8904 adv=0.7615 cyc=0.1447 idt=0.1364 D_A=0.0474 D_B=0.2055 gnG=16.289 gnD=10.051 elapsed=103.1m eta=14.1m
+2026-09-30 08:54:16,151 epoch=26 step=26500 lr=5.33e-05 loss_G=2.9420 adv=0.5073 cyc=0.1582 idt=0.1706 D_A=0.2669 D_B=0.2894 gnG=22.449 gnD=8.085 elapsed=103.5m eta=13.7m
+2026-09-30 08:54:39,105 epoch=26 step=26600 lr=5.33e-05 loss_G=2.5219 adv=0.5149 cyc=0.1398 idt=0.1217 D_A=0.1687 D_B=0.2881 gnG=13.337 gnD=7.932 elapsed=103.9m eta=13.3m
+2026-09-30 08:55:01,973 epoch=26 step=26700 lr=5.33e-05 loss_G=3.9673 adv=0.8794 cyc=0.2031 idt=0.2113 D_A=0.1021 D_B=0.1443 gnG=18.626 gnD=7.964 elapsed=104.3m eta=12.9m
+2026-09-30 08:55:24,797 epoch=26 step=26800 lr=5.33e-05 loss_G=3.9275 adv=1.3001 cyc=0.1681 idt=0.1893 D_A=0.1389 D_B=0.1433 gnG=17.128 gnD=12.823 elapsed=104.6m eta=12.5m
+2026-09-30 08:55:47,683 epoch=26 step=26900 lr=5.33e-05 loss_G=4.4139 adv=1.0013 cyc=0.2179 idt=0.2467 D_A=0.0751 D_B=0.0330 gnG=23.142 gnD=7.716 elapsed=105.0m eta=12.1m
+2026-09-30 08:56:14,016 epoch=26 done, checkpoints + train_state saved
+2026-09-30 08:56:14,473 epoch=27 step=27000 lr=4.00e-05 loss_G=4.3224 adv=0.7689 cyc=0.2293 idt=0.2521 D_A=0.3297 D_B=0.2147 gnG=22.771 gnD=11.007 elapsed=105.5m eta=11.7m
+2026-09-30 08:56:39,808 epoch=27 step=27100 lr=4.00e-05 loss_G=4.4419 adv=0.9355 cyc=0.2255 idt=0.2502 D_A=0.1691 D_B=0.2852 gnG=26.499 gnD=11.184 elapsed=105.9m eta=11.3m
+2026-09-30 08:57:03,109 epoch=27 step=27200 lr=4.00e-05 loss_G=3.9114 adv=1.0909 cyc=0.1926 idt=0.1789 D_A=0.1842 D_B=0.0625 gnG=23.533 gnD=5.874 elapsed=106.3m eta=10.9m
+2026-09-30 08:57:25,959 epoch=27 step=27300 lr=4.00e-05 loss_G=4.0850 adv=1.0466 cyc=0.2098 idt=0.1880 D_A=0.0809 D_B=0.1362 gnG=19.390 gnD=12.111 elapsed=106.7m eta=10.5m
+2026-09-30 08:57:48,853 epoch=27 step=27400 lr=4.00e-05 loss_G=4.5365 adv=0.8422 cyc=0.2283 idt=0.2822 D_A=0.2328 D_B=0.1405 gnG=26.152 gnD=11.792 elapsed=107.0m eta=10.2m
+2026-09-30 08:58:11,694 epoch=27 step=27500 lr=4.00e-05 loss_G=4.4139 adv=1.4777 cyc=0.1959 idt=0.1954 D_A=0.1282 D_B=0.1229 gnG=21.430 gnD=10.185 elapsed=107.4m eta=9.8m
+2026-09-30 08:58:34,664 epoch=27 step=27600 lr=4.00e-05 loss_G=5.1469 adv=1.0271 cyc=0.2691 idt=0.2858 D_A=0.2119 D_B=0.1815 gnG=30.504 gnD=9.034 elapsed=107.8m eta=9.4m
+2026-09-30 08:58:57,613 epoch=27 step=27700 lr=4.00e-05 loss_G=5.7371 adv=0.8654 cyc=0.3034 idt=0.3675 D_A=0.5703 D_B=0.0662 gnG=29.486 gnD=9.059 elapsed=108.2m eta=9.0m
+2026-09-30 08:59:20,402 epoch=27 step=27800 lr=4.00e-05 loss_G=4.4194 adv=0.4598 cyc=0.2635 idt=0.2648 D_A=0.1977 D_B=0.0849 gnG=30.178 gnD=10.545 elapsed=108.6m eta=8.6m
+2026-09-30 08:59:43,217 epoch=27 step=27900 lr=4.00e-05 loss_G=4.6225 adv=0.9631 cyc=0.2389 idt=0.2542 D_A=0.1118 D_B=0.0776 gnG=19.982 gnD=8.690 elapsed=108.9m eta=8.2m
+2026-09-30 09:00:07,722 epoch=27 done, checkpoints + train_state saved
+2026-09-30 09:00:08,229 epoch=28 step=28000 lr=2.67e-05 loss_G=3.7700 adv=0.8638 cyc=0.1955 idt=0.1903 D_A=0.2567 D_B=0.1767 gnG=20.964 gnD=7.564 elapsed=109.4m eta=7.8m
+2026-09-30 09:00:33,454 epoch=28 step=28100 lr=2.67e-05 loss_G=2.8428 adv=0.3946 cyc=0.1588 idt=0.1720 D_A=0.3388 D_B=0.1721 gnG=23.150 gnD=11.829 elapsed=109.8m eta=7.4m
+2026-09-30 09:00:56,559 epoch=28 step=28200 lr=2.67e-05 loss_G=2.9221 adv=0.5214 cyc=0.1667 idt=0.1467 D_A=0.0658 D_B=0.2560 gnG=35.585 gnD=7.390 elapsed=110.2m eta=7.0m
+2026-09-30 09:01:19,563 epoch=28 step=28300 lr=2.67e-05 loss_G=4.8062 adv=1.0322 cyc=0.2498 idt=0.2552 D_A=0.0367 D_B=0.1543 gnG=21.748 gnD=5.830 elapsed=110.6m eta=6.6m
+2026-09-30 09:01:42,548 epoch=28 step=28400 lr=2.67e-05 loss_G=3.9484 adv=0.8440 cyc=0.2102 idt=0.2004 D_A=0.4132 D_B=0.1033 gnG=18.768 gnD=14.759 elapsed=110.9m eta=6.2m
+2026-09-30 09:02:05,413 epoch=28 step=28500 lr=2.67e-05 loss_G=3.8306 adv=0.9201 cyc=0.1904 idt=0.2013 D_A=0.3321 D_B=0.1088 gnG=19.926 gnD=9.037 elapsed=111.3m eta=5.9m
+2026-09-30 09:02:28,292 epoch=28 step=28600 lr=2.67e-05 loss_G=3.9757 adv=1.4722 cyc=0.1638 idt=0.1731 D_A=0.1488 D_B=0.1209 gnG=27.536 gnD=15.118 elapsed=111.7m eta=5.5m
+2026-09-30 09:02:51,206 epoch=28 step=28700 lr=2.67e-05 loss_G=7.5342 adv=0.7300 cyc=0.4227 idt=0.5155 D_A=0.1209 D_B=0.2276 gnG=36.748 gnD=8.850 elapsed=112.1m eta=5.1m
+2026-09-30 09:03:14,060 epoch=28 step=28800 lr=2.67e-05 loss_G=3.9595 adv=1.1867 cyc=0.1878 idt=0.1789 D_A=0.1042 D_B=0.0556 gnG=25.663 gnD=10.721 elapsed=112.5m eta=4.7m
+2026-09-30 09:03:36,950 epoch=28 step=28900 lr=2.67e-05 loss_G=5.6416 adv=0.6876 cyc=0.2953 idt=0.4002 D_A=0.2934 D_B=0.2031 gnG=35.212 gnD=7.989 elapsed=112.8m eta=4.3m
+2026-09-30 09:04:01,188 epoch=28 done, checkpoints + train_state saved
+2026-09-30 09:04:01,545 epoch=29 step=29000 lr=1.33e-05 loss_G=3.3610 adv=0.3238 cyc=0.1897 idt=0.2281 D_A=0.2609 D_B=0.0933 gnG=28.425 gnD=9.470 elapsed=113.3m eta=3.9m
+2026-09-30 09:04:27,020 epoch=29 step=29100 lr=1.33e-05 loss_G=3.3017 adv=0.8983 cyc=0.1574 idt=0.1658 D_A=0.1460 D_B=0.1226 gnG=19.876 gnD=5.679 elapsed=113.7m eta=3.5m
+2026-09-30 09:04:50,260 epoch=29 step=29200 lr=1.33e-05 loss_G=3.7572 adv=0.8694 cyc=0.1939 idt=0.1898 D_A=0.0942 D_B=0.0816 gnG=17.826 gnD=11.011 elapsed=114.1m eta=3.1m
+2026-09-30 09:05:13,162 epoch=29 step=29300 lr=1.33e-05 loss_G=3.4571 adv=0.9726 cyc=0.1713 idt=0.1543 D_A=0.2296 D_B=0.1319 gnG=17.410 gnD=13.330 elapsed=114.4m eta=2.7m
+2026-09-30 09:05:36,079 epoch=29 step=29400 lr=1.33e-05 loss_G=6.3163 adv=0.8656 cyc=0.3235 idt=0.4430 D_A=0.0394 D_B=0.3657 gnG=43.364 gnD=10.857 elapsed=114.8m eta=2.3m
+2026-09-30 09:05:58,916 epoch=29 step=29500 lr=1.33e-05 loss_G=3.1480 adv=0.7429 cyc=0.1699 idt=0.1412 D_A=0.2004 D_B=0.1074 gnG=15.650 gnD=15.509 elapsed=115.2m eta=1.9m
+2026-09-30 09:06:21,722 epoch=29 step=29600 lr=1.33e-05 loss_G=3.4765 adv=0.8450 cyc=0.1810 idt=0.1643 D_A=0.1164 D_B=0.2227 gnG=15.967 gnD=9.670 elapsed=115.6m eta=1.6m
+2026-09-30 09:06:44,599 epoch=29 step=29700 lr=1.33e-05 loss_G=2.7623 adv=0.8943 cyc=0.1266 idt=0.1205 D_A=0.1151 D_B=0.1506 gnG=12.268 gnD=8.786 elapsed=116.0m eta=1.2m
+2026-09-30 09:07:07,524 epoch=29 step=29800 lr=1.33e-05 loss_G=3.7143 adv=0.9644 cyc=0.1866 idt=0.1769 D_A=0.1647 D_B=0.0873 gnG=13.412 gnD=6.393 elapsed=116.4m eta=0.8m
+2026-09-30 09:07:30,419 epoch=29 step=29900 lr=1.33e-05 loss_G=3.1922 adv=0.9049 cyc=0.1723 idt=0.1130 D_A=0.0744 D_B=0.1451 gnG=19.332 gnD=9.160 elapsed=116.7m eta=0.4m
+2026-09-30 09:07:54,927 epoch=29 done, checkpoints + train_state saved
+2026-09-30 09:07:55,776 final={"checkpoints": {"G_AB": "checkpoints/G_AB.pt", "G_BA": "checkpoints/G_BA.pt", "D_A": "checkpoints/D_A.pt", "D_B": "checkpoints/D_B.pt"}, "param_count": {"G_AB": 11378179, "G_BA": 11378179, "D_A": 2764737, "D_B": 2764737, "total": 28285832}, "epochs": 30, "steps": 30000, "training_time_sec": 7028.458998203278, "images_per_sec": 4.268360960442262, "peak_memory_mb": 1569.9013671875, "nan_count": 0, "amp_overflow_skipped_steps": {"G": 15, "D": 15}, "amp_fp16": true, "grad_norm_G": {"mean": 28.12625064369739, "max": 251.07999551031654, "p95": 46.28536001307583}, "grad_norm_D": {"mean": 15.243254632835315, "max": 277.42172469641804, "p95": 29.637168480551257}, "final_loss_G": 3.648649501800537, "final_loss_G_adv": 0.8281254261732102, "final_loss_D_A": 0.14410729594528676, "final_loss_D_B": 0.15082383006811143, "final_cycle_loss": 0.18721416145563125, "final_identity_loss": 0.18967650309205056, "loss_curve_plot": "checkpoints/loss_curves.png"}
