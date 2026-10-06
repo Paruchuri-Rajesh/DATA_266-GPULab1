@@ -18,12 +18,14 @@ The v1–v3 scores and Kaggle entries were computed with our own scorer, `evalua
 - v2: Colab T4, 50K steps, resize-conv upsampling, DiffAugment (colour, translation, cutout), all 300 Monet, λ_id 2.5, FID-based checkpoint selection. Best epoch 45: held-out FID 95.8; all photos FID 92.296, MiFID 0.410.
 - v3: Apple M5, 12K steps, warm start from v2's best epoch, second LR cycle, translation-only DiffAugment (v3's config says 24 epochs/2 h; it was shortened to 12 epochs before launch when Colab quota ran out). Best epoch 11: held-out FID 95.3; all photos FID 91.537, MiFID 0.402.
 - v1's 30 human-audit images in `checkpoints/history/v1/audit/` were generated from v1's G_AB; the final run prepares a new set from the final model.
-- `submission/history/` (not committed) keeps the translated-image zips of v1–v3.
+- `submission/history/` (not committed) keeps the translated-image zips of v1–v3. v3's 7,038 images are committed in `outputs/history/v3/pred_B2A` and its best weights in `checkpoints/history/v3/`.
+
+**Submitted entry.** After checking with the TA, the team reports the v3 entry (public score −45.9695, submission ref 56747128) as my Kaggle result. `submission.csv` holds it, and `submission_details.json` records both it and the final model's instructor-script result.
 
 ## Final run (RTX 4090, 2026-10-01/02)
 
-`V2_CONTINUE`: v2's weights trained further with v3's recipe for 270 epochs × 1,000 steps (6.88 h, bf16), selecting raw/EMA generator pairs on held-out photos. It is promoted to the standard paths (`checkpoints/`, `logs/train_raw.log`, `outputs/`, `submission.csv`).
-- Scored with the instructor's `Part3_Evaluation_Script.ipynb` (executed as `src/Part3_Evaluation_Script_run.ipynb`): FID 101.909 (photo→Monet 96.956, Monet→photo 106.862), MiFID 0.4082, i.e. −51.1585. This is `submission.csv`. The same scoring on the RTX 4090 right after training gave FID 101.963 / MiFID 0.4082 (`kaggle_submissions/final_cuda_run_submission*.{csv,json}`); the small difference is GPU vs CPU arithmetic in Inception-v3.
+`V2_CONTINUE`: v2's weights trained further with v3's recipe for 270 epochs × 1,000 steps (6.88 h, bf16), selecting raw/EMA generator pairs on held-out photos. It is promoted to the standard paths (`checkpoints/`, `logs/train_raw.log`, `outputs/`).
+- Scored with the instructor's `Part3_Evaluation_Script.ipynb` (executed as `src/Part3_Evaluation_Script_run.ipynb`): FID 101.909 (photo→Monet 96.956, Monet→photo 106.862), MiFID 0.4082, i.e. −51.1585 (uploaded 2026-10-04 as `kaggle_submissions/final_submission.csv`). The same scoring on the RTX 4090 right after training gave FID 101.963 / MiFID 0.4082 (`kaggle_submissions/final_cuda_run_submission*.{csv,json}`); the small difference is GPU vs CPU arithmetic in Inception-v3.
 - `MSD_TEXTURE` (fresh two-scale discriminators, cycle weight 10 → 3) ran alongside it and was stopped at step 6,800 (its 7th epoch), when the run was restarted with `V2_CONTINUE` alone (its log is `logs/train_raw_MSD_TEXTURE.log`).
 - An earlier attempt with `A_base` and `C_msD_cycdecay` was stopped at step 6,800 (7th epoch); its logs are in `logs/history/run_killed_20261001_1717/`. `logs/history/overnight_partial_copy/` is a mid-run copy of the final run's logs, kept as written. `logs/history/patchnce_continuation_log.txt` is a 24K-step PatchNCE continuation of the final model that was stopped because it scored worse.
 - `uvcgan2/` holds a separate UVCGAN2-style experiment from the same session (code, configs, logs; weights not kept in the repo). It was not used for the submission.

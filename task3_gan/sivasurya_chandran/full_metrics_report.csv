@@ -9,8 +9,8 @@ Cycle-reconstruction L1 ↓,0.1053,0.0841
 LPIPS input vs translation,0.4204,0.4019
 Content cosine similarity ↑,0.7316,0.7708
 Identity L1 ↓,0.1003,0.0797
-"Submission FID, instructor's script (first 300) ↓",96.9560,106.8620
-"Submission MiFID, instructor's script (first 300) ↓",0.4024,0.4139
+"FID, instructor's script (first 300) ↓",96.9560,106.8620
+"MiFID, instructor's script (first 300) ↓",0.4024,0.4139
 Final cycle / identity loss,0.1593 / 0.1487,
 Final G adversarial / D_A / D_B loss,1.5841 / 0.0633 / 0.0352,
 Grad norm G mean/max,15.285 / 520.640,
@@ -23,5 +23,6 @@ Parameter count (G_AB+G_BA+D_A+D_B),"28,285,832",
 Training time (s),"24,770.4921",
 Images/sec,10.9001,
 Peak memory (MB),"19,863.1582",
-"submission.csv FID / MiFID (instructor's script, mean of both directions)",101.9088 / 0.4082,
-Kaggle public / private score,-51.1585 (uploaded 2026-10-04); team public rank 11,
+"FID / MiFID, instructor's script (mean of both directions)",101.9088 / 0.4082,
+"submission.csv (Kaggle entry, v3) FID / MiFID","91.537 / 0.402 (7,038 photo→Monet vs competition real_stats.npz)",
+Kaggle public / private score,-45.9695 (submission ref 56747128); team public rank 11,

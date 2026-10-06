@@ -12,7 +12,7 @@ Each member has their own folder in every task (`rajesh_paruchuri/`, `sivasurya_
 | Task 1 val CE | 0.711 | **0.639** |
 | Task 2 best test accuracy | 0.9523 (BiGRU + attention) | **0.9581** (BiLSTM + attention) |
 | Task 3 course-script FID / MiFID | 149.48 / 0.414 | **101.91 / 0.408** |
-| Kaggle public score | −74.9486 | −51.1585 (best model) |
+| Kaggle public score | −74.9486 | **−45.9695** (team best) |
 
 **Reports:**
 - `report/DATA266_Lab1_Report_Team_6.pdf`: the combined team report, with comparison tables, joint analyses and both members' failure analyses.
@@ -185,10 +185,10 @@ jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeou
   - 28.3M parameters.
 - Best model: trained on the lab RTX 4090 for 270K steps (6.9 h, bf16), starting from an earlier version's weights. The best checkpoint was picked on held-out photos in both directions.
 - Held-out FID 83.0 (photo→Monet) / 89.7 (Monet→photo); cycle L1 0.105 / 0.084; no NaNs.
-- Course evaluation script (executed copy `src/Part3_Evaluation_Script_run.ipynb`): **`submission.csv` FID 101.91 / MiFID 0.408**.
-- **Kaggle: best model scored −51.1585; team public rank 11.**
+- Course evaluation script (executed copy `src/Part3_Evaluation_Script_run.ipynb`) on the best model: **FID 101.91 / MiFID 0.408**.
+- **Kaggle: −45.9695 (team best), team public rank 11.** `submission.csv` is the v3 entry (`1,91.537,0.402`): v3's `checkpoints/history/v3/G_AB.pt` on all 7,038 photos (`outputs/history/v3/pred_B2A`), scored with `evaluate_competition_stats.py` against the competition's `real_stats.npz`. Details are in `results.md` and `submission_details.json`.
 - Blinded human audit (30 samples, 2 raters): **3.78 / 5, quadratic κ 0.24**. The results are in `checkpoints/audit/`.
-- The best model's weights `checkpoints/{G_AB,G_BA,D_A,D_B}.pt` and both prediction folders (`outputs/pred_A2B`, `outputs/pred_B2A`) are committed; earlier development runs are recorded in `HISTORY.md`.
+- The best model's weights `checkpoints/{G_AB,G_BA,D_A,D_B}.pt` and both prediction folders (`outputs/pred_A2B`, `outputs/pred_B2A`) are committed, as are v3's weights and images; earlier development runs are recorded in `HISTORY.md`.
 
 ```bash
 cd task3_gan/sivasurya_chandran

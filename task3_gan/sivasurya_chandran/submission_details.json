@@ -1,19 +1,32 @@
 {
-  "FID": 101.90883359049133,
-  "MiFID": 0.40815766155719757,
-  "leaderboard_score": -51.15849562602426,
-  "FID_B2A_photo_to_monet": 96.956,
-  "MiFID_B2A_photo_to_monet": 0.4024,
-  "FID_A2B_monet_to_photo": 106.862,
-  "MiFID_A2B_monet_to_photo": 0.4139,
-  "counts": {
-    "real_monet": 300,
-    "gen_b2a": 300,
-    "real_photo": 300,
-    "gen_a2b": 300
-  },
-  "n_eval": 300,
-  "pred_dir": "outputs",
-  "scorer": "instructor's Part3_Evaluation_Script.ipynb, executed as src/Part3_Evaluation_Script_run.ipynb (only folder paths changed), CPU",
-  "kaggle_public_score": "-51.1585 (uploaded 2026-10-04); team public rank 11"
+  "submission_csv": "ID,FID,MiFID / 1,91.537,0.402",
+  "FID": 91.53676721892396,
+  "MiFID": 0.4024646474810304,
+  "leaderboard_score": -45.9695,
+  "model": "v3, best epoch 11 (checkpoints/history/v3/G_AB.pt)",
+  "n_generated": 7038,
+  "images": "outputs/history/v3/pred_B2A (all 7,038 competition photos translated to Monet by v3's G_AB)",
+  "scorer": "evaluate_competition_stats.py: Inception-v3 FID of the 7,038 translations against the competition's real_stats.npz; MiFID = mean cosine distance of index-paired features",
+  "reproduce": "python evaluate_competition_stats.py --gen outputs/history/v3/pred_B2A --no_csv",
+  "kaggle_public_score": "-45.9695 (submission ref 56747128); team public rank 11",
+  "final_model_course_script": {
+    "FID": 101.90883359049133,
+    "MiFID": 0.40815766155719757,
+    "leaderboard_score": -51.15849562602426,
+    "FID_B2A_photo_to_monet": 96.956,
+    "MiFID_B2A_photo_to_monet": 0.4024,
+    "FID_A2B_monet_to_photo": 106.862,
+    "MiFID_A2B_monet_to_photo": 0.4139,
+    "counts": {
+      "real_monet": 300,
+      "gen_b2a": 300,
+      "real_photo": 300,
+      "gen_a2b": 300
+    },
+    "n_eval": 300,
+    "pred_dir": "outputs",
+    "scorer": "instructor's Part3_Evaluation_Script.ipynb, executed as src/Part3_Evaluation_Script_run.ipynb (only folder paths changed), CPU",
+    "weights": "checkpoints/{G_AB,G_BA}.pt (V2_CONTINUE, epoch 269)",
+    "kaggle_public_score": "-51.1585 (uploaded 2026-10-04, kaggle_submissions/final_submission.csv)"
+  }
 }

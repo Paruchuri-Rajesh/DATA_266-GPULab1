@@ -71,13 +71,22 @@ Rajesh Paruchuri trained his own CycleGAN:
 | DiffAugment | translation | colour, translation, cutout |
 | Identity weight | 2.5 | 5 |
 | Training | 50K (v2) + 270K steps, full 256×256 crops, RTX 4090 | 24K steps on 128×128 crops, Apple M4 |
-| Submission FID / MiFID (instructor's script) | **101.909 / 0.4082** | 149.484 / 0.4135 |
+| FID / MiFID, instructor's script | **101.909 / 0.4082** | 149.484 / 0.4135 |
+| Kaggle public score | **−45.9695** (my v3 entry, see below) | −74.9486 |
 
 Both of us found that Monet → photo is the harder direction.
 
 ## Results
 
-### Submission (instructor's evaluation script)
+### Kaggle submission (`submission.csv`)
+
+`submission.csv` is my v3 model's entry: `1,91.537,0.402`. Its public score is **−45.9695** (submission ref 56747128), the team's best, and the team's public rank is **11**. We checked with the TA that this is the entry to report.
+
+- **Model:** v3, best epoch 11 (`checkpoints/history/v3/{G_AB,G_BA,D_A,D_B}.pt`, config `configs/history/config_v3.yaml`, raw log `logs/history/train_raw_v3.log`). v3 warm-started from v2 and trained 12K more steps on an Apple M5 with translation-only DiffAugment; see `HISTORY.md`.
+- **Images:** `outputs/history/v3/pred_B2A`, all 7,038 competition photos translated to Monet by v3's `G_AB`.
+- **Scoring:** `evaluate_competition_stats.py`, written before the instructor's script was shared. It computes the Inception-v3 FID of all 7,038 translations against the competition's `real_stats.npz`; MiFID is the mean cosine distance between index-paired features. Re-running it on the committed images gives FID 91.5368 and MiFID 0.4025 again (rounded to 91.537 / 0.402 in the CSV).
+
+### Final model with the instructor's evaluation script
 
 `src/Part3_Evaluation_Script_run.ipynb` is the instructor's `Part3_Evaluation_Script.ipynb`. I changed only the folder paths and ran it on `outputs/`:
 - `outputs/pred_A2B`: all 300 Monet paintings translated to photos by `G_BA`;
@@ -89,11 +98,9 @@ The script uses the first 300 images of each folder, sorted by file name.
 |---|---|---|
 | Photo → Monet (`pred_B2A` vs real Monet) | 96.956 | 0.4024 |
 | Monet → photo (`pred_A2B` vs real photos) | 106.862 | 0.4139 |
-| **Submission (mean of both)** | **101.909** | **0.4082** |
+| **Mean of both** | **101.909** | **0.4082** |
 
-`submission.csv` = `1, 101.90883359049133, 0.40815766155719757`. The leaderboard shows −(FID + MiFID)/2, so this entry would score **−51.1585**.
-
-**Kaggle.** The team is `PairProgramming_Team_06`. I uploaded this `submission.csv` on 2026-10-04 (a copy is in `kaggle_submissions/final_submission.csv`), and its public score is **−51.1585**. The team's public rank is **11**.
+I uploaded this result as well on 2026-10-04 (`kaggle_submissions/final_submission.csv`); it scored −51.1585. The two Kaggle numbers can't be compared as model quality: the instructor's script scores both directions on 300 images each, while my scorer scores only photo → Monet on all 7,038 images against precomputed statistics, and FID falls as the sample grows.
 
 ### Evaluation in both directions (`checkpoints/metrics_eval.json`)
 
@@ -113,7 +120,7 @@ The script uses the first 300 images of each folder, sorted by file name.
 | Content cosine similarity, input vs translation | 0.7316 | 0.7708 |
 | Identity L1 | 0.1003 | 0.0797 |
 
-**Why these FIDs differ from the submission.** They are lower than the submission FIDs because they compare more images: 1,000 photos instead of 300. FID is biased upward at small sample sizes, so these two tables can't be compared with each other directly.
+**Why these FIDs differ from the instructor-script FIDs.** They are lower because they compare more images: 1,000 photos instead of 300. FID is biased upward at small sample sizes, so these two tables can't be compared with each other directly.
 
 **What the two directions show:**
 - **Photo → Monet.** High coverage (0.93) but lower precision (0.58): the translations spread across the whole range of Monet's work, but not every single image is convincing.
@@ -184,7 +191,8 @@ From `task3_gan/sivasurya_chandran/`, after getting the data with `python ../dow
 python src/run_final.py --hours 13 --variants V2_CONTINUE   # trains, promotes, evaluates, translates and scores
 python src/evaluate.py --config config.yaml                 # metrics_eval.json and outputs/pred_A2B
 python src/translate.py --config config.yaml --input ../data/photo_jpg --output outputs/pred_B2A --flat
-python evaluate_local.py --pred_dir outputs --out submission.csv   # the instructor's script as a script
+python evaluate_local.py --pred_dir outputs --out kaggle_submissions/final_submission.csv   # the instructor's script as a script
+python evaluate_competition_stats.py --gen outputs/history/v3/pred_B2A --out submission.csv   # the v3 Kaggle entry (the uploaded CSV is rounded to 3 decimals)
 ```
 
 `V2_CONTINUE` starts from v2's weights in `checkpoints/history/v2/`.
